@@ -1,0 +1,239 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fcsmps: <http://example.org/fcsmps#> .
+@prefix fc:    <http://example.org/fictionalchars#> .
+
+fc:hasRelation  a     rdf:Property ;
+        rdfs:comment  "Property describing that a living thing has a relation with another living thing."@en ;
+        rdfs:domain   fc:LivingBeings ;
+        rdfs:range    fc:LivingBeings .
+
+fc:hasMarriageDate  a       rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a marriage date."@en ;
+        rdfs:label          "has marriage date"@en ;
+        rdfs:subPropertyOf  fc:hasEventDate .
+
+fc:LivingBeings  a    rdfs:Class ;
+        rdfs:comment  "The class of living things."@en ;
+        rdfs:label    "Living beings"@en .
+
+fc:hasGrandMother  a        rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a grandmother. Subproperty of hasGrandMother."@en ;
+        rdfs:label          "has grand mother"@en ;
+        rdfs:subPropertyOf  fc:hasGrandParent .
+
+fc:hasUncle  a              rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an uncle. Subproperty of hasBloodRelation."@en ;
+        rdfs:label          "has uncle"@en ;
+        rdfs:subPropertyOf  fc:hasBloodRelation .
+
+fc:Marriage  a  rdfs:Class .
+
+fc:hasParent  a             rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a parent."@en ;
+        rdfs:label          "has parent"@en ;
+        rdfs:subPropertyOf  fc:hasAncestor .
+
+fc:hasSister  a             rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an a brother. Property describing that a living thing has an sister. Subproperty of hasSibling."@en ;
+        rdfs:label          "has sister"@en ;
+        rdfs:subPropertyOf  fc:hasSibling .
+
+fc:livesIn  a         rdf:Property ;
+        rdfs:comment  "Property describing that a living thing lives in a building or in a location."@en ;
+        rdfs:domain   fc:LivingBeings ;
+        rdfs:label    "lives in"@en .
+
+fcsmps:Marge  a     fc:Woman ;
+        rdfs:label  "Marge Simpson" .
+
+fc:studiesAt  a       rdf:Property ;
+        rdfs:comment  "Property describing that a living thing studies at a building or a location."@en ;
+        rdfs:domain   fc:LivingBeings ;
+        rdfs:label    "studies at"@en ;
+        rdfs:range    fc:Building .
+
+fc:hasGrandParent  a        rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a grandparent."@en ;
+        rdfs:label          "has grand parent"@en ;
+        rdfs:subPropertyOf  fc:hasAncestor .
+
+fc:hasMother  a             rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a mother. Subproperty of hasParent."@en ;
+        rdfs:label          "has mother"@en ;
+        rdfs:subPropertyOf  fc:hasParent .
+
+fc:Woman  a              rdfs:Class ;
+        rdfs:comment     "The class of female humans. Subclass of Human."@en ;
+        rdfs:label       "Woman"@en ;
+        rdfs:subClassOf  fc:Human .
+
+fc:hasWife  a               rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a wife. Subproperty of hasSpouse."@en ;
+        rdfs:label          "has wife"@en ;
+        rdfs:subPropertyOf  fc:hasSpouse .
+
+fc:owns  a            rdf:Property ;
+        rdfs:comment  "Property describing that a living thing owns a building or a location."@en ;
+        rdfs:domain   fc:LivingBeings ;
+        rdfs:label    "owns"@en ;
+        rdfs:range    fc:Building .
+
+fc:Maleness  a           rdfs:Class ;
+        rdfs:comment     "The class of the male gender. Subclass of GenderType."@en ;
+        rdfs:label       "Maleness"@en ;
+        rdfs:subClassOf  fc:GenderType .
+
+fc:hasEventDate  a   rdf:Property ;
+        rdfs:domain  fc:LivingBeings ;
+        rdfs:range   xsd:date .
+
+fc:hasAncestor  a           rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an ancestor."@en ;
+        rdfs:label          "has ancestor"@en ;
+        rdfs:subPropertyOf  fc:hasBloodRelation .
+
+fc:hasSisterInLaw  a        rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a sister in law. Subproperty of hasSiblingInLaw."@en ;
+        rdfs:label          "has sister in law"@en ;
+        rdfs:subPropertyOf  fc:hasSiblingInLaw .
+
+fc:hasBirthDate  a          rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a birth date."@en ;
+        rdfs:label          "has birth date"@en ;
+        rdfs:subPropertyOf  fc:hasEventDate .
+
+fc:Ownership  a  rdfs:Class .
+
+fc:Location  a        rdfs:Class ;
+        rdfs:comment  "The class of location"@en ;
+        rdfs:label    "Location"@en .
+
+fc:hasDeathDate  a          rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has death date."@en ;
+        rdfs:label          "has death date"@en ;
+        rdfs:subPropertyOf  fc:hasEventDate .
+
+fc:hasHusband  a            rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a husband. Subproperty of hasSpouse."@en ;
+        rdfs:label          "has husband"@en ;
+        rdfs:subPropertyOf  fc:hasSpouse .
+
+fc:Femaleness  a         rdfs:Class ;
+        rdfs:comment     "The class of the female gender. Subclass of GenderType."@en ;
+        rdfs:label       "Femaleness"@en ;
+        rdfs:subClassOf  fc:GenderType .
+
+fc:GenderType  a      rdfs:Class ;
+        rdfs:comment  "The class of genders. "@en ;
+        rdfs:label    "Gender type"@en .
+
+fc:hasSibling  a            rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a sibling. Subproperty of hasBloodRelation."@en ;
+        rdfs:label          "has sibling"@en ;
+        rdfs:subPropertyOf  fc:hasBloodRelation .
+
+fc:hasMotherInLaw  a        rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a mother in law. Subproperty of hasParentInLaw."@en ;
+        rdfs:label          "has mother in law"@en ;
+        rdfs:subPropertyOf  fc:hasParentInLaw .
+
+fc:hasDivorceDate  a        rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a divorce date."@en ;
+        rdfs:label          "has divorce date"@en ;
+        rdfs:subPropertyOf  fc:hasEventDate .
+
+fc:hasGender  a       rdf:Property ;
+        rdfs:comment  "Property describing that a living thing has a gender."@en ;
+        rdfs:domain   fc:LivingBeings ;
+        rdfs:label    "has gender"@en ;
+        rdfs:range    fc:GenderType .
+
+fc:hasGrandFather  a        rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a grandfather. Subproperty of hasGrandParent."@en ;
+        rdfs:label          "has grand father"@en ;
+        rdfs:subPropertyOf  fc:hasGrandParent .
+
+fc:hasBrother  a            rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an a brother. Property describing that a living thing has an aunt. Subproperty of hasSibling."@en ;
+        rdfs:label          "has brother"@en ;
+        rdfs:subPropertyOf  fc:hasSibling .
+
+fc:worksAt  a         rdf:Property ;
+        rdfs:comment  "Property describing that a living thing works at a building or at a location."@en ;
+        rdfs:domain   fc:LivingBeings ;
+        rdfs:label    "works at"@en ;
+        rdfs:range    fc:Building .
+
+fc:hasSpouse  a             rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a spouse. Subproperty of hasRelation."@en ;
+        rdfs:label          "has spouse"@en ;
+        rdfs:subPropertyOf  fc:hasRelation .
+
+fc:hasBloodRelation  a      rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a blood relation."@en ;
+        rdfs:label          "has blood relation"@en ;
+        rdfs:subPropertyOf  fc:hasRelation .
+
+fc:hasInlaw  a              rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an in law."@en ;
+        rdfs:label          "has inlaw"@en ;
+        rdfs:subPropertyOf  fc:hasRelation .
+
+fc:Human  a              rdfs:Class ;
+        rdfs:comment     "The class of humans. Subclass of LivingBeings."@en ;
+        rdfs:label       "Human"@en ;
+        rdfs:subClassOf  fc:LivingBeings .
+
+fc:Man  a                rdfs:Class ;
+        rdfs:comment     "The class of male humans. Subclass of Human"@en ;
+        rdfs:label       "Man"@en ;
+        rdfs:subClassOf  fc:Human .
+
+fc:hasFatherInLaw  a        rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a father in law. Subproperty of hasParentInLaw."@en ;
+        rdfs:label          "has father in law"@en ;
+        rdfs:subPropertyOf  fc:hasParentInLaw .
+
+fc:hasFather  a             rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a father. Subproperty of hasParent."@en ;
+        rdfs:label          "has father"@en ;
+        rdfs:subPropertyOf  fc:hasParent .
+
+fc:hasAunt  a               rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an aunt. Subproperty of hasBloodRelation."@en ;
+        rdfs:label          "has aunt"@en ;
+        rdfs:subPropertyOf  fc:hasBloodRelation .
+
+fc:Building  a        rdfs:Class ;
+        rdfs:comment  "The class of Buildings"@en ;
+        rdfs:label    "Building"@en .
+
+fc:hasParentInLaw  a        rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a parent in law. Subproperty of hasInLaw."@en ;
+        rdfs:label          "has parent in law"@en ;
+        rdfs:subPropertyOf  fc:hasInlaw .
+
+fc:hasSiblingInLaw  a       rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a sibling in law. Subproperty of hasInLaw."@en ;
+        rdfs:label          "has sibling in law"@en ;
+        rdfs:subPropertyOf  fc:hasInlaw .
+
+fc:hasPet  a                rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a pet."@en ;
+        rdfs:domain         fc:Human ;
+        rdfs:label          "has pet"@en ;
+        rdfs:range          fc:Animal ;
+        rdfs:subPropertyOf  fc:hasRelation .
+
+fc:hasBrotherInLaw  a       rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a brother in law. Subproperty of hasSiblingInLaw."@en ;
+        rdfs:label          "has brother in law"@en ;
+        rdfs:subPropertyOf  fc:hasSiblingInLaw .
+
+fc:Animal  a             rdfs:Class ;
+        rdfs:comment     "The class of Animals. Subclass of LivingBeings"@en ;
+        rdfs:label       "Animal"@en ;
+        rdfs:subClassOf  fc:LivingBeings .

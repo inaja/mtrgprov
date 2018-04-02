@@ -1,0 +1,394 @@
+@prefix : <http://www.tao-project.eu/ontologies#> .
+@prefix p: </> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cl: <http://purl.obolibrary.org/obo/cl#> .
+@prefix d0: <http://www.ontologydesignpatterns.org/ont/d0.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix di: <http://www.omg.org/spec/DD/20100524/DI> .
+@prefix dl: <http://ontology.dumontierlab.com/> .
+@prefix ex: <http://example.org/> .
+@prefix gd: <http://www.linkedgeodata.org/ontology/> .
+@prefix gn: <http://www.geonames.org/ontology/ontology_v3.1.rdf#> .
+@prefix go: <http://purl.obolibrary.org/obo/go#> .
+@prefix gs: <http://ontology.eil.utoronto.ca/govstat.owl#> .
+@prefix ic: <http://ontology.eil.utoronto.ca/icontact.owl#> .
+@prefix kp: <http://ontology.eil.utoronto.ca/kp#> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix ot: <http://www.w3.org/2006/time#> .
+@prefix p1: <#> .
+@prefix pr: <http://www.w3.org/ns/prov#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix sc: <http://schema.org/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix v1: <http://purl.org/goodrelations/v1#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wv: <http://www.wurvoc.org/vocabularies/WV/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix OPB: <http://bhi.washington.edu/OPB#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix cbx: <http://cybox.mitre.org/cybox_v1#> .
+@prefix coo: <http://purl.org/coo/ns#> .
+@prefix cve: <urn:us:gov:ic:cve> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dol: <http://www.omg.org/spec/DOL/DOL-terms/> .
+@prefix dsw: <http://purl.org/dsw/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix ext: <http://org.eclipse.bpmn2/ext> .
+@prefix fma: <http://purl.obolibrary.org/obo/fma#> .
+@prefix fmt: <http://www.w3.org/ns/formats/> .
+@prefix foo: <http://example.org/#> .
+@prefix gci: <http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation.owl#> .
+@prefix gvp: <http://vocab.getty.edu/ontology#> .
+@prefix ism: <urn:us:gov:ic:ism> .
+@prefix iso: <http://purl.org/iso25964/skos-thes#> .
+@prefix j.0: <http://nlp2rdf.lod2.eu/schema/string/> .
+@prefix j.1: <http://purl.org/dc/terms/> .
+@prefix j.2: <http://nlp2rdf.lod2.eu/schema/sso/> .
+@prefix j.3: <http://fise.iks-project.eu/ontology/> .
+@prefix j.4: <http://vocabulary.smartlogic.com/NFLT/Relationship#> .
+@prefix j.6: <http://spinrdf.org/spin#> .
+@prefix j.7: <http://vocabulary.smartlogic.com/NFLT/Metadata#Scope+> .
+@prefix kaa: <http://kenchreai.org/kaa/> .
+@prefix kno: <http://www.history.com/yoons> .
+@prefix leo: <http://linkedevents.org/ontology/> .
+@prefix ler: <http://linkedevents.org/resource/> .
+@prefix luc: <http://www.ontotext.com/owlim/lucene#> .
+@prefix mus: <http://data.doremus.org/ontology#> .
+@prefix net: <http://purl.org/net/> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core> .
+@prefix ns0: <http://www.univ-tours.fr/li/Prolex/Ontology#> .
+@prefix ns1: <http://linkedgeodata.org/ontology/> .
+@prefix ns2: <http://www.uniandes.web.semantica.ejemplo.org/voca#> .
+@prefix oad: <http://lod.xdams.org/reload/oad/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix org: <http://ontology.eil.utoronto.ca/organization.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pwn: <http://wordnet-rdf.princeton.edu/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rrx: <http://purl.org/r2rml-ext/> .
+@prefix srs: <http://srs/ontologies/srs.owl#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn> .
+@prefix swc: <http://data.semanticweb.org/ns/swc/ontology#> .
+@prefix tgn: <http://vocab.getty.edu/tgn/> .
+@prefix txn: <http://lod.taxonconcept.org/ontology/txn.owl#> .
+@prefix var: <urn:swrl#> .
+@prefix vin: <http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#> .
+@prefix vso: <http://purl.org/vso/ns#> .
+@prefix wdt: <http://wikidata.org/prop/direct/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix xsp: <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix code: <http://telegraphis.net/ontology/measurement/code#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix doid: <http://purl.obolibrary.org/obo/doid#> .
+@prefix dsig: <http://www.w3.org/2000/09/xmldsig#> .
+@prefix ecrm: <http://erlangen-crm.org/current/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix food: <http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#> .
+@prefix geoR: <http://www.mindswap.org/2003/owl/geo/geoRelations.owl#> .
+@prefix ical: <http://www.w3.org/2002/12/cal/ical#> .
+@prefix jasc: <http://www.semanticweb.org/ontologies/2010/11/jasc.skos#> .
+@prefix misc: <http://data.semanticweb.org/ns/misc#> .
+@prefix norm: <http://www.estrellaproject.org/lkif-core/norm.owl#> .
+@prefix obo1: <http://data.bioontology.org/metadata/obo/> .
+@prefix obo2: <http://purl.obolibrary.org/obo/> .
+@prefix obo3: <http://www.geneontology.org/formats/oboInOwl#http://purl.obolibrary.org/obo/> .
+@prefix onto: <http://hisgis.nl/ontologie/> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ptop: <http://www.ontotext.com/proton/protontop#> .
+@prefix purl: <http://purl.obolibrary.org#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix ralf: <http://lpis.csd.auth.gr/systems/dr-device/ralf/ralf.rdf#> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2008/05/skos#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix ulan: <http://vocab.getty.edu/ulan/> .
+@prefix umls: <http://bioportal.bioontology.org/ontologies/umls/> .
+@prefix undo: <https://w3id.org/akn/ontology/undo/> .
+@prefix unit: <http://qudt.org/vocab/unit#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix var2: <urn:http://www.w3.org/2003/11/swrl#> .
+@prefix vdpp: <http://data.lirmm.fr/ontologies/vdpp#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix voag: <http://voag.linkedmodel.org/voag#> .
+@prefix void: <https://www.w3.org/TR/void/> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix xapi: <https://w3id.org/xapi/ontology#> .
+@prefix yago: <http://dbpedia.org/class/yago/> .
+@prefix admin: <http://webns.net/mvcb/> .
+@prefix bpmn2: <http://www.omg.org/spec/BPMN/20100524/MODEL> .
+@prefix cfrep: <http://www.example.com/fedregs/cfrexecplans/> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix core2: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix dtype: <http://www.srdc.com.tr/ontmalizer#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix iswww: <http://sw.edu/#> .
+@prefix kaake: <http://kenchreai.org/kaa/ke/> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
+@prefix lrole: <http://www.estrellaproject.org/lkif-core/legal-role.owl#> .
+@prefix myont: <http://www.myontologies.net/lousou/2016/reptiles#> .
+@prefix ncicp: <http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#> .
+@prefix owl11: <http://www.w3.org/2006/12/owl11#> .
+@prefix pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
+@prefix quest: <http://obda.org/quest#> .
+@prefix regap: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix rules: <http://www.estrellaproject.org/lkif-core/lkif-rules.owl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix swrlx: <http://www.w3.org/2003/11/swrlx#> .
+@prefix tcmls: <http://www.example.com/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix umbel: <http://umbel.org/umbel/sc/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bibtex: <http://swrc.ontoware.org/ontology#> .
+@prefix bpmndi: <http://www.omg.org/spec/BPMN/20100524/DI> .
+@prefix camera: <http://www.xfront.com/owl/ontologies/camera/#> .
+@prefix coffee: <http://omilab.org/robotarm/examples/coffee/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix isocat: <http://www.isocat.org/ns/dcr.rdf#> .
+@prefix kaakcp: <http://kenchreai.org/kaa/kcp/> .
+@prefix kaakth: <http://kenchreai.org/kaa/kth/> .
+@prefix kaaont: <http://kenchreai.org/kaa/ontology/> .
+@prefix kaatyp: <http://kenchreai.org/kaa/typology/> .
+@prefix locont: <http://webmind.dico.unimi.it/CARE/locont.owl#> .
+@prefix metric: <http://www.telegraphis.net/ontology/measurement/metric#> .
+@prefix ombibo: <http://www.wurvoc.org/bibliography/om-1.8/> .
+@prefix omvmmi: <http://mmisw.org/ont/mmi/20081020/ontologyMetadata/> .
+@prefix person: <http://xmlns.com/nationalid/0.1/> .
+@prefix plaats: <http://hisgis.nl/plaats/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix schema: <http://schema.org/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix ubprop: <http://purl.obolibrary.org/obo/ubprop#> .
+@prefix unspsc: <http://ontoview.org/schema/unspsc/1#> .
+@prefix Concept: <http://www.selisproject.eu/terminology/Concept/> .
+@prefix Default: <http://www.selisproject.eu/terminology/Default/> .
+@prefix aat_rel: <http://vocab.getty.edu/aat/rel/> .
+@prefix aat_rev: <http://vocab.getty.edu/aat/rev/> .
+@prefix coffee2: <http://omilab.org/robotarm/examples/coffee#> .
+@prefix coffee3: <http://omilab.org/robotarm/examples/coffee/#> .
+@prefix company: <http://ontologies.citi.com/COMPANY#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix diamant: <http://www.ivdnt.org/diamant#> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix fedregs: <http://www.example.com/fedregs/> .
+@prefix geo-ont: <http://www.geonames.org/ontology#> .
+@prefix geo-pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix govstat: <http://ontology.eil.utoronto.ca/govstat.owl#> .
+@prefix laction: <http://www.estrellaproject.org/lkif-core/legal-action.owl#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix matinfo: <http://www.matinfo#> .
+@prefix ontogeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix pizzero: <http://www.semanticweb.org/vito/ontologies/pizzero#> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix ralf_ex: <http://lpis.csd.auth.gr/systems/dr-device/ralf/ralf_ex.rdf#> .
+@prefix stardog: <tag:stardog:api:> .
+@prefix tgn_rel: <http://vocab.getty.edu/tgn/rel/> .
+@prefix tgn_rev: <http://vocab.getty.edu/tgn/rev/> .
+@prefix wordnet: <http://xmlns.com/wordnet/1.6/> .
+@prefix wringer: <http://www.example.com/wringer> .
+@prefix aat_term: <http://vocab.getty.edu/aat/term/> .
+@prefix bio-onto: <http://cenpat-conicet.gob.ar/ontology/> .
+@prefix cidoccrm: <http://purl.org/NET/cidoc-crm/core#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix gvp_lang: <http://vocab.getty.edu/language/> .
+@prefix iso37120: <http://ontology.eil.utoronto.ca/ISO37120.owl#> .
+@prefix kaachron: <http://kenchreai.org/kaa/historical-chronology/> .
+@prefix magister: <magister#> .
+@prefix metadata: <http://data.bioontology.org/metadata/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix ontology: <http://dbpedia.org/ontology/> .
+@prefix otherOnt: <http://example.org/otherOntologies/families/> .
+@prefix owl-time: <http://www.w3.org/2006/time#> .
+@prefix owl11xml: <http://www.w3.org/2006/12/owl11-xml#> .
+@prefix patterns: <http://www.co-ode.org/patterns#> .
+@prefix property: <http://www.property#> .
+@prefix quantity: <http://www.telegraphis.net/ontology/measurement/quantity#> .
+@prefix qudt-1.1: <http://qudt.org/1.1/schema/qudt#> .
+@prefix relation: <http://www.selisproject.eu/terminology/relation/> .
+@prefix resource: <http://dbpedia.org/resource/> .
+@prefix security: <http://www.daml.org/services/owl-s/security/security.owl#> .
+@prefix swrc_ext: <http://www.cs.vu.nl/~mcaklein/onto/swrc_ext/2005/05#> .
+@prefix temporal: <http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#> .
+@prefix tgn_term: <http://vocab.getty.edu/tgn/term/> .
+@prefix timezone: <http://www.w3.org/2006/timezone#> .
+@prefix tutorial: <http://acrab.ics.muni.cz/ontologies/tutorial.owl#> .
+@prefix ulan_bio: <http://vocab.getty.edu/ulan/bio/> .
+@prefix ulan_rel: <http://vocab.getty.edu/ulan/rel/> .
+@prefix ulan_rev: <http://vocab.getty.edu/ulan/rev/> .
+@prefix wgs84pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wikidata: <http://www.wikidata.org/entity/> .
+@prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon#> .
+@prefix equipment: <http://www.semanticweb.org/ontologies/2010/11/jasc.skos#equipment/> .
+@prefix marinetlo: <http://www.ics.forth.gr/isl/ontology/MarineTLO/> .
+@prefix occurs_in: <http://purl.obolibrary.org/obo/BFO_0000066> .
+@prefix ulan_term: <http://vocab.getty.edu/ulan/term/> .
+@prefix aat_source: <http://vocab.getty.edu/aat/source/> .
+@prefix biositemap: <http://bioontology.org/ontologies/biositemap.owl#> .
+@prefix credential: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix enabled_by: <http://purl.obolibrary.org/obo/enabled_by> .
+@prefix geographis: <http://telegraphis.net/ontology/geography/geography#> .
+@prefix tgn_source: <http://vocab.getty.edu/tgn/source/> .
+@prefix ulan_event: <http://vocab.getty.edu/ulan/event/> .
+@prefix university: <http://university/ontologies/university.owl#> .
+@prefix wn20schema: <http://www.w3.org/2006/03/wn/wn20/schema/> .
+@prefix Catalogue-2: <http://www.oasis.org/ubl/schema/catalog/2/> .
+@prefix ThalassaSea: <http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#ThalassaSea&> .
+@prefix aat_contrib: <http://vocab.getty.edu/aat/contrib/> .
+@prefix ace_lexicon: <http://attempto.ifi.uzh.ch/ace_lexicon#> .
+@prefix measurement: <http://telegraphis.net/ontology/measurement/measurement#> .
+@prefix tgn_contrib: <http://vocab.getty.edu/tgn/contrib/> .
+@prefix ulan_source: <http://vocab.getty.edu/ulan/source/> .
+@prefix videojuegos: <http://lsi.ugr.es/joseluisgs/videojuegos.owl#> .
+@prefix modification: <http://www.estrellaproject.org/lkif-core/time-modification.owl#> .
+@prefix photography2: <http://www.co-ode.org/ontologies/photography/photography.owl#4> .
+@prefix photography3: <http://www.co-ode.org/ontologies/photography/photography.owl#35-55> .
+@prefix photography4: <http://www.co-ode.org/ontologies/photography/photography.owl#35> .
+@prefix photography5: <http://www.co-ode.org/ontologies/photography/photography.owl#120> .
+@prefix photography6: <http://www.co-ode.org/ontologies/photography/photography.owl#18> .
+@prefix photography7: <http://www.co-ode.org/ontologies/photography/photography.owl#80> .
+@prefix photography8: <http://www.co-ode.org/ontologies/photography/photography.owl#135> .
+@prefix photography9: <http://www.co-ode.org/ontologies/photography/photography.owl#20-100> .
+@prefix ulan_contrib: <http://vocab.getty.edu/ulan/contrib/> .
+@prefix aat_scopeNote: <http://vocab.getty.edu/aat/scopeNote/> .
+@prefix base_ontology: <http://www.onem2m.org/ontology/Base_Ontology/base_ontology#> .
+@prefix qudt-quantity: <http://qudt.org/vocab/quantity#> .
+@prefix qudt-unit-1.1: <http://qudt.org/1.1/vocab/unit#> .
+@prefix tgn_scopeNote: <http://vocab.getty.edu/tgn/scopeNote/> .
+@prefix aat_source_rev: <http://vocab.getty.edu/aat/source/rev/> .
+@prefix bibtex-entries: <http://www.csl.sri.com/users/denker/owl-sec/bibtex-entries.owl#> .
+@prefix ctd_vocabulary: <http://bio2rdf.org/drugbank_vocabulary:> .
+@prefix fibo-fnd-dt-fd: <http://www.omg.org/spec/EDMC-FIBO/FND/DatesAndTimes/FinancialDates/> .
+@prefix hotel-15072010: <http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#> .
+@prefix qudt-dimension: <http://qudt.org/vocab/dimension#> .
+@prefix tgn_source_rev: <http://vocab.getty.edu/tgn/source/rev/> .
+@prefix ulan_scopeNote: <http://vocab.getty.edu/ulan/scopeNote/> .
+@prefix user_behaviour: <http://www.sme-ecompass.eu/ontologies/2014/6/user_behaviour.owl#> .
+@prefix fibo-fnd-arr-id: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/IdentifiersAndIndices/> .
+@prefix fibo-fnd-org-fm: <http://www.omg.org/spec/EDMC-FIBO/FND/Organizations/FormalOrganizations/> .
+@prefix fibo-fnd-utl-av: <http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-fnd-utl-bt: <http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/> .
+@prefix hotel-150720102: <http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#8> .
+@prefix hotel-150720103: <http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#4> .
+@prefix hotel-150720104: <http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#12> .
+@prefix hotel-150720105: <http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#6> .
+@prefix hotel-150720106: <http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#10> .
+@prefix ulan_source_rev: <http://vocab.getty.edu/ulan/source/rev/> .
+@prefix fibo-fnd-aap-agt: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/Agents/> .
+@prefix fibo-fnd-aap-ppl: <http://www.omg.org/spec/EDMC-FIBO/FND/AgentsAndPeople/People/> .
+@prefix fibo-fnd-arr-doc: <http://www.omg.org/spec/EDMC-FIBO/FND/Arrangements/Documents/> .
+@prefix fibo-fnd-plc-adr: <http://www.omg.org/spec/EDMC-FIBO/FND/Places/Addresses/> .
+@prefix fibo-fnd-plc-cty: <http://www.omg.org/spec/EDMC-FIBO/FND/Places/Countries/> .
+@prefix fibo-fnd-plc-loc: <http://www.omg.org/spec/EDMC-FIBO/FND/Places/Locations/> .
+@prefix fibo-fnd-rel-rel: <http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/> .
+@prefix ontology_people1: <http://www.okkam.org/ontology_people1.owl#> .
+@prefix ontology_people2: <http://www.okkam.org/ontology_people2.owl#> .
+@prefix securityontology: <http://securityontology.sba-research.org/securityontology.owl#> .
+@prefix VideoGameOntology: <http://purl.org/net/VideoGameOntology#> .
+@prefix f_Quran_ontology5: <http://www.comp.leeds.ac.uk/ml10sma/files/2015/11/0.1/f_Quran_ontology5.owl#> .
+@prefix visitor_behaviour: <http://www.sme-ecompass.eu/ontologies/visitor_behaviour.owl#> .
+@prefix Ontology1415135201: <http://www.owl-ontologies.com/Ontology1415135201.owl#> .
+@prefix drugbank_vocabulary: <http://bio2rdf.org/drugbank_vocabulary:9> .
+@prefix untitled-ontology-9: <http://www.semanticweb.org/jalex/ontologies/2017/1/untitled-ontology-9#> .
+@prefix SmartHomeOntologyRDF: <file://localhost/D:/Darpan/Year 5 - MSc/Semister 3/Submission/MobileSmartHome/Webservice/SmartHomeOntologyRDF.owl#> .
+@prefix base_ontology-v0_9_0: <http://www.onem2m.org/ontology/Base_Ontology/base_ontology-v0_9_0#> .
+@prefix drugbank_vocabulary2: <http://bio2rdf.org/drugbank_vocabulary:63> .
+@prefix drugbank_vocabulary3: <http://bio2rdf.org/drugbank_vocabulary:328031204> .
+@prefix drugbank_vocabulary4: <http://bio2rdf.org/drugbank_vocabulary:38> .
+@prefix drugbank_vocabulary5: <http://bio2rdf.org/drugbank_vocabulary:0159511> .
+@prefix drugbank_vocabulary6: <http://bio2rdf.org/drugbank_vocabulary:1210774> .
+@prefix drugbank_vocabulary7: <http://bio2rdf.org/drugbank_vocabulary:5> .
+@prefix drugbank_vocabulary8: <http://bio2rdf.org/drugbank_vocabulary:69> .
+@prefix drugbank_vocabulary9: <http://bio2rdf.org/drugbank_vocabulary:2> .
+@prefix untitled-ontology-13: <http://www.semanticweb.org/g50-70/ontologies/2016/8/untitled-ontology-13#> .
+@prefix untitled-ontology-41: <http://www.semanticweb.org/nazifakarima/ontologies/2017/1/untitled-ontology-41#> .
+@prefix accommodation-04042012: <http://www.semanticweb.org/ontologies/2010/3/accommodation-04042012.owl#> .
+@prefix AfricanWildlifeOntology1: <file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#> .
+@prefix computationalenvironment: <http://dase.cs.wright.edu/ontologies/ComputationalEnvironment#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  age
+
+<age> rdf:type owl:AnnotationProperty .
+
+
+
+###  mum
+
+<mum> rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  Teenager
+
+<Teenager> rdf:type owl:Class .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  urn:x-hp:eg/colin
+
+<urn:x-hp:eg/colin> rdf:type <Teenager> ,
+                             owl:NamedIndividual ;
+                    
+                    <age> "13" ;
+                    
+                    <mum> <urn:x-hp:eg/rosy> .
+
+
+
+
+###  Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net

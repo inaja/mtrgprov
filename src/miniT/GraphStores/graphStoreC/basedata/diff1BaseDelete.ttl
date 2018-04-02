@@ -1,0 +1,345 @@
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#List>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+<http://www.w3.org/2000/01/rdf-schema#label>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/2000/01/rdf-schema#Class>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://www.w3.org/2000/01/rdf-schema#Resource>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#subject>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral>
+        a       <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/2000/01/rdf-schema#comment>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Literal> .
+
+<http://www.w3.org/2000/01/rdf-schema#range>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#object>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/2000/01/rdf-schema#domain>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://www.w3.org/2000/01/rdf-schema#Literal>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#first>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> .
+
+<http://www.w3.org/2000/01/rdf-schema#subClassOf>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://example.org/fcsmps#Abraham>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Abraham Simpson" ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Bill> , <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Chet> , <http://example.org/fcsmps#Hubert> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Yuma> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#School>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "School" ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#Building> , <http://example.org/fcsmps#School> .
+
+<http://example.org/fcsmps#Lisa>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Lisa Simpson" ;
+        <http://example.org/fictionalchars#hasAunt>
+                <http://example.org/fcsmps#Patty> , <http://example.org/fcsmps#Selma> ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Bart> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Homer> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fictionalchars#Abraham> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fictionalchars#Mona> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Marge> ;
+        <http://example.org/fictionalchars#hasPet>
+                <http://example.org/fcsmps#Snowball> ;
+        <http://example.org/fictionalchars#hasSister>
+                <http://example.org/fcsmps#Maggie> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Herbert> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#Homer>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Homer Simpson" ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Abraham> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fcsmps#Yuma> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Mona> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Bill> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Chet> , <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Hubert> ;
+        <http://example.org/fictionalchars#hasWife>
+                <http://example.org/fcsmps#Marge> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> ;
+        <http://example.org/fictionalchars#worksAt>
+                <http://example.org/fcsmps#SpringfieldPowerPlant> .
+
+<http://example.org/fcsmps#Marge>
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#hasHusband>
+                <http://example.org/fcsmps#Homer> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#Snowball>
+        a       <http://example.org/fictionalchars#Animal> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Snowball II" ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#SpringfieldElementary>
+        a       <http://example.org/fcsmps#School> , <http://example.org/fictionalchars#Building> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Springfield Elementary School" .
+
+<http://example.org/fcsmps#Mona>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Mona Simpson" ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#hasHusband>
+                <http://example.org/fcsmps#Abraham> .
+
+<http://example.org/fcsmps#SpringfieldPowerPlant>
+        a       <http://example.org/fcsmps#PowerPlant> , <http://example.org/fictionalchars#Building> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Nuclear Power Plant" .
+
+<http://example.org/fcsmps#Maggie>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Maggie Simpson" ;
+        <http://example.org/fictionalchars#hasAunt>
+                <http://example.org/fcsmps#Patty> , <http://example.org/fcsmps#Selma> ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Bart> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Homer> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fictionalchars#Abraham> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fictionalchars#Mona> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Marge> ;
+        <http://example.org/fictionalchars#hasSister>
+                <http://example.org/fcsmps#Lisa> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Herbert> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#Springfield>
+        a       <http://example.org/fictionalchars#Location> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Springfield" .
+
+<http://example.org/fcsmps#Bart>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bart Simpson" ;
+        <http://example.org/fictionalchars#hasAunt>
+                <http://example.org/fcsmps#Selma> , <http://example.org/fcsmps#Patty> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Homer> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fictionalchars#Abraham> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fictionalchars#Mona> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Marge> ;
+        <http://example.org/fictionalchars#hasPet>
+                <http://example.org/fcsmps#SantasHelper> ;
+        <http://example.org/fictionalchars#hasSister>
+                <http://example.org/fcsmps#Maggie> , <http://example.org/fcsmps#Lisa> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Herbert> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#SantasHelper>
+        a       <http://example.org/fictionalchars#Animal> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Santas Little Helper" ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#PowerPlant>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Power Plant" ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#Building> , <http://example.org/fcsmps#PowerPlant> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag> , <http://www.w3.org/2000/01/rdf-schema#Container> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq> , <http://www.w3.org/2000/01/rdf-schema#Container> .
+
+<http://www.w3.org/2000/01/rdf-schema#Datatype>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Datatype> , <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://example.org/fictionalchars#Building>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#Building> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt> , <http://www.w3.org/2000/01/rdf-schema#Container> .
+
+<http://www.w3.org/2000/01/rdf-schema#Container>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#Container> .
+
+<http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty> , <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+
+<http://www.w3.org/2000/01/rdf-schema#isDefinedBy>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> , <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+
+<http://www.w3.org/2000/01/rdf-schema#seeAlso>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2000/01/rdf-schema#Resource> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+
+<http://example.org/fictionalchars#Woman>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://example.org/fictionalchars#Man>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://example.org/fictionalchars#Location>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<http://example.org/fictionalchars#Animal>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> , <http://www.w3.org/2000/01/rdf-schema#Resource> .

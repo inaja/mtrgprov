@@ -1,0 +1,221 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fc:    <http://example.org/fictionalchars#> .
+@prefix fcsmps: <http://example.org/fcsmps#> .
+
+fc:hasRelation  a           rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasRelation .
+
+fcsmps:Abraham  a  fc:LivingBeings , rdfs:Resource , rdfs:Class , fc:Human .
+
+fc:hasMarriageDate  a       rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasMarriageDate .
+
+fc:LivingBeings  a       rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , fc:LivingBeings .
+
+fcsmps:Snowball  a  fc:LivingBeings , rdfs:Resource , rdfs:Class .
+
+fc:hasGrandMother  a        rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasGrandMother , fc:hasRelation , fc:hasBloodRelation , fc:hasAncestor .
+
+fc:hasUncle  a              rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasUncle , fc:hasRelation .
+
+fc:Marriage  a           rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , fc:Marriage .
+
+fc:hasParent  a             rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasParent , fc:hasRelation , fc:hasBloodRelation .
+
+fcsmps:Jacqueline  a    fc:LivingBeings , rdfs:Class , fc:Human , rdfs:Resource ;
+        fc:hasRelation  fcsmps:Clancy ;
+        fc:hasSpouse    fcsmps:Clancy .
+
+fc:hasSister  a             rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasSister , fc:hasRelation , fc:hasBloodRelation .
+
+fc:livesIn  a               rdfs:Resource ;
+        rdfs:subPropertyOf  fc:livesIn .
+
+fcsmps:Marge  a              rdfs:Resource , fc:Human , fc:LivingBeings , rdfs:Class ;
+        fc:hasAncestor       fcsmps:Jacqueline , fcsmps:Clancy ;
+        fc:hasBloodRelation  fcsmps:Patty , fcsmps:Selma , fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasParent         fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasRelation       fcsmps:Selma , fcsmps:Patty , fcsmps:Clancy , fcsmps:Jacqueline , fcsmps:Homer ;
+        fc:hasSibling        fcsmps:Selma , fcsmps:Patty ;
+        fc:hasSpouse         fcsmps:Homer .
+
+fc:Abraham  a   fc:LivingBeings , rdfs:Resource , rdfs:Class .
+
+fc:studiesAt  a             rdfs:Resource ;
+        rdfs:subPropertyOf  fc:studiesAt .
+
+fc:hasGrandParent  a        rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasGrandParent , fc:hasRelation , fc:hasBloodRelation .
+
+fc:hasMother  a             rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasMother , fc:hasRelation , fc:hasBloodRelation , fc:hasAncestor .
+
+fc:Woman  a              rdfs:Resource ;
+        rdfs:subClassOf  fc:Woman , fc:LivingBeings , rdfs:Class , rdfs:Resource .
+
+fc:hasWife  a               rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasWife , fc:hasRelation .
+
+fc:owns  a                  rdfs:Resource ;
+        rdfs:subPropertyOf  fc:owns .
+
+fc:Maleness  a           rdfs:Resource ;
+        rdfs:subClassOf  fc:Maleness , rdfs:Class , rdfs:Resource .
+
+fc:hasEventDate  a          rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasEventDate .
+
+fc:hasAncestor  a           rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasAncestor , fc:hasRelation .
+
+fc:hasSisterInLaw  a        rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasSisterInLaw , fc:hasRelation , fc:hasInlaw .
+
+fc:hasBirthDate  a          rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasBirthDate .
+
+fc:Ownership  a          rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , fc:Ownership .
+
+fcsmps:Clancy  a        rdfs:Resource , fc:Human , fc:LivingBeings , rdfs:Class ;
+        fc:hasRelation  fcsmps:Jacqueline ;
+        fc:hasSpouse    fcsmps:Jacqueline .
+
+fc:Location  a           rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , fc:Location .
+
+fc:hasDeathDate  a          rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasDeathDate .
+
+fc:hasHusband  a            rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasHusband , fc:hasRelation .
+
+fc:Femaleness  a         fc:GenderType , rdfs:Resource ;
+        rdfs:subClassOf  fc:Femaleness , rdfs:Class , rdfs:Resource .
+
+fc:Malesness  a  fc:GenderType , rdfs:Class , rdfs:Resource .
+
+xsd:date  a              rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , xsd:date .
+
+fc:GenderType  a         rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , fc:GenderType .
+
+fc:hasSibling  a            rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasSibling , fc:hasRelation .
+
+fc:hasMotherInLaw  a        rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasMotherInLaw , fc:hasRelation , fc:hasInlaw .
+
+fc:hasDivorceDate  a        rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasDivorceDate .
+
+fc:hasGender  a             rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasGender .
+
+fc:hasGrandFather  a        rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasGrandFather , fc:hasRelation , fc:hasBloodRelation , fc:hasAncestor .
+
+fcsmps:Homer  a              fc:Human , rdfs:Class , fc:LivingBeings , rdfs:Resource ;
+        fc:hasAncestor       fcsmps:Abraham ;
+        fc:hasBloodRelation  fcsmps:Abraham ;
+        fc:hasParent         fcsmps:Abraham ;
+        fc:hasRelation       fcsmps:Abraham , fcsmps:Marge ;
+        fc:hasSpouse         fcsmps:Marge .
+
+fc:hasBrother  a            rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasBrother , fc:hasRelation , fc:hasBloodRelation .
+
+fc:worksAt  a               rdfs:Resource ;
+        rdfs:subPropertyOf  fc:worksAt .
+
+fc:hasSpouse  a             rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasSpouse .
+
+fc:hasBloodRelation  a      rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasBloodRelation .
+
+fcsmps:SantasHelper  a  fc:LivingBeings , rdfs:Resource , rdfs:Class .
+
+fc:hasInlaw  a              rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasInlaw .
+
+fc:Human  a              rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , fc:Human , rdfs:Class .
+
+fc:Man  a                rdfs:Resource ;
+        rdfs:subClassOf  fc:Man , fc:LivingBeings , rdfs:Class , rdfs:Resource .
+
+fc:hasFatherInLaw  a        rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasFatherInLaw , fc:hasRelation , fc:hasInlaw .
+
+fcsmps:Lisa  a               fc:Human , fc:LivingBeings , rdfs:Class , rdfs:Resource ;
+        fc:hasAncestor       fcsmps:Homer , fc:Abraham , fcsmps:Marge ;
+        fc:hasBloodRelation  fcsmps:Homer , fcsmps:Marge , fcsmps:Maggie , fc:Abraham , fcsmps:Bart ;
+        fc:hasGrandParent    fc:Abraham ;
+        fc:hasParent         fcsmps:Marge , fcsmps:Homer ;
+        fc:hasRelation       fcsmps:Snowball , fcsmps:Homer , fcsmps:Marge , fc:Abraham , fcsmps:Bart , fcsmps:Maggie ;
+        fc:hasSibling        fcsmps:Bart , fcsmps:Maggie .
+
+fc:hasFather  a             rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasFather , fc:hasRelation , fc:hasBloodRelation , fc:hasAncestor .
+
+fcsmps:Maggie  a             fc:Human , fc:LivingBeings , rdfs:Class , rdfs:Resource ;
+        fc:hasAncestor       fcsmps:Marge , fc:Abraham , fcsmps:Homer ;
+        fc:hasBloodRelation  fc:Abraham , fcsmps:Marge , fcsmps:Bart , fcsmps:Lisa , fcsmps:Homer ;
+        fc:hasGrandParent    fc:Abraham ;
+        fc:hasParent         fcsmps:Marge , fcsmps:Homer ;
+        fc:hasRelation       fcsmps:Lisa , fcsmps:Marge , fc:Abraham , fcsmps:Homer , fcsmps:Bart ;
+        fc:hasSibling        fcsmps:Bart , fcsmps:Lisa .
+
+fcsmps:Patty  a              rdfs:Class , fc:Human , fc:LivingBeings , rdfs:Resource ;
+        fc:hasAncestor       fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasBloodRelation  fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasParent         fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasRelation       fcsmps:Clancy , fcsmps:Jacqueline .
+
+fc:hasAunt  a               rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasAunt , fc:hasRelation .
+
+fcsmps:Springfield  a  rdfs:Class , rdfs:Resource .
+
+fc:Building  a           rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , fc:Building .
+
+fc:hasParentInLaw  a        rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasParentInLaw , fc:hasRelation .
+
+fc:hasSiblingInLaw  a       rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasSiblingInLaw , fc:hasRelation .
+
+fc:hasPet  a                rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasPet .
+
+fc:hasBrotherInLaw  a       rdfs:Resource ;
+        rdfs:subPropertyOf  fc:hasBrotherInLaw , fc:hasRelation , fc:hasInlaw .
+
+fcsmps:Selma  a              fc:LivingBeings , fc:Human , rdfs:Class , rdfs:Resource ;
+        fc:hasAncestor       fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasBloodRelation  fcsmps:Jacqueline , fcsmps:Clancy ;
+        fc:hasParent         fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasRelation       fcsmps:Jacqueline , fcsmps:Clancy .
+
+fc:Animal  a             rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , fc:Animal , rdfs:Class .
+
+fcsmps:Bart  a               rdfs:Resource , fc:LivingBeings , fc:Human , rdfs:Class ;
+        fc:hasAncestor       fcsmps:Homer , fcsmps:Marge , fc:Abraham ;
+        fc:hasBloodRelation  fcsmps:Marge , fcsmps:Maggie , fc:Abraham , fcsmps:Homer , fcsmps:Lisa ;
+        fc:hasGrandParent    fc:Abraham ;
+        fc:hasParent         fcsmps:Homer , fcsmps:Marge ;
+        fc:hasRelation       fcsmps:Homer , fcsmps:Marge , fcsmps:Maggie , fcsmps:Lisa , fcsmps:SantasHelper , fc:Abraham ;
+        fc:hasSibling        fcsmps:Maggie , fcsmps:Lisa .

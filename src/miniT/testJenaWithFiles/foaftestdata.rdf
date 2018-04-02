@@ -1,0 +1,39 @@
+<rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:admin="http://webns.net/mvcb/">
+<foaf:PersonalProfileDocument rdf:about="">
+  <foaf:maker rdf:resource="#me"/>
+  <foaf:primaryTopic rdf:resource="#me"/>
+  <admin:generatorAgent rdf:resource="http://www.ldodds.com/foaf/foaf-a-matic"/>
+  <admin:errorReportsTo rdf:resource="mailto:leigh@ldodds.com"/>
+</foaf:PersonalProfileDocument>
+<foaf:Person rdf:ID="me">
+<foaf:name>Iman Naja</foaf:name>
+<foaf:title>Miss</foaf:title>
+<foaf:givenname>Iman</foaf:givenname>
+<foaf:family_name>Naja</foaf:family_name>
+<foaf:nick>ammoun</foaf:nick>
+<foaf:mbox_sha1sum>086858f39ca97ec34b5e5a2f09a870a7c820bdb6</foaf:mbox_sha1sum>
+<foaf:homepage rdf:resource="iman-naja.com"/>
+<foaf:phone rdf:resource="tel:7449740502"/>
+<foaf:workplaceHomepage rdf:resource="http://www.ecs.soton.ac.uk"/>
+<foaf:workInfoHomepage rdf:resource="http://www.ecs.soton.ac.uk/people/izn1g08"/>
+<foaf:schoolHomepage rdf:resource="http://www.ecs.soton.ac.uk"/>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>John</foaf:name>
+<foaf:mbox_sha1sum>e170c7e1b070cde4b5b6991df603536f6ad559e4</foaf:mbox_sha1sum>
+<rdfs:seeAlso rdf:resource="Smith"/></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Smith</foaf:name>
+<foaf:mbox_sha1sum>238b9232b6cf819ed9b8d465af95836431acb5bc</foaf:mbox_sha1sum>
+<rdfs:seeAlso rdf:resource="Joe"/></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Joe</foaf:name>
+<foaf:mbox_sha1sum>537dfd87942cb46b22bfcf83f91c287c7d92b937</foaf:mbox_sha1sum>
+<rdfs:seeAlso rdf:resource="John"/></foaf:Person></foaf:knows></foaf:Person>
+</rdf:RDF>

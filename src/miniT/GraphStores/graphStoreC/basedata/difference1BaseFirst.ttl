@@ -1,0 +1,172 @@
+<http://example.org/fcsmps#Abraham>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Abraham Simpson" ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Bill> , <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Chet> , <http://example.org/fcsmps#Hubert> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Yuma> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#School>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "School" ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#Building> .
+
+<http://example.org/fcsmps#Lisa>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Lisa Simpson" ;
+        <http://example.org/fictionalchars#hasAunt>
+                <http://example.org/fcsmps#Patty> , <http://example.org/fcsmps#Selma> ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Bart> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Homer> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fictionalchars#Abraham> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fictionalchars#Mona> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Marge> ;
+        <http://example.org/fictionalchars#hasPet>
+                <http://example.org/fcsmps#Snowball> ;
+        <http://example.org/fictionalchars#hasSister>
+                <http://example.org/fcsmps#Maggie> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Herbert> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#Homer>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Homer Simpson" ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Abraham> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fcsmps#Yuma> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Mona> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Bill> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Chet> , <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Hubert> ;
+        <http://example.org/fictionalchars#hasWife>
+                <http://example.org/fcsmps#Marge> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> ;
+        <http://example.org/fictionalchars#worksAt>
+                <http://example.org/fcsmps#SpringfieldPowerPlant> .
+
+<http://example.org/fcsmps#Marge>
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#hasHusband>
+                <http://example.org/fcsmps#Homer> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#Snowball>
+        a       <http://example.org/fictionalchars#Animal> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Snowball II" ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#SpringfieldElementary>
+        a       <http://example.org/fcsmps#School> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Springfield Elementary School" .
+
+<http://example.org/fcsmps#Mona>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Mona Simpson" ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#hasHusband>
+                <http://example.org/fcsmps#Abraham> .
+
+<http://example.org/fcsmps#SpringfieldPowerPlant>
+        a       <http://example.org/fcsmps#PowerPlant> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Nuclear Power Plant" .
+
+<http://example.org/fcsmps#Maggie>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Maggie Simpson" ;
+        <http://example.org/fictionalchars#hasAunt>
+                <http://example.org/fcsmps#Patty> , <http://example.org/fcsmps#Selma> ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Bart> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Homer> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fictionalchars#Abraham> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fictionalchars#Mona> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Marge> ;
+        <http://example.org/fictionalchars#hasSister>
+                <http://example.org/fcsmps#Lisa> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Herbert> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#Springfield>
+        a       <http://example.org/fictionalchars#Location> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Springfield" .
+
+<http://example.org/fcsmps#Bart>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bart Simpson" ;
+        <http://example.org/fictionalchars#hasAunt>
+                <http://example.org/fcsmps#Selma> , <http://example.org/fcsmps#Patty> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Homer> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fictionalchars#Abraham> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fictionalchars#Mona> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Marge> ;
+        <http://example.org/fictionalchars#hasPet>
+                <http://example.org/fcsmps#SantasHelper> ;
+        <http://example.org/fictionalchars#hasSister>
+                <http://example.org/fcsmps#Maggie> , <http://example.org/fcsmps#Lisa> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Herbert> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#SantasHelper>
+        a       <http://example.org/fictionalchars#Animal> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Santas Little Helper" ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#PowerPlant>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Power Plant" ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#Building> .

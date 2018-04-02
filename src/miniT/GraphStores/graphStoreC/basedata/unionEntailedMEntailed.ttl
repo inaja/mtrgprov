@@ -1,0 +1,588 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fcsmps: <http://example.org/fcsmps#> .
+@prefix fc:    <http://example.org/fictionalchars#> .
+
+rdf:rest  a                 rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:List ;
+        rdfs:range          rdf:List ;
+        rdfs:subPropertyOf  rdf:rest .
+
+rdf:List  a              rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , rdf:List .
+
+rdfs:Container  a        rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdfs:Resource , rdfs:Container .
+
+rdf:predicate  a            rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement ;
+        rdfs:subPropertyOf  rdf:predicate .
+
+rdf:Property  a          rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , rdf:Property .
+
+rdfs:label  a               rdfs:Resource , rdf:Property ;
+        rdfs:range          rdfs:Literal ;
+        rdfs:subPropertyOf  rdfs:label .
+
+rdf:Statement  a         rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , rdf:Statement .
+
+rdfs:Class  a            rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , rdfs:Class .
+
+rdf:type  a                 rdfs:Resource , rdf:Property ;
+        rdfs:range          rdfs:Class ;
+        rdfs:subPropertyOf  rdf:type .
+
+rdfs:Resource  a         rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource .
+
+rdf:subject  a              rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement ;
+        rdfs:subPropertyOf  rdf:subject .
+
+rdf:XMLLiteral  a        rdfs:Datatype , rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdfs:Resource , rdf:XMLLiteral .
+
+rdfs:comment  a             rdfs:Resource , rdf:Property ;
+        rdfs:range          rdfs:Literal ;
+        rdfs:subPropertyOf  rdfs:comment .
+
+rdfs:range  a               rdfs:Resource , rdf:Property ;
+        rdfs:domain         rdf:Property ;
+        rdfs:range          rdfs:Class ;
+        rdfs:subPropertyOf  rdfs:range .
+
+rdfs:subPropertyOf  a       rdfs:Resource , rdf:Property ;
+        rdfs:domain         rdf:Property ;
+        rdfs:range          rdf:Property ;
+        rdfs:subPropertyOf  rdfs:subPropertyOf .
+
+rdf:object  a               rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:Statement ;
+        rdfs:subPropertyOf  rdf:object .
+
+rdf:nil  a      rdf:List , rdfs:Resource .
+
+rdfs:domain  a              rdfs:Resource , rdf:Property ;
+        rdfs:domain         rdf:Property ;
+        rdfs:range          rdfs:Class ;
+        rdfs:subPropertyOf  rdfs:domain .
+
+rdfs:Literal  a          rdfs:Class , rdfs:Resource ;
+        rdfs:subClassOf  rdfs:Resource , rdfs:Literal .
+
+rdf:first  a                rdf:Property , rdfs:Resource ;
+        rdfs:domain         rdf:List ;
+        rdfs:subPropertyOf  rdf:first .
+
+rdfs:subClassOf  a          rdfs:Resource , rdf:Property ;
+        rdfs:domain         rdfs:Class ;
+        rdfs:range          rdfs:Class ;
+        rdfs:subPropertyOf  rdfs:subClassOf .
+
+fc:hasRelation  a           rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a relation with another living thing."@en ;
+        rdfs:domain         fc:LivingBeings ;
+        rdfs:range          fc:LivingBeings ;
+        rdfs:subPropertyOf  fc:hasRelation .
+
+fcsmps:Abraham  a            fc:Human , rdfs:Resource , fc:LivingBeings , fc:Man ;
+        rdfs:label           "Abraham Simpson" ;
+        fc:hasAncestor       fcsmps:Orville , fcsmps:Yuma ;
+        fc:hasBloodRelation  fcsmps:Bill , fcsmps:Yuma , fcsmps:Tyrone , fcsmps:Hubert , fcsmps:Cyrus , fcsmps:Orville , fcsmps:Chet ;
+        fc:hasBrother        fcsmps:Bill , fcsmps:Cyrus , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Hubert ;
+        fc:hasFather         fcsmps:Orville ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasMother         fcsmps:Yuma ;
+        fc:hasParent         fcsmps:Orville , fcsmps:Yuma ;
+        fc:hasRelation       fcsmps:Bill , fcsmps:Hubert , fcsmps:Chet , fcsmps:Yuma , fcsmps:Tyrone , fcsmps:Orville , fcsmps:Cyrus ;
+        fc:hasSibling        fcsmps:Tyrone , fcsmps:Bill , fcsmps:Hubert , fcsmps:Cyrus , fcsmps:Chet ;
+        fc:livesIn           fcsmps:Springfield .
+
+fc:Mona  a      rdfs:Resource , fc:LivingBeings .
+
+fc:hasMarriageDate  a       rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a marriage date."@en ;
+        rdfs:label          "has marriage date"@en ;
+        rdfs:subPropertyOf  fc:hasMarriageDate , fc:hasEventDate .
+
+fcsmps:PowerPlant  a     rdfs:Resource , rdfs:Class ;
+        rdfs:label       "Power Plant" ;
+        rdfs:subClassOf  rdfs:Resource , fcsmps:PowerPlant , fc:Building .
+
+fc:LivingBeings  a       rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of living things."@en ;
+        rdfs:label       "Living beings"@en ;
+        rdfs:subClassOf  fc:LivingBeings , rdfs:Resource .
+
+fcsmps:Snowball  a  rdfs:Resource , fc:LivingBeings , fc:Animal ;
+        rdfs:label  "Snowball II" ;
+        fc:livesIn  fcsmps:Springfield .
+
+fc:hasGrandMother  a        rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a grandmother. Subproperty of hasGrandMother."@en ;
+        rdfs:label          "has grand mother"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasBloodRelation , fc:hasAncestor , fc:hasGrandMother , fc:hasGrandParent .
+
+fc:hasUncle  a              rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an uncle. Subproperty of hasBloodRelation."@en ;
+        rdfs:label          "has uncle"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasUncle , fc:hasBloodRelation .
+
+fcsmps:SpringfieldPowerPlant
+        a           rdfs:Resource , fc:Building , fcsmps:PowerPlant ;
+        rdfs:label  "Nuclear Power Plant" .
+
+rdf:Alt  a               rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdfs:Container , rdf:Alt , rdfs:Resource .
+
+fc:hasParent  a             rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a parent."@en ;
+        rdfs:label          "has parent"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasBloodRelation , fc:hasParent , fc:hasAncestor .
+
+fc:Marriage  a           rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  fc:Marriage , rdfs:Resource .
+
+fc:hasSister  a             rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an a brother. Property describing that a living thing has an sister. Subproperty of hasSibling."@en ;
+        rdfs:label          "has sister"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasBloodRelation , fc:hasSister , fc:hasSibling .
+
+fcsmps:Hubert  a             fc:Man , rdfs:Resource , fc:LivingBeings , fc:Human ;
+        rdfs:label           "Hubert Simpson" ;
+        fc:hasAncestor       fcsmps:Yuma , fcsmps:Orville ;
+        fc:hasBloodRelation  fcsmps:Abraham , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Orville , fcsmps:Yuma , fcsmps:Bill , fcsmps:Cyrus ;
+        fc:hasBrother        fcsmps:Chet , fcsmps:Tyrone , fcsmps:Bill , fcsmps:Cyrus , fcsmps:Abraham ;
+        fc:hasFather         fcsmps:Orville ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasMother         fcsmps:Yuma ;
+        fc:hasParent         fcsmps:Orville , fcsmps:Yuma ;
+        fc:hasRelation       fcsmps:Abraham , fcsmps:Orville , fcsmps:Yuma , fcsmps:Cyrus , fcsmps:Chet , fcsmps:Bill , fcsmps:Tyrone ;
+        fc:hasSibling        fcsmps:Abraham , fcsmps:Cyrus , fcsmps:Bill , fcsmps:Chet , fcsmps:Tyrone .
+
+rdf:Seq  a               rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdfs:Container , rdf:Seq , rdfs:Resource .
+
+fc:livesIn  a               rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing lives in a building or in a location."@en ;
+        rdfs:domain         fc:LivingBeings ;
+        rdfs:label          "lives in"@en ;
+        rdfs:subPropertyOf  fc:livesIn .
+
+fcsmps:Marge  a              rdfs:Resource , fc:Woman , fc:Human , fc:LivingBeings ;
+        rdfs:label           "Marge Simpson" ;
+        fc:hasBloodRelation  fcsmps:Patty , fcsmps:Selma ;
+        fc:hasGender         fc:Femaleness ;
+        fc:hasHusband        fcsmps:Homer ;
+        fc:hasRelation       fcsmps:Selma , fcsmps:Patty , fcsmps:Homer ;
+        fc:hasSibling        fcsmps:Selma , fcsmps:Patty ;
+        fc:hasSister         fcsmps:Patty , fcsmps:Selma ;
+        fc:hasSpouse         fcsmps:Homer ;
+        fc:livesIn           fcsmps:Springfield .
+
+rdfs:ContainerMembershipProperty
+        a                rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdf:Property , rdfs:ContainerMembershipProperty , rdfs:Resource .
+
+fc:Abraham  a   rdfs:Resource , fc:LivingBeings .
+
+fc:studiesAt  a             rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing studies at a building or a location."@en ;
+        rdfs:domain         fc:LivingBeings ;
+        rdfs:label          "studies at"@en ;
+        rdfs:range          fc:Building ;
+        rdfs:subPropertyOf  fc:studiesAt .
+
+fc:hasGrandParent  a        rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a grandparent."@en ;
+        rdfs:label          "has grand parent"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasBloodRelation , fc:hasGrandParent , fc:hasAncestor .
+
+fc:hasMother  a             rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a mother. Subproperty of hasParent."@en ;
+        rdfs:label          "has mother"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasBloodRelation , fc:hasAncestor , fc:hasMother , fc:hasParent .
+
+fc:Woman  a              rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of female humans. Subclass of Human."@en ;
+        rdfs:label       "Woman"@en ;
+        rdfs:subClassOf  rdfs:Resource , fc:LivingBeings , fc:Woman , fc:Human .
+
+fc:hasWife  a               rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a wife. Subproperty of hasSpouse."@en ;
+        rdfs:label          "has wife"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasWife , fc:hasSpouse .
+
+rdfs:isDefinedBy  a         rdfs:Resource , rdf:Property ;
+        rdfs:subPropertyOf  rdfs:seeAlso , rdfs:isDefinedBy .
+
+fc:owns  a                  rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing owns a building or a location."@en ;
+        rdfs:domain         fc:LivingBeings ;
+        rdfs:label          "owns"@en ;
+        rdfs:range          fc:Building ;
+        rdfs:subPropertyOf  fc:owns .
+
+fc:Maleness  a           rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of the male gender. Subclass of GenderType."@en ;
+        rdfs:label       "Maleness"@en ;
+        rdfs:subClassOf  rdfs:Resource , fc:Maleness , fc:GenderType .
+
+fc:hasEventDate  a          rdfs:Resource , rdf:Property ;
+        rdfs:domain         fc:LivingBeings ;
+        rdfs:range          xsd:date ;
+        rdfs:subPropertyOf  fc:hasEventDate .
+
+fc:hasAncestor  a           rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an ancestor."@en ;
+        rdfs:label          "has ancestor"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasAncestor , fc:hasBloodRelation .
+
+fc:hasBirthDate  a          rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a birth date."@en ;
+        rdfs:label          "has birth date"@en ;
+        rdfs:subPropertyOf  fc:hasBirthDate , fc:hasEventDate .
+
+fc:hasSisterInLaw  a        rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a sister in law. Subproperty of hasSiblingInLaw."@en ;
+        rdfs:label          "has sister in law"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasInlaw , fc:hasSisterInLaw , fc:hasSiblingInLaw .
+
+rdf:Bag  a               rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdfs:Container , rdf:Bag , rdfs:Resource .
+
+fc:Ownership  a          rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  fc:Ownership , rdfs:Resource .
+
+fc:Location  a           rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of location"@en ;
+        rdfs:label       "Location"@en ;
+        rdfs:subClassOf  fc:Location , rdfs:Resource .
+
+fc:hasDeathDate  a          rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has death date."@en ;
+        rdfs:label          "has death date"@en ;
+        rdfs:subPropertyOf  fc:hasDeathDate , fc:hasEventDate .
+
+fc:hasHusband  a            rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a husband. Subproperty of hasSpouse."@en ;
+        rdfs:label          "has husband"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasHusband , fc:hasSpouse .
+
+fc:Femaleness  a         rdfs:Resource , fc:GenderType , rdfs:Class ;
+        rdfs:comment     "The class of the female gender. Subclass of GenderType."@en ;
+        rdfs:label       "Femaleness"@en ;
+        rdfs:subClassOf  rdfs:Resource , fc:Femaleness , fc:GenderType .
+
+fc:Malesness  a  rdfs:Resource , fc:GenderType .
+
+fcsmps:Chet  a               rdfs:Resource , fc:LivingBeings , fc:Man , fc:Human ;
+        rdfs:label           "Chet Simpson" ;
+        fc:hasAncestor       fcsmps:Orville , fcsmps:Yuma ;
+        fc:hasBloodRelation  fcsmps:Cyrus , fcsmps:Orville , fcsmps:Bill , fcsmps:Abraham , fcsmps:Tyrone , fcsmps:Yuma , fcsmps:Hubert ;
+        fc:hasBrother        fcsmps:Cyrus , fcsmps:Tyrone , fcsmps:Hubert , fcsmps:Abraham , fcsmps:Bill ;
+        fc:hasFather         fcsmps:Orville ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasMother         fcsmps:Yuma ;
+        fc:hasParent         fcsmps:Yuma , fcsmps:Orville ;
+        fc:hasRelation       fcsmps:Yuma , fcsmps:Bill , fcsmps:Hubert , fcsmps:Tyrone , fcsmps:Orville , fcsmps:Abraham , fcsmps:Cyrus ;
+        fc:hasSibling        fcsmps:Abraham , fcsmps:Bill , fcsmps:Tyrone , fcsmps:Cyrus , fcsmps:Hubert .
+
+xsd:date  a              rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  xsd:date , rdfs:Resource .
+
+fc:hasDivorceDate  a        rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a divorce date."@en ;
+        rdfs:label          "has divorce date"@en ;
+        rdfs:subPropertyOf  fc:hasDivorceDate , fc:hasEventDate .
+
+fc:hasSibling  a            rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a sibling. Subproperty of hasBloodRelation."@en ;
+        rdfs:label          "has sibling"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasSibling , fc:hasBloodRelation .
+
+fc:hasMotherInLaw  a        rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a mother in law. Subproperty of hasParentInLaw."@en ;
+        rdfs:label          "has mother in law"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasInlaw , fc:hasMotherInLaw , fc:hasParentInLaw .
+
+fc:GenderType  a         rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of genders. "@en ;
+        rdfs:label       "Gender type"@en ;
+        rdfs:subClassOf  fc:GenderType , rdfs:Resource .
+
+fc:hasGender  a             rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a gender."@en ;
+        rdfs:domain         fc:LivingBeings ;
+        rdfs:label          "has gender"@en ;
+        rdfs:range          fc:GenderType ;
+        rdfs:subPropertyOf  fc:hasGender .
+
+fc:hasGrandFather  a        rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a grandfather. Subproperty of hasGrandParent."@en ;
+        rdfs:label          "has grand father"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasBloodRelation , fc:hasAncestor , fc:hasGrandFather , fc:hasGrandParent .
+
+fcsmps:Homer  a              fc:Human , fc:LivingBeings , rdfs:Resource , fc:Man ;
+        rdfs:label           "Homer Simpson" ;
+        fc:hasAncestor       fcsmps:Abraham , fcsmps:Yuma , fcsmps:Orville , fcsmps:Mona ;
+        fc:hasBloodRelation  fcsmps:Cyrus , fcsmps:Mona , fcsmps:Abraham , fcsmps:Bill , fcsmps:Hubert , fcsmps:Orville , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Yuma ;
+        fc:hasFather         fcsmps:Abraham ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasGrandFather    fcsmps:Orville ;
+        fc:hasGrandMother    fcsmps:Yuma ;
+        fc:hasGrandParent    fcsmps:Orville , fcsmps:Yuma ;
+        fc:hasMother         fcsmps:Mona ;
+        fc:hasParent         fcsmps:Abraham , fcsmps:Mona ;
+        fc:hasRelation       fcsmps:Hubert , fcsmps:Abraham , fcsmps:Mona , fcsmps:Yuma , fcsmps:Marge , fcsmps:Chet , fcsmps:Orville , fcsmps:Cyrus , fcsmps:Tyrone , fcsmps:Bill ;
+        fc:hasSpouse         fcsmps:Marge ;
+        fc:hasUncle          fcsmps:Hubert , fcsmps:Chet , fcsmps:Tyrone , fcsmps:Bill , fcsmps:Cyrus ;
+        fc:hasWife           fcsmps:Marge ;
+        fc:livesIn           fcsmps:Springfield ;
+        fc:worksAt           fcsmps:SpringfieldPowerPlant .
+
+fc:hasBrother  a            rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an a brother. Property describing that a living thing has an aunt. Subproperty of hasSibling."@en ;
+        rdfs:label          "has brother"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasBloodRelation , fc:hasBrother , fc:hasSibling .
+
+fc:worksAt  a               rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing works at a building or at a location."@en ;
+        rdfs:domain         fc:LivingBeings ;
+        rdfs:label          "works at"@en ;
+        rdfs:range          fc:Building ;
+        rdfs:subPropertyOf  fc:worksAt .
+
+fcsmps:Rita  a        fc:Human , rdfs:Resource , fc:LivingBeings , fc:Woman ;
+        rdfs:label    "Rita LaFleur Simpson" ;
+        fc:hasGender  fc:Femaleness .
+
+fc:hasBloodRelation  a      rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a blood relation."@en ;
+        rdfs:label          "has blood relation"@en ;
+        rdfs:subPropertyOf  fc:hasBloodRelation , fc:hasRelation .
+
+fc:hasSpouse  a             rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a spouse. Subproperty of hasRelation."@en ;
+        rdfs:label          "has spouse"@en ;
+        rdfs:subPropertyOf  fc:hasSpouse , fc:hasRelation .
+
+fcsmps:SantasHelper  a  rdfs:Resource , fc:LivingBeings , fc:Animal ;
+        rdfs:label  "Santas Little Helper" ;
+        fc:livesIn  fcsmps:Springfield .
+
+fc:hasInlaw  a              rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an in law."@en ;
+        rdfs:label          "has inlaw"@en ;
+        rdfs:subPropertyOf  fc:hasInlaw , fc:hasRelation .
+
+fcsmps:Mona  a          fc:Human , rdfs:Resource , fc:LivingBeings , fc:Woman ;
+        rdfs:label      "Mona Simpson" ;
+        fc:hasGender    fc:Femaleness ;
+        fc:hasHusband   fcsmps:Abraham ;
+        fc:hasRelation  fcsmps:Abraham ;
+        fc:hasSpouse    fcsmps:Abraham .
+
+fc:Human  a              rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of humans. Subclass of LivingBeings."@en ;
+        rdfs:label       "Human"@en ;
+        rdfs:subClassOf  fc:Human , fc:LivingBeings , rdfs:Resource .
+
+fc:Man  a                rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of male humans. Subclass of Human"@en ;
+        rdfs:label       "Man"@en ;
+        rdfs:subClassOf  rdfs:Resource , fc:LivingBeings , fc:Man , fc:Human .
+
+fc:hasFatherInLaw  a        rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a father in law. Subproperty of hasParentInLaw."@en ;
+        rdfs:label          "has father in law"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasInlaw , fc:hasFatherInLaw , fc:hasParentInLaw .
+
+fcsmps:Patty  a       fc:Human , fc:Woman , rdfs:Resource , fc:LivingBeings ;
+        rdfs:label    "Patty Bouvier" ;
+        fc:hasGender  fc:Femaleness ;
+        fc:livesIn    fcsmps:Springfield .
+
+fcsmps:Lisa  a               fc:Human , rdfs:Resource , fc:Woman , fc:LivingBeings ;
+        rdfs:label           "Lisa Simpson" ;
+        fc:hasAncestor       fc:Abraham , fc:Mona , fcsmps:Marge , fcsmps:Homer ;
+        fc:hasAunt           fcsmps:Selma , fcsmps:Patty ;
+        fc:hasBloodRelation  fcsmps:Patty , fcsmps:Maggie , fcsmps:Marge , fcsmps:Bart , fc:Mona , fc:Abraham , fcsmps:Herbert , fcsmps:Homer , fcsmps:Selma ;
+        fc:hasBrother        fcsmps:Bart ;
+        fc:hasFather         fcsmps:Homer ;
+        fc:hasGender         fc:Femaleness ;
+        fc:hasGrandFather    fc:Abraham ;
+        fc:hasGrandMother    fc:Mona ;
+        fc:hasGrandParent    fc:Mona , fc:Abraham ;
+        fc:hasMother         fcsmps:Marge ;
+        fc:hasParent         fcsmps:Homer , fcsmps:Marge ;
+        fc:hasPet            fcsmps:Snowball ;
+        fc:hasRelation       fcsmps:Marge , fcsmps:Selma , fcsmps:Homer , fc:Mona , fc:Abraham , fcsmps:Snowball , fcsmps:Maggie , fcsmps:Herbert , fcsmps:Bart , fcsmps:Patty ;
+        fc:hasSibling        fcsmps:Bart , fcsmps:Maggie ;
+        fc:hasSister         fcsmps:Maggie ;
+        fc:hasUncle          fcsmps:Herbert ;
+        fc:livesIn           fcsmps:Springfield .
+
+fc:hasFather  a             rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a father. Subproperty of hasParent."@en ;
+        rdfs:label          "has father"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasBloodRelation , fc:hasAncestor , fc:hasFather , fc:hasParent .
+
+rdfs:Datatype  a         rdfs:Resource , rdfs:Class ;
+        rdfs:subClassOf  rdfs:Class , rdfs:Datatype , rdfs:Resource .
+
+fcsmps:Maggie  a             fc:Human , rdfs:Resource , fc:Woman , fc:LivingBeings ;
+        rdfs:label           "Maggie Simpson" ;
+        fc:hasAncestor       fcsmps:Marge , fc:Mona , fcsmps:Homer , fc:Abraham ;
+        fc:hasAunt           fcsmps:Patty , fcsmps:Selma ;
+        fc:hasBloodRelation  fcsmps:Lisa , fc:Abraham , fcsmps:Bart , fcsmps:Herbert , fcsmps:Selma , fcsmps:Homer , fcsmps:Patty , fcsmps:Marge , fc:Mona ;
+        fc:hasBrother        fcsmps:Bart ;
+        fc:hasFather         fcsmps:Homer ;
+        fc:hasGender         fc:Femaleness ;
+        fc:hasGrandFather    fc:Abraham ;
+        fc:hasGrandMother    fc:Mona ;
+        fc:hasGrandParent    fc:Mona , fc:Abraham ;
+        fc:hasMother         fcsmps:Marge ;
+        fc:hasParent         fcsmps:Homer , fcsmps:Marge ;
+        fc:hasRelation       fc:Mona , fcsmps:Marge , fcsmps:Patty , fcsmps:Bart , fcsmps:Homer , fcsmps:Selma , fc:Abraham , fcsmps:Herbert , fcsmps:Lisa ;
+        fc:hasSibling        fcsmps:Bart , fcsmps:Lisa ;
+        fc:hasSister         fcsmps:Lisa ;
+        fc:hasUncle          fcsmps:Herbert ;
+        fc:livesIn           fcsmps:Springfield .
+
+fcsmps:SpringfieldElementary
+        a           fc:Building , rdfs:Resource , fcsmps:School ;
+        rdfs:label  "Springfield Elementary School" .
+
+fcsmps:School  a         rdfs:Resource , rdfs:Class ;
+        rdfs:label       "School" ;
+        rdfs:subClassOf  rdfs:Resource , fcsmps:School , fc:Building .
+
+fcsmps:Tyrone  a             fc:Man , rdfs:Resource , fc:LivingBeings , fc:Human ;
+        rdfs:label           "Tyrone Simpson" ;
+        fc:hasAncestor       fcsmps:Orville , fcsmps:Yuma ;
+        fc:hasBloodRelation  fcsmps:Cyrus , fcsmps:Hubert , fcsmps:Chet , fcsmps:Yuma , fcsmps:Orville , fcsmps:Abraham , fcsmps:Bill ;
+        fc:hasBrother        fcsmps:Cyrus , fcsmps:Bill , fcsmps:Hubert , fcsmps:Abraham , fcsmps:Chet ;
+        fc:hasFather         fcsmps:Orville ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasMother         fcsmps:Yuma ;
+        fc:hasParent         fcsmps:Orville , fcsmps:Yuma ;
+        fc:hasRelation       fcsmps:Orville , fcsmps:Cyrus , fcsmps:Hubert , fcsmps:Yuma , fcsmps:Abraham , fcsmps:Bill , fcsmps:Chet ;
+        fc:hasSibling        fcsmps:Abraham , fcsmps:Bill , fcsmps:Cyrus , fcsmps:Chet , fcsmps:Hubert .
+
+fc:hasAunt  a               rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has an aunt. Subproperty of hasBloodRelation."@en ;
+        rdfs:label          "has aunt"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasAunt , fc:hasBloodRelation .
+
+fcsmps:Bill  a               rdfs:Resource , fc:Man , fc:LivingBeings , fc:Human ;
+        rdfs:label           "Bill Simpson" ;
+        fc:hasAncestor       fcsmps:Yuma , fcsmps:Orville ;
+        fc:hasBloodRelation  fcsmps:Abraham , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Yuma , fcsmps:Hubert , fcsmps:Cyrus , fcsmps:Orville ;
+        fc:hasBrother        fcsmps:Cyrus , fcsmps:Hubert , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Abraham ;
+        fc:hasFather         fcsmps:Orville ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasMother         fcsmps:Yuma ;
+        fc:hasParent         fcsmps:Yuma , fcsmps:Orville ;
+        fc:hasRelation       fcsmps:Chet , fcsmps:Tyrone , fcsmps:Hubert , fcsmps:Cyrus , fcsmps:Abraham , fcsmps:Yuma , fcsmps:Orville ;
+        fc:hasSibling        fcsmps:Abraham , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Hubert , fcsmps:Cyrus .
+
+fcsmps:Yuma  a        fc:Human , fc:Woman , rdfs:Resource , fc:LivingBeings ;
+        rdfs:label    "Yuma Hickman" ;
+        fc:hasGender  fc:Femaleness .
+
+fcsmps:Springfield  a  rdfs:Resource , fc:Location ;
+        rdfs:label  "Springfield" .
+
+fcsmps:Orville  a     fc:Human , fc:Man , rdfs:Resource , fc:LivingBeings ;
+        rdfs:label    "Orville Simpson" ;
+        fc:hasGender  fc:Malesness .
+
+fc:Building  a           rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of Buildings"@en ;
+        rdfs:label       "Building"@en ;
+        rdfs:subClassOf  fc:Building , rdfs:Resource .
+
+fc:hasParentInLaw  a        rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a parent in law. Subproperty of hasInLaw."@en ;
+        rdfs:label          "has parent in law"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasParentInLaw , fc:hasInlaw .
+
+fcsmps:Herbert  a            fc:Human , fc:Man , rdfs:Resource , fc:LivingBeings ;
+        rdfs:label           "Herbert Powell" ;
+        fc:hasAncestor       fcsmps:Rita , fcsmps:Yuma , fcsmps:Orville ;
+        fc:hasBloodRelation  fcsmps:Rita , fcsmps:Cyrus , fcsmps:Hubert , fcsmps:Chet , fcsmps:Tyrone , fcsmps:Orville , fcsmps:Bill , fcsmps:Yuma ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasGrandFather    fcsmps:Orville ;
+        fc:hasGrandMother    fcsmps:Yuma ;
+        fc:hasGrandParent    fcsmps:Yuma , fcsmps:Orville ;
+        fc:hasMother         fcsmps:Rita ;
+        fc:hasParent         fcsmps:Rita ;
+        fc:hasRelation       fcsmps:Yuma , fcsmps:Orville , fcsmps:Tyrone , fcsmps:Cyrus , fcsmps:Rita , fcsmps:Hubert , fcsmps:Bill , fcsmps:Chet ;
+        fc:hasUncle          fcsmps:Cyrus , fcsmps:Bill , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Hubert .
+
+rdfs:seeAlso  a             rdfs:Resource , rdf:Property ;
+        rdfs:subPropertyOf  rdfs:seeAlso .
+
+fc:hasSiblingInLaw  a       rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a sibling in law. Subproperty of hasInLaw."@en ;
+        rdfs:label          "has sibling in law"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasSiblingInLaw , fc:hasInlaw .
+
+fc:hasPet  a                rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a pet."@en ;
+        rdfs:domain         fc:Human ;
+        rdfs:label          "has pet"@en ;
+        rdfs:range          fc:Animal ;
+        rdfs:subPropertyOf  fc:hasPet , fc:hasRelation .
+
+fc:hasBrotherInLaw  a       rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a brother in law. Subproperty of hasSiblingInLaw."@en ;
+        rdfs:label          "has brother in law"@en ;
+        rdfs:subPropertyOf  fc:hasRelation , fc:hasInlaw , fc:hasBrotherInLaw , fc:hasSiblingInLaw .
+
+fcsmps:Selma  a       fc:Human , fc:Woman , rdfs:Resource , fc:LivingBeings ;
+        rdfs:label    "Selma Bouvier" ;
+        fc:hasGender  fc:Femaleness ;
+        fc:livesIn    fcsmps:Springfield .
+
+fc:Animal  a             rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of Animals. Subclass of LivingBeings"@en ;
+        rdfs:label       "Animal"@en ;
+        rdfs:subClassOf  fc:Animal , fc:LivingBeings , rdfs:Resource .
+
+fcsmps:Bart  a               fc:Man , fc:Human , fc:LivingBeings , rdfs:Resource ;
+        rdfs:label           "Bart Simpson" ;
+        fc:hasAncestor       fcsmps:Homer , fcsmps:Marge , fc:Abraham , fc:Mona ;
+        fc:hasAunt           fcsmps:Selma , fcsmps:Patty ;
+        fc:hasBloodRelation  fcsmps:Lisa , fcsmps:Marge , fcsmps:Homer , fcsmps:Herbert , fcsmps:Maggie , fc:Mona , fcsmps:Patty , fcsmps:Selma , fc:Abraham ;
+        fc:hasFather         fcsmps:Homer ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasGrandFather    fc:Abraham ;
+        fc:hasGrandMother    fc:Mona ;
+        fc:hasGrandParent    fc:Abraham , fc:Mona ;
+        fc:hasMother         fcsmps:Marge ;
+        fc:hasParent         fcsmps:Marge , fcsmps:Homer ;
+        fc:hasPet            fcsmps:SantasHelper ;
+        fc:hasRelation       fcsmps:Patty , fc:Abraham , fcsmps:Maggie , fcsmps:SantasHelper , fcsmps:Lisa , fcsmps:Herbert , fc:Mona , fcsmps:Marge , fcsmps:Homer , fcsmps:Selma ;
+        fc:hasSibling        fcsmps:Lisa , fcsmps:Maggie ;
+        fc:hasSister         fcsmps:Maggie , fcsmps:Lisa ;
+        fc:hasUncle          fcsmps:Herbert ;
+        fc:livesIn           fcsmps:Springfield .
+
+fcsmps:Cyrus  a              rdfs:Resource , fc:LivingBeings , fc:Man , fc:Human ;
+        rdfs:label           "Cyrus Simpson" ;
+        fc:hasAncestor       fcsmps:Yuma , fcsmps:Orville ;
+        fc:hasBloodRelation  fcsmps:Tyrone , fcsmps:Hubert , fcsmps:Abraham , fcsmps:Orville , fcsmps:Yuma , fcsmps:Chet , fcsmps:Bill ;
+        fc:hasBrother        fcsmps:Abraham , fcsmps:Hubert , fcsmps:Bill , fcsmps:Tyrone , fcsmps:Chet ;
+        fc:hasFather         fcsmps:Orville ;
+        fc:hasGender         fc:Malesness ;
+        fc:hasMother         fcsmps:Yuma ;
+        fc:hasParent         fcsmps:Orville , fcsmps:Yuma ;
+        fc:hasRelation       fcsmps:Tyrone , fcsmps:Bill , fcsmps:Hubert , fcsmps:Yuma , fcsmps:Orville , fcsmps:Abraham , fcsmps:Chet ;
+        fc:hasSibling        fcsmps:Tyrone , fcsmps:Hubert , fcsmps:Bill , fcsmps:Abraham , fcsmps:Chet .

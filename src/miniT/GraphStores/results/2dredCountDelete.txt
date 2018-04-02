@@ -1,0 +1,170 @@
+Total number of processed triples: 96
+
+
+Time taken to reason is: 13981310 milliseconds. 
+
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#List, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 18 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 87 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 15 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Class, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 75 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Resource, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 189 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Datatype] has 3 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#LivingBeings] has 1 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 37 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Literal, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 48 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#GenderType] has 1 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 28 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 39 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 45 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 39 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Jacqueline] has 8 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Jacqueline] has 2 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Jacqueline] has 6 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Jacqueline] has 4 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 39 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 39 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Container, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 18 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 15 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#seeAlso, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 9 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 9 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 9 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 9 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#comment, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 6 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#GenderType] has 9 derivations
+Statement: [http://example.org/fcsmps#Selma, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 12 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 9 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#nil, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#seeAlso, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#comment, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#List, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Resource, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Class, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Literal, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Container, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 9 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 9 derivations
+Statement: [http://example.org/fcsmps#Selma, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 9 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#List] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/1999/02/22-rdf-syntax-ns#List] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#rest] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#List, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Literal] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Class, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#subject] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#comment, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Literal] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#object] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#nil, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#List] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Literal, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#List] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#first] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasParent] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#label, "has parent"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a parent."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a relation with another living thing."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/2000/01/rdf-schema#range, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#label, "has ancestor"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has an ancestor."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Jacqueline] has 0 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Selma, http://www.w3.org/2000/01/rdf-schema#label, "Selma Bouvier"] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a blood relation."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/2000/01/rdf-schema#label, "has blood relation"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasGender] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#range, http://example.org/fictionalchars#GenderType] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#label, "has gender"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a gender."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a mother. Subproperty of hasParent."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#label, "has mother"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasMother] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasParent] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Resource, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Container] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Container] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Datatype] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Class, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Container] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Container, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Container] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#isDefinedBy] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#seeAlso] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#seeAlso, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#seeAlso] has 0 derivations

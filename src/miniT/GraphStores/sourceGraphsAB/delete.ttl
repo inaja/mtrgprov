@@ -1,0 +1,11 @@
+PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#> 
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+prefix fc:    <http://example.org/fictionalchars#> 
+prefix fcsmps: <http://example.org/fcsmps#> 
+
+fcsmps:Selma fc:hasFather fcsmps:Clancy ;
+			 rdf:type fc:Woman ;
+			 fc:livesIn fcsmps:Springfield;
+.

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		 xmlns:fc="http://example.org/fictionalchars#">
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Animal">
+    <rdfs:comment xml:lang="en">The class of Animals. Subclass of LivingBeings</rdfs:comment>
+    <rdfs:label xml:lang="en">Animal</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Building">
+    <rdfs:comment xml:lang="en">The class of Buildings</rdfs:comment>
+    <rdfs:label xml:lang="en">Building</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Femaleness">
+    <rdfs:comment xml:lang="en">The class of the female gender. Subclass of GenderType.</rdfs:comment>
+    <rdfs:label xml:lang="en">Femaleness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fictionalchars#GenderType"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#GenderType">
+    <rdfs:comment xml:lang="en">The class of genders. </rdfs:comment>
+    <rdfs:label xml:lang="en">Gender type</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Human">
+    <rdfs:comment xml:lang="en">The class of humans. Subclass of LivingBeings.</rdfs:comment>
+    <rdfs:label xml:lang="en">Human</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#LivingBeings">
+    <rdfs:comment xml:lang="en">The class of living things.</rdfs:comment>
+    <rdfs:label xml:lang="en">Living beings</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Location">
+    <rdfs:comment xml:lang="en">The class of location</rdfs:comment>
+    <rdfs:label xml:lang="en">Location</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Maleness">
+    <rdfs:comment xml:lang="en">The class of the male gender. Subclass of GenderType.</rdfs:comment>
+    <rdfs:label xml:lang="en">Maleness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fictionalchars#GenderType"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Man">
+    <rdfs:comment xml:lang="en">The class of male humans. Subclass of Human</rdfs:comment>
+    <rdfs:label xml:lang="en">Man</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fictionalchars#Human"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Marriage">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Ownership">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://example.org/fictionalchars#Woman">
+    <rdfs:comment xml:lang="en">The class of female humans. Subclass of Human.</rdfs:comment>
+    <rdfs:label xml:lang="en">Woman</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/fictionalchars#Human"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasAncestor">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has an ancestor.</rdfs:comment>
+    <rdfs:label xml:lang="en">has ancestor</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasBloodRelation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasAunt">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has an aunt. Subproperty of hasBloodRelation.</rdfs:comment>
+    <rdfs:label xml:lang="en">has aunt</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasBloodRelation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasBirthDate">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a birth date.</rdfs:comment>
+    <rdfs:label xml:lang="en">has birth date</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasEventDate"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasBloodRelation">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a blood relation.</rdfs:comment>
+    <rdfs:label xml:lang="en">has blood relation</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasRelation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasBrother">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has an a brother. Property describing that a living thing has an aunt. Subproperty of hasSibling.</rdfs:comment>
+    <rdfs:label xml:lang="en">has brother</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasSibling"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasBrotherInLaw">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a brother in law. Subproperty of hasSiblingInLaw.</rdfs:comment>
+    <rdfs:label xml:lang="en">has brother in law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasSiblingInLaw"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasDeathDate">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has death date.</rdfs:comment>
+    <rdfs:label xml:lang="en">has death date</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasEventDate"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasDivorceDate">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a divorce date.</rdfs:comment>
+    <rdfs:label xml:lang="en">has divorce date</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasEventDate"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasEventDate">
+    <rdfs:domain rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasFather">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a father. Subproperty of hasParent.</rdfs:comment>
+    <rdfs:label xml:lang="en">has father</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasParent"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasFatherInLaw">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a father in law. Subproperty of hasParentInLaw.</rdfs:comment>
+    <rdfs:label xml:lang="en">has father in law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasParentInLaw"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasGender">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a gender.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+    <rdfs:label xml:lang="en">has gender</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/fictionalchars#GenderType"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasGrandFather">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a grandfather. Subproperty of hasGrandParent.</rdfs:comment>
+    <rdfs:label xml:lang="en">has grand father</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasGrandParent"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasGrandMother">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a grandmother. Subproperty of hasGrandMother.</rdfs:comment>
+    <rdfs:label xml:lang="en">has grand mother</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasGrandParent"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasGrandParent">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a grandparent.</rdfs:comment>
+    <rdfs:label xml:lang="en">has grand parent</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasAncestor"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasHusband">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a husband. Subproperty of hasSpouse.</rdfs:comment>
+    <rdfs:label xml:lang="en">has husband</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasSpouse"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasInlaw">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has an in law.</rdfs:comment>
+    <rdfs:label xml:lang="en">has inlaw</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasRelation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasMarriageDate">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a marriage date.</rdfs:comment>
+    <rdfs:label xml:lang="en">has marriage date</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasEventDate"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasMother">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a mother. Subproperty of hasParent.</rdfs:comment>
+    <rdfs:label xml:lang="en">has mother</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasParent"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasMotherInLaw">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a mother in law. Subproperty of hasParentInLaw.</rdfs:comment>
+    <rdfs:label xml:lang="en">has mother in law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasParentInLaw"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasParent">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a parent.</rdfs:comment>
+    <rdfs:label xml:lang="en">has parent</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasAncestor"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasParentInLaw">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a parent in law. Subproperty of hasInLaw.</rdfs:comment>
+    <rdfs:label xml:lang="en">has parent in law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasInlaw"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasPet">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a pet.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/fictionalchars#Human"/>
+    <rdfs:label xml:lang="en">has pet</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/fictionalchars#Animal"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasRelation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasRelation">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a relation with another living thing.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+    <rdfs:range rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasSibling">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a sibling. Subproperty of hasBloodRelation.</rdfs:comment>
+    <rdfs:label xml:lang="en">has sibling</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasBloodRelation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasSiblingInLaw">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a sibling in law. Subproperty of hasInLaw.</rdfs:comment>
+    <rdfs:label xml:lang="en">has sibling in law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasInlaw"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasSister">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has an a brother. Property describing that a living thing has an sister. Subproperty of hasSibling.</rdfs:comment>
+    <rdfs:label xml:lang="en">has sister</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasSibling"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasSisterInLaw">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a sister in law. Subproperty of hasSiblingInLaw.</rdfs:comment>
+    <rdfs:label xml:lang="en">has sister in law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasSiblingInLaw"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasSpouse">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a spouse. Subproperty of hasRelation.</rdfs:comment>
+    <rdfs:label xml:lang="en">has spouse</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasRelation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasUncle">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has an uncle. Subproperty of hasBloodRelation.</rdfs:comment>
+    <rdfs:label xml:lang="en">has uncle</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasBloodRelation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#hasWife">
+    <rdfs:comment xml:lang="en">Property describing that a living thing has a wife. Subproperty of hasSpouse.</rdfs:comment>
+    <rdfs:label xml:lang="en">has wife</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/fictionalchars#hasSpouse"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#livesIn">
+    <rdfs:comment xml:lang="en">Property describing that a living thing lives in a building or in a location.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+    <rdfs:label xml:lang="en">lives in</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/fictionalchars#Building"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#owns">
+    <rdfs:comment xml:lang="en">Property describing that a living thing owns a building or a location.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+    <rdfs:label xml:lang="en">owns</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/fictionalchars#Building"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#studiesAt">
+    <rdfs:comment xml:lang="en">Property describing that a living thing studies at a building or a location.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+    <rdfs:label xml:lang="en">studies at</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/fictionalchars#Building"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/fictionalchars#worksAt">
+    <rdfs:comment xml:lang="en">Property describing that a living thing works at a building or at a location.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://example.org/fictionalchars#LivingBeings"/>
+    <rdfs:label xml:lang="en">works at</rdfs:label>
+    <rdfs:range rdf:resource="http://example.org/fictionalchars#Building"/>
+  </rdf:Property>
+  
+  <rdf:Description rdf:about="http://example.org/fcsmps#Springfield">
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Location"/>
+    <rdfs:label>Springfield</rdfs:label>
+  </rdf:Description>
+  
+  
+  <rdf:Description rdf:about="http://example.org/fcsmps#Abraham">
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Man"/>
+    <rdfs:label>Abraham Simpson</rdfs:label>
+    <fc:GenderType rdf:resource="http://example.org/fictionalchars#Malesness"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Homer">
+    <rdfs:label>Homer Simpson</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Man"/>
+	<fc:GenderType rdf:resource="http://example.org/fictionalchars#Malesness"/>
+    <fc:hasWife rdf:resource="http://example.org/fcsmps#Marge"/>
+    <fc:hasFather rdf:resource="http://example.org/fcsmps#Abraham"/>
+  </rdf:Description>
+  
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Bart">
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Man"/>
+	<rdfs:label>Bart Simpson</rdfs:label>
+	<fc:hasFather rdf:resource="http://example.org/fcsmps#Homer"/>
+  </rdf:Description>
+
+
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Lisa">
+  <rdfs:label>Lisa Simpson</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Woman"/>
+	
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Maggie">
+  <rdfs:label>Maggie Simpson</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Woman"/>
+	
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Marge">
+      <rdfs:label>Marge Simpson</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Woman"/>
+	 <fc:hasHusband rdf:resource="http://example.org/fcsmps#Homer"/>
+  </rdf:Description>
+
+</rdf:RDF>

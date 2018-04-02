@@ -1,0 +1,9 @@
+<rdf:RDF
+  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+  xmlns:rdfs='w3.org/2000/01/rdf-schema#'
+ >
+<Teenager rdf:about="urn:x-hp:eg/colin">
+  <mum rdf:resource="urn:x-hp:eg/rosy" />
+  <age>13</age>
+</Teenager>
+  </rdf:RDF>

@@ -1,0 +1,54 @@
+# baseURI: http://example.org/fcsimpsons
+
+@prefix fcsmps: <http://example.org/fcsmps#> .
+@prefix fc: <http://example.org/fictionalchars#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fcsmps:Springfield
+	rdf:type fc:Location ;
+	rdfs:label "Springfield" ;
+.
+	
+fcsmps:Abraham
+  rdf:type fc:Man ;
+  rdfs:label "Abraham Simpson" ;
+  fc:GenderType fc:Malesness ;
+.
+
+fcsmps:Homer
+  rdf:type fc:Man ;
+  rdfs:label "Homer Simpson" ;
+  fc:GenderType fc:Malesness ;
+  fc:hasWife fcsmps:Marge ;
+  fc:hasFather fcsmps:Abraham ;
+.
+
+fcsmps:Marge
+  rdf:type fc:Woman ;
+  rdfs:label "Marge Simpson" ;
+  fc:hasHusband fcsmps:Homer ;
+  fc:GenderType fc:Femaleness ;
+.
+
+fcsmps:Bart
+  rdf:type fc:Man ;
+  rdfs:label "Bart Simpson" ;
+  fc:hasFather fcsmps:Homer ;
+  fc:hasMother fcsmps:Marge ;
+  fc:GenderType fc:Malesness ;
+.
+
+fcsmps:Lisa
+  rdf:type fc:Woman ;
+  rdfs:label "Lisa Simpson" ;
+  fc:GenderType fc:Femaleness ;
+.
+
+fcsmps:Maggie
+  rdf:type fc:Woman ;
+  rdfs:label "Maggie Simpson" ;
+  fc:GenderType fc:Femaleness ;
+.

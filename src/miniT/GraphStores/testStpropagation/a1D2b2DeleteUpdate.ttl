@@ -1,0 +1,86 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fcsmps: <http://example.org/fcsmps#> .
+@prefix fc:    <http://example.org/fictionalchars#> .
+
+fcsmps:Chet  a         fc:Man ;
+        rdfs:label     "Chet Simpson" ;
+        fc:hasBrother  fcsmps:Cyrus , fcsmps:Tyrone , fcsmps:Hubert , fcsmps:Abraham , fcsmps:Bill ;
+        fc:hasFather   fcsmps:Orville ;
+        fc:hasGender   fc:Malesness ;
+        fc:hasMother   fcsmps:Yuma .
+
+fcsmps:Clancy  a      fc:Man ;
+        rdfs:label    "Clancy Bouvier" ;
+        fc:hasGender  fc:Malesness ;
+        fc:hasWife    fcsmps:Jacqueline .
+
+fcsmps:Patty  a       fc:Woman ;
+        rdfs:label    "Patty Bouvier" ;
+        fc:hasFather  fcsmps:Clancy ;
+        fc:hasGender  fc:Femaleness ;
+        fc:hasMother  fcsmps:Jacqueline ;
+        fc:livesIn    fcsmps:Springfield .
+
+fcsmps:Herbert  a          fc:Man ;
+        rdfs:label         "Herbert Powell" ;
+        fc:hasGender       fc:Malesness ;
+        fc:hasGrandFather  fcsmps:Orville ;
+        fc:hasGrandMother  fcsmps:Yuma ;
+        fc:hasMother       fcsmps:Rita ;
+        fc:hasUncle        fcsmps:Cyrus , fcsmps:Bill , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Hubert .
+
+fcsmps:Jacqueline  a   fc:Woman ;
+        rdfs:label     "Jacqueline Bouvier" ;
+        fc:hasGender   fc:Femaleness ;
+        fc:hasHusband  fcsmps:Clancy .
+
+fcsmps:Marge  fc:hasFather  fcsmps:Clancy ;
+        fc:hasMother  fcsmps:Jacqueline ;
+        fc:hasSister  fcsmps:Selma , fcsmps:Patty .
+
+fcsmps:Rita  a        fc:Woman ;
+        rdfs:label    "Rita LaFleur Simpson" ;
+        fc:hasGender  fc:Femaleness .
+
+fcsmps:Tyrone  a       fc:Man ;
+        rdfs:label     "Tyrone Simpson" ;
+        fc:hasBrother  fcsmps:Cyrus , fcsmps:Bill , fcsmps:Hubert , fcsmps:Abraham , fcsmps:Chet ;
+        fc:hasFather   fcsmps:Orville ;
+        fc:hasGender   fc:Malesness ;
+        fc:hasMother   fcsmps:Yuma .
+
+fcsmps:Selma  rdfs:label  "Selma Bouvier" ;
+        fc:hasGender  fc:Femaleness ;
+        fc:hasMother  fcsmps:Jacqueline .
+
+fcsmps:Cyrus  a        fc:Man ;
+        rdfs:label     "Cyrus Simpson" ;
+        fc:hasBrother  fcsmps:Abraham , fcsmps:Hubert , fcsmps:Bill , fcsmps:Tyrone , fcsmps:Chet ;
+        fc:hasFather   fcsmps:Orville ;
+        fc:hasGender   fc:Malesness ;
+        fc:hasMother   fcsmps:Yuma .
+
+fcsmps:Hubert  a       fc:Man ;
+        rdfs:label     "Hubert Simpson" ;
+        fc:hasBrother  fcsmps:Chet , fcsmps:Tyrone , fcsmps:Bill , fcsmps:Cyrus , fcsmps:Abraham ;
+        fc:hasFather   fcsmps:Orville ;
+        fc:hasGender   fc:Malesness ;
+        fc:hasMother   fcsmps:Yuma .
+
+fcsmps:Bill  a         fc:Man ;
+        rdfs:label     "Bill Simpson" ;
+        fc:hasBrother  fcsmps:Cyrus , fcsmps:Hubert , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Abraham ;
+        fc:hasFather   fcsmps:Orville ;
+        fc:hasGender   fc:Malesness ;
+        fc:hasMother   fcsmps:Yuma .
+
+fcsmps:Yuma  a        fc:Woman ;
+        rdfs:label    "Yuma Hickman" ;
+        fc:hasGender  fc:Femaleness .
+
+fcsmps:Orville  a     fc:Man ;
+        rdfs:label    "Orville Simpson" ;
+        fc:hasGender  fc:Malesness .

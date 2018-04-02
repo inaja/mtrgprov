@@ -1,0 +1,1011 @@
+Total number of processed triples: 425
+
+
+Time taken to reason is: 28072955 milliseconds. 
+
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#Building, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#List, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 18 derivations
+Statement: [http://example.org/fictionalchars#studiesAt, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#studiesAt] has 1 derivations
+Statement: [http://example.org/fictionalchars#owns, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#owns] has 1 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 174 derivations
+Statement: [http://example.org/fictionalchars#Human, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://example.org/fictionalchars#Marriage, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://example.org/fictionalchars#Marriage, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Marriage] has 1 derivations
+Statement: [http://example.org/fictionalchars#livesIn, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#livesIn] has 1 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 15 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Class, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 114 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Resource, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 756 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://example.org/fictionalchars#Ownership, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://example.org/fictionalchars#Ownership, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Ownership] has 1 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Datatype] has 3 derivations
+Statement: [http://example.org/fictionalchars#Animal, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://example.org/fictionalchars#worksAt, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#worksAt] has 1 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Literal, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 354 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasGender] has 1 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://example.org/fictionalchars#Location, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://example.org/fictionalchars#Location, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Location] has 1 derivations
+Statement: [http://www.w3.org/2001/XMLSchema#date, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 1 derivations
+Statement: [http://www.w3.org/2001/XMLSchema#date, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2001/XMLSchema#date] has 1 derivations
+Statement: [http://www.w3.org/2001/XMLSchema#date, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 25 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 99 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fictionalchars#hasMarriageDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 129 derivations
+Statement: [http://example.org/fcsmps#Snowball, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Animal] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 24 derivations
+Statement: [http://example.org/fictionalchars#hasUncle, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 18 derivations
+Statement: [http://example.org/fcsmps#SpringfieldPowerPlant, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fcsmps#PowerPlant] has 3 derivations
+Statement: [http://example.org/fictionalchars#Marriage, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 21 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 33 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Woman] has 3 derivations
+Statement: [http://example.org/fictionalchars#hasSister, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 21 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fictionalchars#livesIn, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://example.org/fcsmps#Marge, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Woman] has 3 derivations
+Statement: [http://example.org/fictionalchars#studiesAt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#hasGrandParent, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 33 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 24 derivations
+Statement: [http://example.org/fictionalchars#Woman, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 45 derivations
+Statement: [http://example.org/fictionalchars#hasWife, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 18 derivations
+Statement: [http://example.org/fictionalchars#owns, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#Maleness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 18 derivations
+Statement: [http://example.org/fictionalchars#hasEventDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 39 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 42 derivations
+Statement: [http://example.org/fictionalchars#hasSisterInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 21 derivations
+Statement: [http://example.org/fictionalchars#hasBirthDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#Ownership, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 21 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fictionalchars#Location, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 24 derivations
+Statement: [http://example.org/fictionalchars#hasDeathDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#hasHusband, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 18 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 18 derivations
+Statement: [http://example.org/fcsmps#Chet, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 36 derivations
+Statement: [http://example.org/fictionalchars#hasSibling, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 30 derivations
+Statement: [http://example.org/fictionalchars#hasMotherInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 21 derivations
+Statement: [http://example.org/fictionalchars#hasDivorceDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 24 derivations
+Statement: [http://example.org/fcsmps#Homer, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fictionalchars#hasBrother, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 21 derivations
+Statement: [http://example.org/fictionalchars#worksAt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 15 derivations
+Statement: [http://example.org/fictionalchars#hasSpouse, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 27 derivations
+Statement: [http://example.org/fcsmps#Rita, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Woman] has 3 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 63 derivations
+Statement: [http://example.org/fcsmps#SantasHelper, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Animal] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasInlaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 39 derivations
+Statement: [http://example.org/fcsmps#Mona, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Woman] has 3 derivations
+Statement: [http://example.org/fictionalchars#Human, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 93 derivations
+Statement: [http://example.org/fictionalchars#Man, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 54 derivations
+Statement: [http://example.org/fictionalchars#hasFatherInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 21 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Woman] has 3 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 24 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Woman] has 3 derivations
+Statement: [http://example.org/fcsmps#Patty, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Woman] has 3 derivations
+Statement: [http://example.org/fcsmps#SpringfieldElementary, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fcsmps#School] has 3 derivations
+Statement: [http://example.org/fictionalchars#hasAunt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 18 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fcsmps#Bill, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fcsmps#Yuma, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Woman] has 3 derivations
+Statement: [http://example.org/fcsmps#Springfield, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Location] has 6 derivations
+Statement: [http://example.org/fcsmps#Orville, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fictionalchars#Building, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 42 derivations
+Statement: [http://example.org/fictionalchars#hasParentInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 30 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fictionalchars#hasSiblingInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 30 derivations
+Statement: [http://example.org/fictionalchars#hasPet, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 21 derivations
+Statement: [http://example.org/fictionalchars#hasBrotherInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 21 derivations
+Statement: [http://example.org/fictionalchars#Animal, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 30 derivations
+Statement: [http://example.org/fcsmps#Bart, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Man] has 3 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Container, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 18 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 12 derivations
+Statement: [http://example.org/fcsmps#PowerPlant, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 21 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 12 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 15 derivations
+Statement: [http://example.org/fcsmps#School, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 21 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#seeAlso, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 12 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 9 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 9 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 9 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 9 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#comment, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 6 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#GenderType] has 30 derivations
+Statement: [http://example.org/fictionalchars#Malesness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#GenderType] has 36 derivations
+Statement: [http://example.org/fcsmps#SpringfieldPowerPlant, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Building] has 12 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Jacqueline] has 8 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Mona] has 8 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Yuma] has 8 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Yuma] has 8 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Jacqueline] has 8 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Jacqueline] has 8 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Marge] has 8 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Yuma] has 8 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Yuma] has 8 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Yuma] has 8 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Yuma] has 8 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Marge] has 8 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Marge] has 8 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Rita] has 8 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Jacqueline] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Mona] has 4 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Yuma] has 4 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Yuma] has 4 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Jacqueline] has 4 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Jacqueline] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Marge] has 4 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Yuma] has 4 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Yuma] has 4 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Yuma] has 4 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Yuma] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Marge] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Marge] has 4 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Rita] has 4 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Jacqueline] has 6 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Mona] has 6 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Yuma] has 6 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Yuma] has 6 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Jacqueline] has 6 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Jacqueline] has 6 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Marge] has 6 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Yuma] has 6 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Yuma] has 6 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Yuma] has 6 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Yuma] has 6 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Marge] has 6 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Marge] has 6 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Rita] has 6 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fictionalchars#Abraham] has 8 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Orville] has 8 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fictionalchars#Abraham] has 8 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fictionalchars#Abraham] has 8 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Orville] has 8 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasAncestor, http://example.org/fictionalchars#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Orville] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasAncestor, http://example.org/fictionalchars#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasAncestor, http://example.org/fictionalchars#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Orville] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fictionalchars#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Orville] has 6 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fictionalchars#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fictionalchars#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Orville] has 6 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bill] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Herbert] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Tyrone] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Herbert] has 4 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Cyrus] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Chet] has 4 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bill] has 4 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Tyrone] has 4 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Chet] has 4 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Hubert] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Cyrus] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Hubert] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Herbert] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fictionalchars#Mona] has 8 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Yuma] has 8 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fictionalchars#Mona] has 8 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fictionalchars#Mona] has 8 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Yuma] has 8 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasAncestor, http://example.org/fictionalchars#Mona] has 4 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Yuma] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasAncestor, http://example.org/fictionalchars#Mona] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasAncestor, http://example.org/fictionalchars#Mona] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Yuma] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fictionalchars#Mona] has 6 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Yuma] has 6 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fictionalchars#Mona] has 6 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fictionalchars#Mona] has 6 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Yuma] has 6 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Lisa] has 6 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Maggie] has 6 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Lisa] has 6 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Maggie] has 6 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Selma] has 6 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Patty] has 6 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Lisa] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Maggie] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Lisa] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Maggie] has 4 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Selma] has 4 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Patty] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Marge] has 4 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Jacqueline] has 4 derivations
+Statement: [http://example.org/fcsmps#Mona, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Homer] has 4 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Clancy] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Patty] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Selma] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Selma] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Patty] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Selma] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Patty] has 4 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bill] has 6 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Cyrus] has 6 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bart] has 6 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Chet] has 6 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Tyrone] has 6 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Cyrus] has 6 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Cyrus] has 6 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Cyrus] has 6 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Hubert] has 6 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Hubert] has 6 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Tyrone] has 6 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Tyrone] has 6 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bill] has 6 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Hubert] has 6 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Chet] has 6 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bart] has 6 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Tyrone] has 6 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Tyrone] has 6 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bill] has 6 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Chet] has 6 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bill] has 6 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Bill] has 6 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Hubert] has 6 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Cyrus] has 6 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Hubert] has 6 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Chet] has 6 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Chet] has 6 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bill] has 4 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Cyrus] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bart] has 4 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Chet] has 4 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Tyrone] has 4 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Cyrus] has 4 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Cyrus] has 4 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Cyrus] has 4 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Hubert] has 4 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Hubert] has 4 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Tyrone] has 4 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Tyrone] has 4 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bill] has 4 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Hubert] has 4 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Chet] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bart] has 4 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Tyrone] has 4 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Tyrone] has 4 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bill] has 4 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Chet] has 4 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bill] has 4 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bill] has 4 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Hubert] has 4 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Cyrus] has 4 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Hubert] has 4 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Chet] has 4 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Chet] has 4 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Abraham] has 8 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Homer] has 8 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Orville] has 8 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Orville] has 8 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Orville] has 8 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Orville] has 8 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Orville] has 8 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Clancy] has 8 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Homer] has 8 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Clancy] has 8 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Orville] has 8 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Homer] has 8 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Abraham] has 4 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Homer] has 4 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Orville] has 4 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Orville] has 4 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Orville] has 4 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Orville] has 4 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Orville] has 4 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Clancy] has 4 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Homer] has 4 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Clancy] has 4 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Orville] has 4 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasAncestor, http://example.org/fcsmps#Homer] has 4 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Abraham] has 6 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Homer] has 6 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Orville] has 6 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Orville] has 6 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Orville] has 6 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Orville] has 6 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Orville] has 6 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Clancy] has 6 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Homer] has 6 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Clancy] has 6 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Orville] has 6 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Homer] has 6 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bill] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Herbert] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Tyrone] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Herbert] has 2 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Cyrus] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Chet] has 2 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Bill] has 2 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Tyrone] has 2 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Chet] has 2 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Hubert] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Cyrus] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Hubert] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Herbert] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasGrandParent, http://example.org/fictionalchars#Mona] has 2 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasGrandParent, http://example.org/fcsmps#Yuma] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasGrandParent, http://example.org/fictionalchars#Mona] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasGrandParent, http://example.org/fictionalchars#Mona] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasGrandParent, http://example.org/fcsmps#Yuma] has 2 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Bill] has 2 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Cyrus] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Bart] has 2 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Chet] has 2 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Tyrone] has 2 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Cyrus] has 2 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Cyrus] has 2 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Cyrus] has 2 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Hubert] has 2 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Hubert] has 2 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Tyrone] has 2 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Tyrone] has 2 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Bill] has 2 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Hubert] has 2 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Chet] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Bart] has 2 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Tyrone] has 2 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Tyrone] has 2 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Bill] has 2 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Chet] has 2 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Bill] has 2 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Bill] has 2 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Hubert] has 2 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Cyrus] has 2 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Hubert] has 2 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Chet] has 2 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Chet] has 2 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasSpouse, http://example.org/fcsmps#Marge] has 2 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://example.org/fictionalchars#hasSpouse, http://example.org/fcsmps#Jacqueline] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasGrandParent, http://example.org/fictionalchars#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasGrandParent, http://example.org/fcsmps#Orville] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasGrandParent, http://example.org/fictionalchars#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasGrandParent, http://example.org/fictionalchars#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasGrandParent, http://example.org/fcsmps#Orville] has 2 derivations
+Statement: [http://example.org/fcsmps#Mona, http://example.org/fictionalchars#hasSpouse, http://example.org/fcsmps#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasSpouse, http://example.org/fcsmps#Homer] has 2 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://example.org/fictionalchars#hasSpouse, http://example.org/fcsmps#Clancy] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Patty] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Selma] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Selma] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Patty] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Selma] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBloodRelation, http://example.org/fcsmps#Patty] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Lisa] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Maggie] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Lisa] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Maggie] has 2 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Selma] has 2 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasSibling, http://example.org/fcsmps#Patty] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#SantasHelper] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasRelation, http://example.org/fcsmps#Snowball] has 2 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Jacqueline] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Mona] has 2 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Yuma] has 2 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Yuma] has 2 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Jacqueline] has 2 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Jacqueline] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Marge] has 2 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Yuma] has 2 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Yuma] has 2 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Yuma] has 2 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Yuma] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Marge] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Marge] has 2 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Rita] has 2 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Abraham] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Homer] has 2 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Orville] has 2 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Orville] has 2 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Orville] has 2 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Orville] has 2 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Orville] has 2 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Clancy] has 2 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Homer] has 2 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Clancy] has 2 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Orville] has 2 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasParent, http://example.org/fcsmps#Homer] has 2 derivations
+Statement: [http://example.org/fcsmps#Bart, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 54 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 51 derivations
+Statement: [http://example.org/fcsmps#Patty, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 36 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 54 derivations
+Statement: [http://example.org/fcsmps#SantasHelper, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 15 derivations
+Statement: [http://example.org/fcsmps#Homer, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 63 derivations
+Statement: [http://example.org/fcsmps#Marge, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 45 derivations
+Statement: [http://example.org/fcsmps#Snowball, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 15 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 60 derivations
+Statement: [http://example.org/fcsmps#Orville, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 39 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 57 derivations
+Statement: [http://example.org/fcsmps#Rita, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 18 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 30 derivations
+Statement: [http://example.org/fcsmps#Selma, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 21 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 48 derivations
+Statement: [http://example.org/fcsmps#Chet, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 57 derivations
+Statement: [http://example.org/fcsmps#Yuma, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 39 derivations
+Statement: [http://example.org/fcsmps#Mona, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 21 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 57 derivations
+Statement: [http://example.org/fcsmps#Bill, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 57 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 27 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 57 derivations
+Statement: [http://example.org/fcsmps#Bart, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 12 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 12 derivations
+Statement: [http://example.org/fictionalchars#Abraham, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 12 derivations
+Statement: [http://example.org/fictionalchars#Mona, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#LivingBeings] has 12 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Class] has 6 derivations
+Statement: [http://example.org/fcsmps#SpringfieldPowerPlant, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 12 derivations
+Statement: [http://example.org/fcsmps#Yuma, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Patty, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Mona, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Rita, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Marge, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Yuma, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Patty, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Mona, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Rita, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Marge, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Chet, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Orville, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Bill, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Bart, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Homer, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 18 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Chet, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Orville, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Bill, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#Homer, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Human] has 9 derivations
+Statement: [http://example.org/fcsmps#SpringfieldElementary, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 12 derivations
+Statement: [http://example.org/fcsmps#SpringfieldElementary, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/fictionalchars#Building] has 9 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#nil, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 12 derivations
+Statement: [http://example.org/fictionalchars#Malesness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 9 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#List, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Resource, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Class, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2001/XMLSchema#date, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Literal, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Building, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Woman, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Ownership, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Man, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Maleness, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Human, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Marriage, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Animal, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Location, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Container, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fcsmps#PowerPlant, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fcsmps#School, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#Abraham, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 9 derivations
+Statement: [http://example.org/fictionalchars#Mona, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 9 derivations
+Statement: [http://example.org/fcsmps#Selma, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 9 derivations
+Statement: [http://example.org/fcsmps#SantasHelper, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 15 derivations
+Statement: [http://example.org/fcsmps#Snowball, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 15 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasHusband, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasPet, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasSister, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasSisterInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasMarriageDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasSiblingInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasSibling, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasSpouse, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasInlaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasBirthDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#livesIn, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasAunt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasParentInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#studiesAt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasDivorceDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasEventDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasBrother, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasDeathDate, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasFatherInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#worksAt, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#owns, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasUncle, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasGrandParent, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasWife, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasBrotherInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasMotherInLaw, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#seeAlso, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#comment, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 6 derivations
+Statement: [http://example.org/fcsmps#Springfield, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource] has 9 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#List] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/1999/02/22-rdf-syntax-ns#List] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#rest, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#rest] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#List, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Literal] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Class, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#subject] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#comment, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Literal] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#object, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#object] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#nil, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/1999/02/22-rdf-syntax-ns#List] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Literal, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/1999/02/22-rdf-syntax-ns#List] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#first] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#domain, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/2000/01/rdf-schema#range, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a relation with another living thing."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Bill] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Cyrus] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://www.w3.org/2000/01/rdf-schema#label, "Abraham Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Tyrone] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Chet] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Yuma] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Hubert] has 0 derivations
+Statement: [http://example.org/fcsmps#Abraham, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Orville] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMarriageDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasEventDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMarriageDate, http://www.w3.org/2000/01/rdf-schema#label, "has marriage date"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMarriageDate, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a marriage date."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#PowerPlant, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Building] has 0 derivations
+Statement: [http://example.org/fcsmps#PowerPlant, http://www.w3.org/2000/01/rdf-schema#label, "Power Plant"] has 0 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/2000/01/rdf-schema#label, "Living beings"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/2000/01/rdf-schema#comment, "The class of living things."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Snowball, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#Snowball, http://www.w3.org/2000/01/rdf-schema#label, "Snowball II"] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasGrandParent] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/2000/01/rdf-schema#label, "has grand mother"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a grandmother. Subproperty of hasGrandMother."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasUncle, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasUncle, http://www.w3.org/2000/01/rdf-schema#label, "has uncle"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasUncle, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has an uncle. Subproperty of hasBloodRelation."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#SpringfieldPowerPlant, http://www.w3.org/2000/01/rdf-schema#label, "Nuclear Power Plant"] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#label, "has parent"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a parent."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://example.org/fictionalchars#hasHusband, http://example.org/fcsmps#Clancy] has 0 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Jacqueline, http://www.w3.org/2000/01/rdf-schema#label, "Jacqueline Bouvier"] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSister, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSibling] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSister, http://www.w3.org/2000/01/rdf-schema#label, "has sister"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSister, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has an a brother. Property describing that a living thing has an sister. Subproperty of hasSibling."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Chet] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://www.w3.org/2000/01/rdf-schema#label, "Hubert Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Yuma] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Tyrone] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Bill] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Orville] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Cyrus] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Hubert, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Abraham] has 0 derivations
+Statement: [http://example.org/fictionalchars#livesIn, http://www.w3.org/2000/01/rdf-schema#label, "lives in"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#livesIn, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#livesIn, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing lives in a building or in a location."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasHusband, http://example.org/fcsmps#Homer] has 0 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Marge, http://www.w3.org/2000/01/rdf-schema#label, "Marge Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasSister, http://example.org/fcsmps#Selma] has 0 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasSister, http://example.org/fcsmps#Patty] has 0 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Jacqueline] has 0 derivations
+Statement: [http://example.org/fcsmps#Marge, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Clancy] has 0 derivations
+Statement: [http://example.org/fictionalchars#studiesAt, http://www.w3.org/2000/01/rdf-schema#range, http://example.org/fictionalchars#Building] has 0 derivations
+Statement: [http://example.org/fictionalchars#studiesAt, http://www.w3.org/2000/01/rdf-schema#label, "studies at"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#studiesAt, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#studiesAt, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing studies at a building or a location."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandParent, http://www.w3.org/2000/01/rdf-schema#label, "has grand parent"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandParent, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a grandparent."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasParent] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#label, "has mother"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a mother. Subproperty of hasParent."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Woman, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Human] has 0 derivations
+Statement: [http://example.org/fictionalchars#Woman, http://www.w3.org/2000/01/rdf-schema#label, "Woman"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Woman, http://www.w3.org/2000/01/rdf-schema#comment, "The class of female humans. Subclass of Human."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasWife, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSpouse] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasWife, http://www.w3.org/2000/01/rdf-schema#label, "has wife"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasWife, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a wife. Subproperty of hasSpouse."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#owns, http://www.w3.org/2000/01/rdf-schema#range, http://example.org/fictionalchars#Building] has 0 derivations
+Statement: [http://example.org/fictionalchars#owns, http://www.w3.org/2000/01/rdf-schema#label, "owns"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#owns, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#owns, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing owns a building or a location."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Maleness, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#GenderType] has 0 derivations
+Statement: [http://example.org/fictionalchars#Maleness, http://www.w3.org/2000/01/rdf-schema#label, "Maleness"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Maleness, http://www.w3.org/2000/01/rdf-schema#comment, "The class of the male gender. Subclass of GenderType."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasEventDate, http://www.w3.org/2000/01/rdf-schema#range, http://www.w3.org/2001/XMLSchema#date] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasEventDate, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#label, "has ancestor"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has an ancestor."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSisterInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSiblingInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSisterInLaw, http://www.w3.org/2000/01/rdf-schema#label, "has sister in law"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSisterInLaw, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a sister in law. Subproperty of hasSiblingInLaw."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBirthDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasEventDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBirthDate, http://www.w3.org/2000/01/rdf-schema#label, "has birth date"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBirthDate, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a birth date."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://example.org/fictionalchars#hasWife, http://example.org/fcsmps#Jacqueline] has 0 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Clancy, http://www.w3.org/2000/01/rdf-schema#label, "Clancy Bouvier"] has 0 derivations
+Statement: [http://example.org/fictionalchars#Location, http://www.w3.org/2000/01/rdf-schema#label, "Location"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Location, http://www.w3.org/2000/01/rdf-schema#comment, "The class of location"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasDeathDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasEventDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasDeathDate, http://www.w3.org/2000/01/rdf-schema#label, "has death date"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasDeathDate, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has death date."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasHusband, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSpouse] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasHusband, http://www.w3.org/2000/01/rdf-schema#label, "has husband"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasHusband, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a husband. Subproperty of hasSpouse."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#GenderType] has 0 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/2000/01/rdf-schema#label, "Femaleness"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/2000/01/rdf-schema#comment, "The class of the female gender. Subclass of GenderType."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Cyrus] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Tyrone] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Hubert] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Orville] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Yuma] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Bill] has 0 derivations
+Statement: [http://example.org/fcsmps#Chet, http://www.w3.org/2000/01/rdf-schema#label, "Chet Simpson"] has 0 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/2000/01/rdf-schema#label, "Gender type"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/2000/01/rdf-schema#comment, "The class of genders. "@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSibling, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSibling, http://www.w3.org/2000/01/rdf-schema#label, "has sibling"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSibling, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a sibling. Subproperty of hasBloodRelation."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMotherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasParentInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMotherInLaw, http://www.w3.org/2000/01/rdf-schema#label, "has mother in law"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMotherInLaw, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a mother in law. Subproperty of hasParentInLaw."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasDivorceDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasEventDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasDivorceDate, http://www.w3.org/2000/01/rdf-schema#label, "has divorce date"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasDivorceDate, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a divorce date."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#range, http://example.org/fictionalchars#GenderType] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#label, "has gender"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGender, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a gender."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasGrandParent] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/2000/01/rdf-schema#label, "has grand father"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a grandfather. Subproperty of hasGrandParent."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Bill] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Mona] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasWife, http://example.org/fcsmps#Marge] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://www.w3.org/2000/01/rdf-schema#label, "Homer Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Tyrone] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Chet] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#worksAt, http://example.org/fcsmps#SpringfieldPowerPlant] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasGrandFather, http://example.org/fcsmps#Orville] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasGrandMother, http://example.org/fcsmps#Yuma] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Cyrus] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Hubert] has 0 derivations
+Statement: [http://example.org/fcsmps#Homer, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSibling] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrother, http://www.w3.org/2000/01/rdf-schema#label, "has brother"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrother, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has an a brother. Property describing that a living thing has an aunt. Subproperty of hasSibling."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#worksAt, http://www.w3.org/2000/01/rdf-schema#range, http://example.org/fictionalchars#Building] has 0 derivations
+Statement: [http://example.org/fictionalchars#worksAt, http://www.w3.org/2000/01/rdf-schema#label, "works at"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#worksAt, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#worksAt, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing works at a building or at a location."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSpouse, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSpouse, http://www.w3.org/2000/01/rdf-schema#label, "has spouse"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSpouse, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a spouse. Subproperty of hasRelation."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Rita, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Rita, http://www.w3.org/2000/01/rdf-schema#label, "Rita LaFleur Simpson"] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/2000/01/rdf-schema#label, "has blood relation"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a blood relation."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#SantasHelper, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#SantasHelper, http://www.w3.org/2000/01/rdf-schema#label, "Santas Little Helper"] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasInlaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasInlaw, http://www.w3.org/2000/01/rdf-schema#label, "has inlaw"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasInlaw, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has an in law."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Mona, http://example.org/fictionalchars#hasHusband, http://example.org/fcsmps#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Mona, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Mona, http://www.w3.org/2000/01/rdf-schema#label, "Mona Simpson"] has 0 derivations
+Statement: [http://example.org/fictionalchars#Human, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#Human, http://www.w3.org/2000/01/rdf-schema#label, "Human"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Human, http://www.w3.org/2000/01/rdf-schema#comment, "The class of humans. Subclass of LivingBeings."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Man, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Human] has 0 derivations
+Statement: [http://example.org/fictionalchars#Man, http://www.w3.org/2000/01/rdf-schema#label, "Man"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Man, http://www.w3.org/2000/01/rdf-schema#comment, "The class of male humans. Subclass of Human"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFatherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasParentInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFatherInLaw, http://www.w3.org/2000/01/rdf-schema#label, "has father in law"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFatherInLaw, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a father in law. Subproperty of hasParentInLaw."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Herbert] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Bart] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasSister, http://example.org/fcsmps#Maggie] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasAunt, http://example.org/fcsmps#Patty] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasPet, http://example.org/fcsmps#Snowball] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasAunt, http://example.org/fcsmps#Selma] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://www.w3.org/2000/01/rdf-schema#label, "Lisa Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasGrandFather, http://example.org/fictionalchars#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasGrandMother, http://example.org/fictionalchars#Mona] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Marge] has 0 derivations
+Statement: [http://example.org/fcsmps#Lisa, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Homer] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasParent] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/2000/01/rdf-schema#label, "has father"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a father. Subproperty of hasParent."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasGrandFather, http://example.org/fictionalchars#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Marge] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasSister, http://example.org/fcsmps#Lisa] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Bart] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://www.w3.org/2000/01/rdf-schema#label, "Maggie Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasGrandMother, http://example.org/fictionalchars#Mona] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasAunt, http://example.org/fcsmps#Patty] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasAunt, http://example.org/fcsmps#Selma] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Homer] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#Maggie, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Herbert] has 0 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Jacqueline] has 0 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Patty, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Clancy] has 0 derivations
+Statement: [http://example.org/fcsmps#Patty, http://www.w3.org/2000/01/rdf-schema#label, "Patty Bouvier"] has 0 derivations
+Statement: [http://example.org/fcsmps#SpringfieldElementary, http://www.w3.org/2000/01/rdf-schema#label, "Springfield Elementary School"] has 0 derivations
+Statement: [http://example.org/fcsmps#School, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Building] has 0 derivations
+Statement: [http://example.org/fcsmps#School, http://www.w3.org/2000/01/rdf-schema#label, "School"] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAunt, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAunt, http://www.w3.org/2000/01/rdf-schema#label, "has aunt"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAunt, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has an aunt. Subproperty of hasBloodRelation."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://www.w3.org/2000/01/rdf-schema#label, "Tyrone Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Cyrus] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Yuma] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Orville] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Bill] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Hubert] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Tyrone, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Chet] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Cyrus] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Hubert] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Tyrone] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://www.w3.org/2000/01/rdf-schema#label, "Bill Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Chet] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Yuma] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Orville] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Bill, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Yuma, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Yuma, http://www.w3.org/2000/01/rdf-schema#label, "Yuma Hickman"] has 0 derivations
+Statement: [http://example.org/fcsmps#Springfield, http://www.w3.org/2000/01/rdf-schema#label, "Springfield"] has 0 derivations
+Statement: [http://example.org/fcsmps#Orville, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Orville, http://www.w3.org/2000/01/rdf-schema#label, "Orville Simpson"] has 0 derivations
+Statement: [http://example.org/fictionalchars#Building, http://www.w3.org/2000/01/rdf-schema#label, "Building"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Building, http://www.w3.org/2000/01/rdf-schema#comment, "The class of Buildings"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParentInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasInlaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParentInLaw, http://www.w3.org/2000/01/rdf-schema#label, "has parent in law"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParentInLaw, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a parent in law. Subproperty of hasInLaw."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasGrandMother, http://example.org/fcsmps#Yuma] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Cyrus] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Bill] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://www.w3.org/2000/01/rdf-schema#label, "Herbert Powell"] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Tyrone] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Chet] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Hubert] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Rita] has 0 derivations
+Statement: [http://example.org/fcsmps#Herbert, http://example.org/fictionalchars#hasGrandFather, http://example.org/fcsmps#Orville] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSiblingInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasInlaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSiblingInLaw, http://www.w3.org/2000/01/rdf-schema#label, "has sibling in law"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSiblingInLaw, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a sibling in law. Subproperty of hasInLaw."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasPet, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasPet, http://www.w3.org/2000/01/rdf-schema#range, http://example.org/fictionalchars#Animal] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasPet, http://www.w3.org/2000/01/rdf-schema#label, "has pet"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasPet, http://www.w3.org/2000/01/rdf-schema#domain, http://example.org/fictionalchars#Human] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasPet, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a pet."@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrotherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSiblingInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrotherInLaw, http://www.w3.org/2000/01/rdf-schema#label, "has brother in law"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrotherInLaw, http://www.w3.org/2000/01/rdf-schema#comment, "Property describing that a living thing has a brother in law. Subproperty of hasSiblingInLaw."@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Jacqueline] has 0 derivations
+Statement: [http://example.org/fcsmps#Selma, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fcsmps#Selma, http://www.w3.org/2000/01/rdf-schema#label, "Selma Bouvier"] has 0 derivations
+Statement: [http://example.org/fictionalchars#Animal, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#Animal, http://www.w3.org/2000/01/rdf-schema#label, "Animal"@en] has 0 derivations
+Statement: [http://example.org/fictionalchars#Animal, http://www.w3.org/2000/01/rdf-schema#comment, "The class of Animals. Subclass of LivingBeings"@en] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Homer] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#livesIn, http://example.org/fcsmps#Springfield] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasUncle, http://example.org/fcsmps#Herbert] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasSister, http://example.org/fcsmps#Maggie] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasAunt, http://example.org/fcsmps#Selma] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasAunt, http://example.org/fcsmps#Patty] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasPet, http://example.org/fcsmps#SantasHelper] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://www.w3.org/2000/01/rdf-schema#label, "Bart Simpson"] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Marge] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasGrandMother, http://example.org/fictionalchars#Mona] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasGrandFather, http://example.org/fictionalchars#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasSister, http://example.org/fcsmps#Lisa] has 0 derivations
+Statement: [http://example.org/fcsmps#Bart, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Abraham] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasMother, http://example.org/fcsmps#Yuma] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Hubert] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Bill] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Tyrone] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasFather, http://example.org/fcsmps#Orville] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasGender, http://example.org/fictionalchars#Malesness] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://example.org/fictionalchars#hasBrother, http://example.org/fcsmps#Chet] has 0 derivations
+Statement: [http://example.org/fcsmps#Cyrus, http://www.w3.org/2000/01/rdf-schema#label, "Cyrus Simpson"] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Resource, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://example.org/fictionalchars#Building, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Building] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Property, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://example.org/fictionalchars#GenderType, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#GenderType] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Container, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Container] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Property] has 0 derivations
+Statement: [http://example.org/fcsmps#PowerPlant, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fcsmps#PowerPlant] has 0 derivations
+Statement: [http://example.org/fcsmps#PowerPlant, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://example.org/fictionalchars#LivingBeings, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#Woman, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Woman] has 0 derivations
+Statement: [http://example.org/fictionalchars#Woman, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://example.org/fictionalchars#Woman, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Container] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Container] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Datatype] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Datatype, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#Class, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Class] has 0 derivations
+Statement: [http://example.org/fcsmps#School, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fcsmps#School] has 0 derivations
+Statement: [http://example.org/fcsmps#School, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt] has 0 derivations
+Statement: [http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Container] has 0 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Femaleness] has 0 derivations
+Statement: [http://example.org/fictionalchars#Femaleness, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://example.org/fictionalchars#Man, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Man] has 0 derivations
+Statement: [http://example.org/fictionalchars#Man, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://example.org/fictionalchars#Man, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#LivingBeings] has 0 derivations
+Statement: [http://example.org/fictionalchars#Human, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Human] has 0 derivations
+Statement: [http://example.org/fictionalchars#Maleness, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Maleness] has 0 derivations
+Statement: [http://example.org/fictionalchars#Maleness, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://www.w3.org/2000/01/rdf-schema#Resource] has 0 derivations
+Statement: [http://example.org/fictionalchars#Animal, http://www.w3.org/2000/01/rdf-schema#subClassOf, http://example.org/fictionalchars#Animal] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#isDefinedBy] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#isDefinedBy, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#seeAlso] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasDivorceDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasDivorceDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasFather] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBrother] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAunt, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAunt] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAunt, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSibling, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSibling] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSibling, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrotherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBrotherInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrotherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBrotherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasInlaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasHusband, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasHusband] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasHusband, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://www.w3.org/2000/01/rdf-schema#seeAlso, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://www.w3.org/2000/01/rdf-schema#seeAlso] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParentInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasParentInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParentInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasWife, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasWife] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasWife, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasGrandParent] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasDeathDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasDeathDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSiblingInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSiblingInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSiblingInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasInlaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasInlaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBirthDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBirthDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSisterInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSisterInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSisterInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSisterInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasInlaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasEventDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasEventDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSister, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSister] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSister, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSister, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasGrandMother] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasRelation, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasSpouse, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasSpouse] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasUncle, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasUncle] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasUncle, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasParent] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasParent, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasAncestor, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasBloodRelation, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasPet, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasPet] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMotherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasMotherInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMotherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMotherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasInlaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasGrandFather] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasGrandFather, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMarriageDate, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasMarriageDate] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasMother] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasBloodRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasAncestor] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasMother, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFatherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasFatherInLaw] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFatherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasRelation] has 0 derivations
+Statement: [http://example.org/fictionalchars#hasFatherInLaw, http://www.w3.org/2000/01/rdf-schema#subPropertyOf, http://example.org/fictionalchars#hasInlaw] has 0 derivations

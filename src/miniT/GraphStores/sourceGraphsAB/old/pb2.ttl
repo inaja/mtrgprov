@@ -1,0 +1,27 @@
+@base <http://example.org/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rgprov: <http://www.ecs.soton.ac.uk/rgprov#> .
+@prefix :     <http://example.org#> .
+
+
+:bob 	a 	foaf:Person, 	prov:Agent;	
+	foaf:givenName	"Bob";
+	foaf:mbox		<mailto:bob@example.org>;
+	prov:actedOnBehalfOf	:fox;
+	.
+	
+:swiki	a foaf:Organization, prov:Agent;
+	foaf:name "Simpsons Wiki";
+	.	
+		
+:publicationActivity2 a prov:Activity;
+	prov:wasAssociatedWith	:bob;
+	.
+	
+<http://example.org/fcBouvier.ttl> a rgprov:Graph;
+	prov:wasGeneratedby	:publicationActivity2;
+	.	

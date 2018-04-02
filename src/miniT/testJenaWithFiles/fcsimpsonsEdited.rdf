@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		 xmlns:fc="http://example.org/fictionalchars#">
+
+  
+  <rdf:Description rdf:about="http://example.org/fcsmps#Springfield">
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Location"/>
+    <rdfs:label>Springfield</rdfs:label>
+  </rdf:Description>
+  
+  
+  <rdf:Description rdf:about="http://example.org/fcsmps#Abraham">
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Man"/>
+    <rdfs:label>Abraham Simpson</rdfs:label>
+    <fc:GenderType rdf:resource="http://example.org/fictionalchars#Malesness"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Homer">
+    <rdfs:label>Homer Simpson</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Man"/>
+	<fc:GenderType rdf:resource="http://example.org/fictionalchars#Malesness"/>
+    <fc:hasWife rdf:resource="http://example.org/fcsmps#Marge"/>
+    <fc:hasFather rdf:resource="http://example.org/fcsmps#Abraham"/>
+  </rdf:Description>
+  
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Bart">
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Man"/>
+	<rdfs:label>Bart Simpson</rdfs:label>
+	<fc:hasFather rdf:resource="http://example.org/fcsmps#Homer"/>
+  </rdf:Description>
+
+
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Lisa">
+  <rdfs:label>Lisa Simpson</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Woman"/>
+	
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Maggie">
+  <rdfs:label>Maggie Simpson</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Woman"/>
+	
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/fcsmps#Marge">
+      <rdfs:label>Marge Simpson</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/fictionalchars#Woman"/>
+	 <fc:hasHusband rdf:resource="http://example.org/fcsmps#Homer"/>
+  </rdf:Description>
+
+</rdf:RDF>

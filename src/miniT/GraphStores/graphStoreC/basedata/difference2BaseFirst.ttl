@@ -1,0 +1,122 @@
+<http://example.org/fcsmps#Chet>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Chet Simpson" ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Hubert> , <http://example.org/fcsmps#Abraham> , <http://example.org/fcsmps#Bill> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Yuma> .
+
+<http://example.org/fcsmps#Patty>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Patty Bouvier" ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#Herbert>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Herbert Powell" ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasGrandFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGrandMother>
+                <http://example.org/fcsmps#Yuma> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Rita> ;
+        <http://example.org/fictionalchars#hasUncle>
+                <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Bill> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Chet> , <http://example.org/fcsmps#Hubert> .
+
+<http://example.org/fcsmps#Marge>
+        <http://example.org/fictionalchars#hasSister>
+                <http://example.org/fcsmps#Patty> , <http://example.org/fcsmps#Selma> .
+
+<http://example.org/fcsmps#Rita>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rita LaFleur Simpson" ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> .
+
+<http://example.org/fcsmps#Tyrone>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Tyrone Simpson" ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Bill> , <http://example.org/fcsmps#Hubert> , <http://example.org/fcsmps#Abraham> , <http://example.org/fcsmps#Chet> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Yuma> .
+
+<http://example.org/fcsmps#Selma>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Selma Bouvier" ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> ;
+        <http://example.org/fictionalchars#livesIn>
+                <http://example.org/fcsmps#Springfield> .
+
+<http://example.org/fcsmps#Cyrus>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Cyrus Simpson" ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Abraham> , <http://example.org/fcsmps#Hubert> , <http://example.org/fcsmps#Bill> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Chet> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Yuma> .
+
+<http://example.org/fcsmps#Hubert>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Hubert Simpson" ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Chet> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Bill> , <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Abraham> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Yuma> .
+
+<http://example.org/fcsmps#Yuma>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Yuma Hickman" ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Femaleness> .
+
+<http://example.org/fcsmps#Bill>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bill Simpson" ;
+        <http://example.org/fictionalchars#hasBrother>
+                <http://example.org/fcsmps#Cyrus> , <http://example.org/fcsmps#Hubert> , <http://example.org/fcsmps#Tyrone> , <http://example.org/fcsmps#Chet> , <http://example.org/fcsmps#Abraham> ;
+        <http://example.org/fictionalchars#hasFather>
+                <http://example.org/fcsmps#Orville> ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> ;
+        <http://example.org/fictionalchars#hasMother>
+                <http://example.org/fcsmps#Yuma> .
+
+<http://example.org/fcsmps#Orville>
+        a       <http://example.org/fictionalchars#Man> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Orville Simpson" ;
+        <http://example.org/fictionalchars#hasGender>
+                <http://example.org/fictionalchars#Malesness> .

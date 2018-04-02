@@ -1,0 +1,37 @@
+prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix owl:   <http://www.w3.org/2002/07/owl#> 
+prefix xsd:   <http://www.w3.org/2001/XMLSchema#> 
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+prefix fcsmps: <http://example.org/fcsmps#> 
+prefix fc:    <http://example.org/fictionalchars#> 
+
+
+rdf:type  a         rdfs:Resource , rdf:Property ;
+        rdfs:range  rdfs:Class .
+
+fc:Woman  a              rdfs:Resource , rdfs:Class ;
+        rdfs:comment     "The class of female humans. Subclass of Human."@en ;
+        rdfs:label       "Woman"@en ;
+        rdfs:subClassOf  rdfs:Resource , fc:LivingBeings , fc:Woman , rdfs:Class , fc:Human .
+		
+fc:hasFather  a             rdfs:Resource , rdf:Property ;
+        rdfs:comment        "Property describing that a living thing has a father. Subproperty of hasParent."@en ;
+        rdfs:label          "has father"@en ;
+        rdfs:subPropertyOf  fc:hasFather , fc:hasAncestor , fc:hasBloodRelation , fc:hasRelation , fc:hasParent .
+
+fcsmps:Selma  a              fc:LivingBeings , fc:Woman , fc:Human , rdfs:Class , rdfs:Resource ;
+        rdfs:label           "Selma Bouvier" ;
+        fc:hasAncestor       fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasBloodRelation  fcsmps:Jacqueline , fcsmps:Clancy ;
+        fc:hasFather         fcsmps:Clancy ;
+        fc:hasGender         fc:Femaleness ;
+        fc:hasMother         fcsmps:Jacqueline ;
+        fc:hasParent         fcsmps:Clancy , fcsmps:Jacqueline ;
+        fc:hasRelation       fcsmps:Jacqueline , fcsmps:Clancy .
+
+fcsmps:Clancy  a        rdfs:Class , fc:LivingBeings , fc:Man , fc:Human , rdfs:Resource ;
+        rdfs:label      "Clancy Bouvier" ;
+        fc:hasGender    fc:Malesness ;
+        fc:hasRelation  fcsmps:Jacqueline ;
+        fc:hasSpouse    fcsmps:Jacqueline ;
+        fc:hasWife      fcsmps:Jacqueline .

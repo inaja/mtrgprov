@@ -1,0 +1,100 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fcsmps: <http://example.org/fcsmps#> .
+@prefix fc:    <http://example.org/fictionalchars#> .
+
+fcsmps:Abraham  a      fc:Man ;
+        rdfs:label     "Abraham Simpson" ;
+        fc:hasBrother  fcsmps:Bill , fcsmps:Cyrus , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Hubert ;
+        fc:hasFather   fcsmps:Orville ;
+        fc:hasGender   fc:Malesness ;
+        fc:hasMother   fcsmps:Yuma ;
+        fc:livesIn     fcsmps:Springfield .
+
+fcsmps:School  rdfs:label  "School" ;
+        rdfs:subClassOf  fc:Building .
+
+fcsmps:Lisa  a             fc:Woman ;
+        rdfs:label         "Lisa Simpson" ;
+        fc:hasAunt         fcsmps:Patty , fcsmps:Selma ;
+        fc:hasBrother      fcsmps:Bart ;
+        fc:hasFather       fcsmps:Homer ;
+        fc:hasGender       fc:Femaleness ;
+        fc:hasGrandFather  fc:Abraham ;
+        fc:hasGrandMother  fc:Mona ;
+        fc:hasMother       fcsmps:Marge ;
+        fc:hasPet          fcsmps:Snowball ;
+        fc:hasSister       fcsmps:Maggie ;
+        fc:hasUncle        fcsmps:Herbert ;
+        fc:livesIn         fcsmps:Springfield .
+
+fcsmps:Homer  a            fc:Man ;
+        rdfs:label         "Homer Simpson" ;
+        fc:hasFather       fcsmps:Abraham ;
+        fc:hasGender       fc:Malesness ;
+        fc:hasGrandFather  fcsmps:Orville ;
+        fc:hasGrandMother  fcsmps:Yuma ;
+        fc:hasMother       fcsmps:Mona ;
+        fc:hasUncle        fcsmps:Bill , fcsmps:Tyrone , fcsmps:Chet , fcsmps:Cyrus , fcsmps:Hubert ;
+        fc:hasWife         fcsmps:Marge ;
+        fc:livesIn         fcsmps:Springfield ;
+        fc:worksAt         fcsmps:SpringfieldPowerPlant .
+
+fcsmps:Marge  fc:hasGender  fc:Femaleness ;
+        fc:hasHusband  fcsmps:Homer ;
+        fc:livesIn     fcsmps:Springfield .
+
+fcsmps:Snowball  a  fc:Animal ;
+        rdfs:label  "Snowball II" ;
+        fc:livesIn  fcsmps:Springfield .
+
+fcsmps:SpringfieldElementary
+        a           fcsmps:School ;
+        rdfs:label  "Springfield Elementary School" .
+
+fcsmps:Mona  a         fc:Woman ;
+        rdfs:label     "Mona Simpson" ;
+        fc:hasGender   fc:Femaleness ;
+        fc:hasHusband  fcsmps:Abraham .
+
+fcsmps:SpringfieldPowerPlant
+        a           fcsmps:PowerPlant ;
+        rdfs:label  "Nuclear Power Plant" .
+
+fcsmps:Maggie  a           fc:Woman ;
+        rdfs:label         "Maggie Simpson" ;
+        fc:hasAunt         fcsmps:Patty , fcsmps:Selma ;
+        fc:hasBrother      fcsmps:Bart ;
+        fc:hasFather       fcsmps:Homer ;
+        fc:hasGender       fc:Femaleness ;
+        fc:hasGrandFather  fc:Abraham ;
+        fc:hasGrandMother  fc:Mona ;
+        fc:hasMother       fcsmps:Marge ;
+        fc:hasSister       fcsmps:Lisa ;
+        fc:hasUncle        fcsmps:Herbert ;
+        fc:livesIn         fcsmps:Springfield .
+
+fcsmps:Springfield  a  fc:Location ;
+        rdfs:label  "Springfield" .
+
+fcsmps:Bart  a             fc:Man ;
+        rdfs:label         "Bart Simpson" ;
+        fc:hasAunt         fcsmps:Selma , fcsmps:Patty ;
+        fc:hasFather       fcsmps:Homer ;
+        fc:hasGender       fc:Malesness ;
+        fc:hasGrandFather  fc:Abraham ;
+        fc:hasGrandMother  fc:Mona ;
+        fc:hasMother       fcsmps:Marge ;
+        fc:hasPet          fcsmps:SantasHelper ;
+        fc:hasSister       fcsmps:Maggie , fcsmps:Lisa ;
+        fc:hasUncle        fcsmps:Herbert ;
+        fc:livesIn         fcsmps:Springfield .
+
+fcsmps:SantasHelper  a  fc:Animal ;
+        rdfs:label  "Santas Little Helper" ;
+        fc:livesIn  fcsmps:Springfield .
+
+fcsmps:PowerPlant  rdfs:label  "Power Plant" ;
+        rdfs:subClassOf  fc:Building .

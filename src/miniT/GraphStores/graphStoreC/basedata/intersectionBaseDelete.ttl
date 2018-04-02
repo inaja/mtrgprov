@@ -1,0 +1,417 @@
+<http://example.org/fictionalchars#hasRelation>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a relation with another living thing."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://example.org/fictionalchars#LivingBeings> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://example.org/fictionalchars#LivingBeings> .
+
+<http://example.org/fictionalchars#hasMarriageDate>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a marriage date."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has marriage date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasEventDate> .
+
+<http://example.org/fictionalchars#LivingBeings>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of living things."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Living beings"@en .
+
+<http://example.org/fictionalchars#hasGrandMother>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a grandmother. Subproperty of hasGrandMother."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has grand mother"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasGrandParent> .
+
+<http://example.org/fictionalchars#hasUncle>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has an uncle. Subproperty of hasBloodRelation."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has uncle"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasBloodRelation> .
+
+<http://example.org/fictionalchars#Marriage>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://example.org/fictionalchars#hasParent>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a parent."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has parent"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasAncestor> .
+
+<http://example.org/fictionalchars#hasSister>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has an a brother. Property describing that a living thing has an sister. Subproperty of hasSibling."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has sister"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasSibling> .
+
+<http://example.org/fictionalchars#livesIn>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing lives in a building or in a location."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://example.org/fictionalchars#LivingBeings> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "lives in"@en .
+
+<http://example.org/fcsmps#Marge>
+        a       <http://example.org/fictionalchars#Woman> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Marge Simpson" .
+
+<http://example.org/fictionalchars#studiesAt>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing studies at a building or a location."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://example.org/fictionalchars#LivingBeings> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "studies at"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://example.org/fictionalchars#Building> .
+
+<http://example.org/fictionalchars#hasGrandParent>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a grandparent."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has grand parent"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasAncestor> .
+
+<http://example.org/fictionalchars#hasMother>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a mother. Subproperty of hasParent."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has mother"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasParent> .
+
+<http://example.org/fictionalchars#Woman>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of female humans. Subclass of Human."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Woman"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#Human> .
+
+<http://example.org/fictionalchars#hasWife>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a wife. Subproperty of hasSpouse."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has wife"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasSpouse> .
+
+<http://example.org/fictionalchars#owns>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing owns a building or a location."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://example.org/fictionalchars#LivingBeings> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "owns"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://example.org/fictionalchars#Building> .
+
+<http://example.org/fictionalchars#Maleness>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of the male gender. Subclass of GenderType."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Maleness"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#GenderType> .
+
+<http://example.org/fictionalchars#hasEventDate>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://example.org/fictionalchars#LivingBeings> ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#date> .
+
+<http://example.org/fictionalchars#hasAncestor>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has an ancestor."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has ancestor"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasBloodRelation> .
+
+<http://example.org/fictionalchars#hasSisterInLaw>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a sister in law. Subproperty of hasSiblingInLaw."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has sister in law"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasSiblingInLaw> .
+
+<http://example.org/fictionalchars#hasBirthDate>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a birth date."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has birth date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasEventDate> .
+
+<http://example.org/fictionalchars#Ownership>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<http://example.org/fictionalchars#Location>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of location"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Location"@en .
+
+<http://example.org/fictionalchars#hasDeathDate>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has death date."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has death date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasEventDate> .
+
+<http://example.org/fictionalchars#hasHusband>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a husband. Subproperty of hasSpouse."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has husband"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasSpouse> .
+
+<http://example.org/fictionalchars#Femaleness>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of the female gender. Subclass of GenderType."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Femaleness"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#GenderType> .
+
+<http://example.org/fictionalchars#GenderType>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of genders. "@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Gender type"@en .
+
+<http://example.org/fictionalchars#hasSibling>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a sibling. Subproperty of hasBloodRelation."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has sibling"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasBloodRelation> .
+
+<http://example.org/fictionalchars#hasMotherInLaw>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a mother in law. Subproperty of hasParentInLaw."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has mother in law"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasParentInLaw> .
+
+<http://example.org/fictionalchars#hasDivorceDate>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a divorce date."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has divorce date"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasEventDate> .
+
+<http://example.org/fictionalchars#hasGender>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a gender."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://example.org/fictionalchars#LivingBeings> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has gender"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://example.org/fictionalchars#GenderType> .
+
+<http://example.org/fictionalchars#hasGrandFather>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a grandfather. Subproperty of hasGrandParent."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has grand father"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasGrandParent> .
+
+<http://example.org/fictionalchars#hasBrother>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has an a brother. Property describing that a living thing has an aunt. Subproperty of hasSibling."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has brother"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasSibling> .
+
+<http://example.org/fictionalchars#worksAt>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing works at a building or at a location."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://example.org/fictionalchars#LivingBeings> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "works at"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://example.org/fictionalchars#Building> .
+
+<http://example.org/fictionalchars#hasSpouse>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a spouse. Subproperty of hasRelation."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has spouse"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasRelation> .
+
+<http://example.org/fictionalchars#hasBloodRelation>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a blood relation."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has blood relation"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasRelation> .
+
+<http://example.org/fictionalchars#hasInlaw>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has an in law."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has inlaw"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasRelation> .
+
+<http://example.org/fictionalchars#Human>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of humans. Subclass of LivingBeings."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Human"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#LivingBeings> .
+
+<http://example.org/fictionalchars#Man>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of male humans. Subclass of Human"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Man"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#Human> .
+
+<http://example.org/fictionalchars#hasFatherInLaw>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a father in law. Subproperty of hasParentInLaw."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has father in law"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasParentInLaw> .
+
+<http://example.org/fictionalchars#hasFather>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a father. Subproperty of hasParent."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has father"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasParent> .
+
+<http://example.org/fictionalchars#hasAunt>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has an aunt. Subproperty of hasBloodRelation."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has aunt"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasBloodRelation> .
+
+<http://example.org/fictionalchars#Building>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of Buildings"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Building"@en .
+
+<http://example.org/fictionalchars#hasParentInLaw>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a parent in law. Subproperty of hasInLaw."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has parent in law"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasInlaw> .
+
+<http://example.org/fictionalchars#hasSiblingInLaw>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a sibling in law. Subproperty of hasInLaw."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has sibling in law"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasInlaw> .
+
+<http://example.org/fictionalchars#hasPet>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a pet."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                <http://example.org/fictionalchars#Human> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has pet"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://example.org/fictionalchars#Animal> ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasRelation> .
+
+<http://example.org/fictionalchars#hasBrotherInLaw>
+        a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Property describing that a living thing has a brother in law. Subproperty of hasSiblingInLaw."@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "has brother in law"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+                <http://example.org/fictionalchars#hasSiblingInLaw> .
+
+<http://example.org/fictionalchars#Animal>
+        a       <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "The class of Animals. Subclass of LivingBeings"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Animal"@en ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://example.org/fictionalchars#LivingBeings> .
