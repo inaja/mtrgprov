@@ -1,0 +1,26 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fc:    <http://example.org/fictionalchars#> .
+@prefix fcsmps: <http://example.org/fcsmps#> .
+
+fcsmps:Marge  fc:hasFather  fcsmps:Clancy ;
+        fc:hasHusband  fcsmps:Homer ;
+        fc:hasMother   fcsmps:Jacqueline .
+
+fcsmps:Patty  fc:hasFather  fcsmps:Clancy ;
+        fc:hasMother  fcsmps:Jacqueline .
+
+fcsmps:Selma  fc:hasFather  fcsmps:Clancy ;
+        fc:hasMother  fcsmps:Jacqueline .
+
+fcsmps:Jacqueline  a   fc:Woman ;
+        rdfs:label     "Jacqueline Bouvier" ;
+        fc:hasGender   fc:Femaleness ;
+        fc:hasHusband  fcsmps:Clancy .
+
+fcsmps:Clancy  a      fc:Man ;
+        rdfs:label    "Clancy Bouvier" ;
+        fc:hasGender  fc:Malesness ;
+        fc:hasWife    fcsmps:Jacqueline .

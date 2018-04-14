@@ -1,0 +1,45 @@
+@prefix :      <http://example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rgprov: <http://www.ecs.soton.ac.uk/rgprov#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+:fcOthers.ttl  a             rgprov:Graph ;
+        prov:wasGeneratedby  :publicationActivity2 .
+
+:fcOthersUpdatedInsert.ttl
+        a                    rgprov:Graph ;
+        prov:wasGeneratedby  :updateActivityInsert ;
+        prov:wasRevisionOf   :fcOthers.ttl .
+
+:fcOthersUpdatedDelete.ttl
+        a                    rgprov:Graph ;
+        prov:wasGeneratedby  :updateActivityDelete ;
+        prov:wasRevisionOf   :fcOthersUpdatedInsert.ttl .
+
+:bob    a                     foaf:Person , prov:Agent ;
+        prov:actedOnBehalfOf  :fox ;
+        foaf:givenName        "Bob" ;
+        foaf:mbox             <mailto:bob@example.org> .
+
+:swiki  a          prov:Agent , foaf:Organization ;
+        foaf:name  "Simpsons Wiki" .
+
+:publicationActivity2
+        a                       prov:Activity ;
+        prov:wasAssociatedWith  :bob .
+
+:updateActivityInsert
+        a                       prov:Activity ;
+        prov:wasAssociatedWith  :carol .
+
+:carol  a                     foaf:Person , prov:Agent ;
+        prov:actedOnBehalfOf  :fox ;
+        foaf:givenName        "Carol" ;
+        foaf:mbox             <mailto:carol@example.org> .
+
+:updateActivityDelete
+        a                       prov:Activity ;
+        prov:wasAssociatedWith  :carol .
