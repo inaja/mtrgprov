@@ -1,7 +1,9 @@
 package operators;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import utilities.*;
@@ -62,8 +64,12 @@ public class UpdatedOperator
 	{
 		c3prime = new GraphInSystem(graphC3_NAME, graphC3_PROV_NAME, graphC3prime_NAME);
 		//Get C3 from Fuseki
-		Model c3Old = SPARQLUtilities.loadGraphFromFuseki(DATASET4MT,c3prime.getGraph_NAME());
-		c3prime.setGraph_MODEL(c3Old);
+		Model c3base = SPARQLUtilities.loadGraphFromFuseki(DATASET4MT,c3prime.getGraph_BASE_NAME());
+		c3prime.setGraph_BASE_MODEL(c3base);
+		Model c3infs = SPARQLUtilities.loadGraphFromFuseki(DATASET4MT,c3prime.getGraph_INFS_NAME());
+		c3prime.setGraph_INFS_MODEL(c3infs);
+		//Model c3primeModel = c3base.union(c3infs);
+		//c3prime.setGraph_BASE_MODEL(c3primeModel);
 		
 		//Get C3's provenance from Fuseki
 		Model c3PreviousProv = SPARQLUtilities.loadGraphFromFuseki(DATASET4MT, graphC3_PROV_NAME);
@@ -74,8 +80,8 @@ public class UpdatedOperator
 							Config.LOCAL_URI + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(), 
 							"inaja:" + c3prime.getGraph_NAME());
 		setQueriedGraphStOpType(retreivedOp);
-		
 		//check C3's provenance to see which other graph was used along with this one in the st op
+		
 		Model c3PROVAfterloading;
 		c3PROVAfterloading = ProvenanceHandler.updateC3ProvAfterLoadingUpdate(c3PreviousProv, c3prime.getGraph_NAME(), b2prime.getGraphOriginal_source_NAME());
 		c3prime.setGraph_PROV_MODEL(c3PROVAfterloading);
@@ -85,7 +91,7 @@ public class UpdatedOperator
 	{	
 		this.graphSTA1B2prime_NAME = graphSTA1B2_Update_Name;
 		if (whichGraph.equalsIgnoreCase("A1")) {
-			//ignore for the moment
+			//check whether to insert/delete all the model or a subset of it
 		} else if (whichGraph.equalsIgnoreCase("B2")) {
 			//check whether to insert/delete all the model or a subset of it
 			generateWhatIsToBeAppliedAsUpdate(whichGraph);
@@ -93,13 +99,23 @@ public class UpdatedOperator
 			
 			if (graphUpdateType.equalsIgnoreCase("insert")) {
 				applyInsertUpdateOnC3();
+				//update the provenance of C3 - or generate provenance or C'3
+				//update the provenance of C3 after insertion
+				//update the provenance of C3 after reasoning
 			}
 			else {
 				applyDeleteUpdateOnC3();
+				//update the provenance of C3 - or generate provenance or C'3
+				//update the provenance of C3 after deletion
+				//update the provenance of C3 after reasoning?
 			}
+			
+			//	updateProvOfC3(graphUpdateType, graphStOpType);
+				
 		}
 		else throw new IllegalArgumentException("Incorrect Graph Name In loadUpdateAndProv, expected either \"A1\" or \"B2\"");
 	}
+	
 	
 	public void applyInsertUpdateOnC3 () throws Exception 
 	{
@@ -111,15 +127,40 @@ public class UpdatedOperator
 		else 
 			m = b2prime.getUpdateGraphSubset_MODEL();
 		
-		c3prime.setGraph_MODEL(c3prime.getGraph_MODEL().union(m));
-		Utilities.writeModelToFile(c3prime.getGraph_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
+		List <Statement> notToBeInserted = new ArrayList<Statement>();
+		StmtIterator itStmt = m.listStatements();
+		while (itStmt.hasNext()) {
+			Statement currentTriple = itStmt.next();
+			//check if object is literal
+			String predicate;
+			if (currentTriple.getObject().isLiteral()) {
+				predicate = "\"" + currentTriple.getObject().toString() + "\"";
+			}
+			else {
+				predicate = "<" + currentTriple.getObject().toString() + "> ";
+			}
+			String triple = //currentTriple.getSubject().getNameSpace()+ currentTriple.getSubject().getLocalName() + " "
+							//currentTriple.getSubject().getLocalName() + " "
+							"<" + currentTriple.getSubject().toString()+ "> " +
+							"<" + currentTriple.getPredicate().toString() + "> " +
+							predicate;
+			//System.out.println(triple);
+			if (SPARQLUtilities.checkIfTripleIsInInfGraph(c3prime.getGraph_INFS_MODEL(), triple)) {
+				System.out.println("Won't be inserting: " + triple);
+				notToBeInserted.add(currentTriple);			
+			}
+		}
+		m.remove(notToBeInserted);
+		
+		c3prime.setGraph_BASE_MODEL(c3prime.getGraph_BASE_MODEL().union(m));
+		Utilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
 		
 		String sTriplesToBeInserted = SPARQLUtilities.createTriplesForUpdate(m);
-		String updateStmt = SPARQLUtilities.createUpdateStatement(DATASET4MT, c3prime.getGraph_NAME(), sTriplesToBeInserted, "insert");
+		String updateStmt = SPARQLUtilities.createUpdateStatement(DATASET4MT, c3prime.getGraph_BASE_NAME(), sTriplesToBeInserted, "insert");
 				
 		// 2. send insert - or subset of it - to Fuseki to the base graph
-		SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES, c3prime.getGraph_NAME());
-		SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_NAME(), updateStmt);
+		SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES, c3prime.getGraph_BASE_NAME());
+		SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_BASE_NAME(), updateStmt);
 			
 		// 3. loop over the triples and get their describe from Fuseki,
 		//	  union the received describe		
@@ -128,7 +169,7 @@ public class UpdatedOperator
 		
 		while (it2.hasNext()) {
 			Statement stmt = it2.next();
-			String ds = SPARQLUtilities.createDescribeStmtForUpdateTriples(DATASET4MT, c3prime.getGraph_NAME(), stmt);
+			String ds = SPARQLUtilities.createDescribeStmtForUpdateTriples(DATASET4MT, c3prime.getGraph_BASE_NAME(), stmt);
 			mDescribe = mDescribe.union(SPARQLUtilities.describeThatOf(DATASET4MT, ds));
 		}
 			
@@ -136,18 +177,18 @@ public class UpdatedOperator
 		timeCalled = Utilities.getTime();
 		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribe, graphStoresLocal_URI + "/graphStoreC/nontraditional/dredCountInsert" + queriedGraphStOpType + timeCalled [1]+ ".txt");
 		//Model oldBASE_AND_NEW_TRIPLES = c3.getGraph_BASE_MODEL().union(results);
-		Model newC3 = c3prime.getGraph_MODEL().union(results);
+		Model oldInfs_AND_NEW_Infs = c3prime.getGraph_INFS_MODEL().union(results);
 		// 5. insert the new triples created by the re-reasoning - or model generated
 		//c3.setGraph_BASE_AND_INFS_MODEL(oldBASE_AND_NEW_TRIPLES);
-		c3prime.setGraph_MODEL(newC3);
-		Utilities.writeModelToFile(newC3, graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
+		c3prime.setGraph_INFS_MODEL(oldInfs_AND_NEW_Infs);
+		Utilities.writeModelToFile(oldInfs_AND_NEW_Infs, graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
 		try {
-			SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES, c3prime.getGraph_NAME());
-			SPARQLUtilities.uploadNewGraph(DATASET4MT, c3prime.getGraph_NAME(), newC3);
+			SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES, c3prime.getGraph_INFS_NAME());
+			SPARQLUtilities.uploadNewGraph(DATASET4MT, c3prime.getGraph_INFS_NAME(), oldInfs_AND_NEW_Infs);
 		} catch (IOException e) {
 			System.err.println("\n************************************************* \n"
 							   + "ERROR from Method applyInsertUpdateOnC3 in Class Operator,\n"
-							   + "COULD NOT UPLOAD TO FUSEKI, intended graph" +  c3prime.getGraph_NAME()+timeCalled [1]+"\n"
+							   + "COULD NOT UPLOAD TO FUSEKI, intended graph" +  c3prime.getGraph_INFS_NAME()+timeCalled [1]+"\n"
 							   + e.getMessage()
 							   + "************************************************* \n");
 		}	
@@ -163,6 +204,32 @@ public class UpdatedOperator
 		else 
 			mTriplesToBeDeleted = b2prime.getUpdateGraphSubset_MODEL();
 		
+		//loop over the triples to be deleted, if they are inferred, remove them from the
+		// list of triples to be deleted
+		
+		List <Statement> notToBeDeleted = new ArrayList<Statement>();
+		StmtIterator itStmt = mTriplesToBeDeleted.listStatements();
+		while (itStmt.hasNext()) {
+			Statement currentTriple = itStmt.next();
+			String predicate;
+			if (currentTriple.getObject().isLiteral()) {
+				predicate = "\"" + currentTriple.getObject().toString() + "\"";
+			}
+			else {
+				predicate = "<" + currentTriple.getObject().toString() + "> ";
+			}
+			String triple = //currentTriple.getSubject().getNameSpace()+ currentTriple.getSubject().getLocalName() + " "
+							//currentTriple.getSubject().getLocalName() + " "
+							"<" + currentTriple.getSubject().toString()+ "> " +
+							"<" + currentTriple.getPredicate().toString() + "> " +
+							predicate;
+			System.out.println(triple);
+			if (SPARQLUtilities.checkIfTripleIsInInfGraph(c3prime.getGraph_INFS_MODEL(), triple)) {
+				System.out.println("Won't be deleting: " + triple);
+				notToBeDeleted.add(currentTriple);			
+			}
+		}mTriplesToBeDeleted.remove(notToBeDeleted);	
+		
 		// 1. loop over triples (or the subset of the triples) to be deleted and 
 		//		send a request for their describe to Fuseki, 
 		//		union the received describes 
@@ -170,7 +237,7 @@ public class UpdatedOperator
 		Model mDescribedGraph = ModelFactory.createDefaultModel();
 		while (itDescribe.hasNext()) {
 			Statement stmt = itDescribe.next();
-			String ds = SPARQLUtilities.createDescribeStmtForUpdateTriples(DATASET4MT, c3prime.getGraph_NAME(), stmt);
+			String ds = SPARQLUtilities.createDescribeStmtForUpdateTriples(DATASET4MT, c3prime.getGraph_INFS_NAME(), stmt);
 			mDescribedGraph = mDescribedGraph.union(SPARQLUtilities.describeThatOf(DATASET4MT, ds));
 		}
 		// 2. delete from the final describe graph:
@@ -178,34 +245,30 @@ public class UpdatedOperator
 		// 	  for each triple, check the property, get its super/sub-property and their subject/object
 		//
 		// Third loop over all the triples to be deleted
-		
-		Set<String> strTriples = new HashSet<String>();
-		//Set<String> strBaseTriples = new HashSet<String>();
-		//Set<String> strInfTriples = new HashSet<String>();
-		//while (itrDeleteModel.hasNext()) {
 		StmtIterator itrDeleteModel = mTriplesToBeDeleted.listStatements();
+		Set<String> strBaseTriples = new HashSet<String>();
+		Set<String> strInfTriples = new HashSet<String>();
 		while (itrDeleteModel.hasNext()) {
-			Statement tripleToBeDeleted = itrDeleteModel.next();
-			// Form the triple to be deleted from the graph
-			String strTriple = "<" + tripleToBeDeleted.getSubject() + "> " 
-								 + "<" + tripleToBeDeleted.getPredicate() + "> ";
-			if (tripleToBeDeleted.getObject().isLiteral()) {
-				strTriple += "\"" + tripleToBeDeleted.getObject() + "\"";
+			Statement baseTripleToBeDeleted = itrDeleteModel.next();
+			// Form the triple to be deleted from base graph
+			String strBaseTriple = "<" + baseTripleToBeDeleted.getSubject() + "> " 
+								 + "<" + baseTripleToBeDeleted.getPredicate() + "> ";
+			if (baseTripleToBeDeleted.getObject().isLiteral()) {
+				strBaseTriple += "\"" + baseTripleToBeDeleted.getObject() + "\"";
 			} else {
-				strTriple += "<" + tripleToBeDeleted.getObject() + ">";
+				strBaseTriple += "<" + baseTripleToBeDeleted.getObject() + ">";
 			}
-			strTriples.add(strTriple); // i think this is redundant
-			System.out.println(strTriples.toString());
+			strBaseTriples.add(strBaseTriple); // i think this is redundant
+			
 			// Now, onto the inf graph (the triple is not in the inf graph, so no need to delete it)
 			// we have to loop over their describe graph from the inf
 			// StmtIterator itrTriplesToBeDeletedFromDsrcb = mDescribedGraph.listStatements();
-			Resource subjectOfInterest = tripleToBeDeleted.getSubject();
-			Property propertyOfInterest = tripleToBeDeleted.getPredicate();
+			Resource subjectOfInterest = baseTripleToBeDeleted.getSubject();
 			//loop over the triples in the inf graph which share the subject
-			Selector selectTriplesOfInterest = new SimpleSelector(subjectOfInterest, propertyOfInterest, (RDFNode) null);
-			StmtIterator itrTriplesWithSameSubjAndProp = mDescribedGraph.listStatements(selectTriplesOfInterest);
-			while (itrTriplesWithSameSubjAndProp.hasNext()) {
-				Statement stmtWithSameSubjct = itrTriplesWithSameSubjAndProp.next();
+			Selector selectTriplesOfInterest = new SimpleSelector(subjectOfInterest, null, (RDFNode) null);
+			StmtIterator itrTriplesWithSameSubject = mDescribedGraph.listStatements(selectTriplesOfInterest);
+			while (itrTriplesWithSameSubject.hasNext()) {
+				Statement stmtWithSameSubjct = itrTriplesWithSameSubject.next();
 				/*System.out.println(stmtWithSameSubjct.getSubject().toString() + " " 
 									+ stmtWithSameSubjct.getPredicate().toString() + " " 
 									+ stmtWithSameSubjct.getObject().toString());*/
@@ -223,7 +286,7 @@ public class UpdatedOperator
 					while (itrTypeOfObject.hasNext()) {
 						Statement stmt = itrTypeOfObject.next();
 						String strRDFType = stmt.getObject().toString();
-						strTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
+						strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
 										   + "<" + currentProperty.toString() + "> "
 											+ "<" + strRDFType + ">");
 					}
@@ -240,29 +303,22 @@ public class UpdatedOperator
 							Statement stmt = itrTypeOfProperty.next();
 							//String strRDFType = stmt.getObject().toString();
 							//2. create delete statement for subject current-sub/super-property object
-							strTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
+							strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
 									   + "<" + stmt.getObject().toString() + "> "
 										+ "<" + stmtWithSameSubjct.getObject().toString() + ">");
 						}
 				}		
 			}
-			
 			/* 
 			because there is no transitivity/symmetry... then do no need to do anything else		
 			*/
 		}
-		//strBaseTriples.addAll(strInfTriples);
-		//Set<String> strBaseAndInfTriples = strBaseTriples;
-		
-		String strDeleteBaseAndInfTriples = SPARQLUtilities.createMultiUpdateStatements(DATASET4MT, c3prime.getGraph_NAME(), strTriples, "delete");
-		System.out.println(strDeleteBaseAndInfTriples.toString());
-		
-		//String strDeleteBaseTriples = SPARQLUtilities.createMultiUpdateStatements(DATASET4MT, c3prime.getGraph_BASE_NAME(), strBaseTriples, "delete");
-		//String strDeleteInfTriples = SPARQLUtilities.createMultiUpdateStatements(DATASET4MT, c3prime.getGraph_INFS_NAME(), strInfTriples, "delete");
-		SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES, c3prime.getGraph_NAME());
-		//SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES,c3prime.getGraph_INFS_NAME());
-		SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_NAME(), strDeleteBaseAndInfTriples);
-		//SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_INFS_NAME(), strDeleteInfTriples);
+		String strDeleteBaseTriples = SPARQLUtilities.createMultiUpdateStatements(DATASET4MT, c3prime.getGraph_BASE_NAME(), strBaseTriples, "delete");
+		String strDeleteInfTriples = SPARQLUtilities.createMultiUpdateStatements(DATASET4MT, c3prime.getGraph_INFS_NAME(), strInfTriples, "delete");
+		SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES, c3prime.getGraph_BASE_NAME());
+		SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES,c3prime.getGraph_INFS_NAME());
+		SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_BASE_NAME(), strDeleteBaseTriples);
+		SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_INFS_NAME(), strDeleteInfTriples);
 
 		// then i need to re-derive the base of the triple
 		// so get the describe from the base and re-derive and insert the new triples
@@ -271,7 +327,7 @@ public class UpdatedOperator
 		while(itSubjects.hasNext()){
 			Statement stmt = itSubjects.next();
 			String subject = stmt.getSubject().toString(); 
-			String ds = SPARQLUtilities.createDescribeStmtForUpdatedSubjects(DATASET4MT, c3prime.getGraph_NAME(), subject);
+			String ds = SPARQLUtilities.createDescribeStmtForUpdatedSubjects(DATASET4MT, c3prime.getGraph_BASE_NAME(), subject);
 			mDescribeSubjectsAndProperties = mDescribeSubjectsAndProperties.union(SPARQLUtilities.describeThatOf(DATASET4MT, ds));
 		}
 		// Trying to only get the describe of the subject results in some missing inferences
@@ -280,7 +336,7 @@ public class UpdatedOperator
 		while(itProperties.hasNext()){
 			Statement stmt = itProperties.next();
 			String property = stmt.getPredicate().toString(); 
-			String ds = SPARQLUtilities.createDescribeStmtForUpdatedSubjects(DATASET4MT, c3prime.getGraph_NAME(), property);
+			String ds = SPARQLUtilities.createDescribeStmtForUpdatedSubjects(DATASET4MT, c3prime.getGraph_BASE_NAME(), property);
 			mDescribeSubjectsAndProperties = mDescribeSubjectsAndProperties.union(SPARQLUtilities.describeThatOf(DATASET4MT, ds));
 		}
 		
@@ -289,13 +345,13 @@ public class UpdatedOperator
 		//Utilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_DELETE-" + timeCalled[1] + ".ttl", "ttl");
 		//Utilities.writeModelToFile(c3prime.getGraph_INFS_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_DELETE-" + timeCalled[1] + ".ttl", "ttl");
 		String triplesToBeInserted = SPARQLUtilities.createTriplesForUpdate(results);
-		String insertQuery = SPARQLUtilities.createUpdateStatement(DATASET4MT, c3prime.getGraph_NAME(), triplesToBeInserted, "insert");
+		String insertQuery = SPARQLUtilities.createUpdateStatement(DATASET4MT, c3prime.getGraph_INFS_NAME(), triplesToBeInserted, "insert");
 		try {
-			SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_NAME(), insertQuery);
+			SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_INFS_NAME(), insertQuery);
 		} catch (IOException e) {
 			System.err.println("\n************************************************* \n"
 							   + "ERROR from Method applyInsertUpdateOnC3 in Class Operator,\n"
-							   + "COULD NOT UPLOAD TO FUSEKI, intended graph" +  c3prime.getGraph_NAME()+timeCalled[1] +"\n"
+							   + "COULD NOT UPLOAD TO FUSEKI, intended graph" +  c3prime.getGraph_INFS_NAME()+timeCalled[1] +"\n"
 							   + e.getMessage()
 							   + "************************************************* \n");
 		}
