@@ -342,6 +342,20 @@ public class SPARQLUtilities
 		return describeStmt;
 	}
 	
+	public static boolean checkIfTripleIsInInfGraph(Model m, String triple) 
+	{
+		String queryString = PREFIXES + "\n"
+							+ "ASK \n" 
+							//+ "from " +  url + "\n"
+							+ "where \n"
+							+ "{" + triple + "}";
+		Query query = QueryFactory.create(queryString);
+		QueryExecution qe = QueryExecutionFactory.create(query, m);		
+		boolean isInGraph = qe.execAsk();
+		qe.close();
+		return isInGraph;
+	}
+	
 	/*public static String getDATASET() {
 		return DATASET;
 	}*/
@@ -357,6 +371,7 @@ public class SPARQLUtilities
 	public static void setPREFIXES(String prefixes) {
 		PREFIXES = prefixes;
 	}
+	
 	/*
 	public static void setTestPrefixes() {
 		PREFIXES = "PREFIX owl:   <http://www.w3.org/2002/07/owl#>" + "\n" 
