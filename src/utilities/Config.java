@@ -7,21 +7,21 @@ public class Config
 	
 	public static final String DATASET_ORIGINALS = "OriginalData";
 	
-	public static final String DATASET_UNION = "MTUnionOneGraph";
+	public static final String DATASET_UNION = "MTUnion";
 	public static final String DATASET4COPIES_UNION = "CopiesUnion";
-	public static final String DATASET4TRADITIONAL_UNION = "TraditionalUnionOneGraph";
+	public static final String DATASET4TRADITIONAL_UNION = "TraditionalUnion";
 	
-	public static final String DATASET_INTERSECTION = "MTIntersectionOneGraph";
+	public static final String DATASET_INTERSECTION = "MTIntersection";
 	public static final String DATASET4COPIES_INTERSECTION = "CopiesIntersection";
-	public static final String DATASET4TRADITIONAL_INTERSECTION = "TraditionalIntersectionOneGraph";
+	public static final String DATASET4TRADITIONAL_INTERSECTION = "TraditionalIntersection";
 	
-	public static final String DATASET_DIFFERENCE1 = "MTDifference1OneGraph";
+	public static final String DATASET_DIFFERENCE1 = "MTDifference";
 	public static final String DATASET4COPIES_DIFFERENCE1 = "CopiesDifference";
-	public static final String DATASET4TRADITIONAL_DIFFERENCE1 = "TraditionalDifference1OneGraph";
+	public static final String DATASET4TRADITIONAL_DIFFERENCE1 = "TraditionalDifference";
 	
-	public static final String DATASET_DIFFERENCE2 = "MTDifference2OneGraph";
+	public static final String DATASET_DIFFERENCE2 = "MTDifference2";
 	public static final String DATASET4COPIES_DIFFERENCE2 = "CopiesDifference2";
-	public static final String DATASET4TRADITIONAL_DIFFERENCE2 = "TraditionalDifference2OneGraph";
+	public static final String DATASET4TRADITIONAL_DIFFERENCE2 = "TraditionalDifference2";
 	
 	public static String PREFIXES = "PREFIX owl:   <http://www.w3.org/2002/07/owl#>" + "\n" 
 						+ "PREFIX rdf:   	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>" + "\n"
@@ -36,7 +36,7 @@ public class Config
 	//public String NAMESPACE;
 	public static final boolean UPLOAD_TO_FUSEKI = true; 
 	
-	public static final String LOCAL_URI = "d:/alleclipses/workspaces/afterformatworkplacejaxrs/MinithesisOneGraph/src/miniT/GraphStores";
+	public static final String LOCAL_URI = "d:/alleclipses/workspaces/afterformatworkplacejaxrs/Minithesis/src/miniT/GraphStores";
 	
 	//public static final String graphA1_source_URI = LOCAL_URI + "/sourceGraphsAB/fcSimpsonsFamily.ttl";
 	public static final String graphA1_source_URI = localhostString + DATASET_ORIGINALS + "/data/fcSimpsonsFamily.ttl";
@@ -65,7 +65,7 @@ public class Config
 	public static final String graphB2_source_PROV_INSERTED_NAME = "ProvB2UpdatedInsert.ttl";
 	
 	public static final String graphSTA1B2_DELETE_NAME = "GopDELETEC3.ttl";
-	public static final String updateGraphB2_DELETE_URI = localhostString + DATASET_ORIGINALS + "/data/delete.ttl";
+	public static final String updateGraphB2_DELETE_URI = localhostString + DATASET_ORIGINALS + "/data/delete2.ttl";
 	public static final String updateGraphB2_DELETE_NAME = "DeletedTriples.ttl";
 	public static final String graphB2prime_sourceDeleted_URI = localhostString + DATASET_ORIGINALS + "/data/fcOthersUpdatedDelete.ttl";
 	public static final String updateGraphB2_sourceDELETED_NAME = "fcOthersUpdatedDelete.ttl";
