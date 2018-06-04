@@ -1,14 +1,13 @@
 package operators;
 
-import java.io.IOException;
-
-import org.apache.jena.rdf.model.Model;
-
-import miniT.ProvenanceHandler;
 import utilities.Config;
 import utilities.EntailmentUtilities;
 import utilities.SPARQLUtilities;
 import utilities.Utilities;
+import miniT.ProvenanceHandler;
+
+import java.io.IOException;
+import org.apache.jena.rdf.model.Model;
 
 public class TraditionalOperator extends ParentOperator 
 {
@@ -54,11 +53,12 @@ public class TraditionalOperator extends ParentOperator
 	{
 		String [] timeNowStart = Utilities.getTime();
 		String entailActivityName = ProvenanceHandler.createNameOfEntailOp(c3.getGraph_NAME(), timeNowStart[1]);
-		Model mEntailed = EntailmentUtilities.getEntailedGraphAndCount(graphSTA1B2_MODEL, graphStoresLocal_URI + "/graphStoreC/traditional/derivationCounts" + timeNowStart[1] + Op + ".txt" );
+		Model results = EntailmentUtilities.getEntailmentsOnly(graphSTA1B2_MODEL, graphStoresLocal_URI + "/graphStoreC/traditional/derivationCounts" + timeNowStart[1] + Op + ".txt" );
 		String [] timeNowEnd = Utilities.getTime();
-		c3.setGraph_MODEL(mEntailed);
+		c3.setGraph_INFS_MODEL(results);
 		
-		Utilities.writeModelToFile(mEntailed, graphStoresLocal_URI + "/graphStoreC/traditional/" + c3.getWithoutTTL_Graph_NAME() + Op + "-" + timeNowStart[1] + ".ttl", "ttl");
+		Utilities.writeModelToFile(graphSTA1B2_MODEL, graphStoresLocal_URI + "/graphStoreC/traditional/" + c3.getWithoutTTL_Graph_BASE_NAME()+ Op + "-" + timeNowStart[1] + ".ttl", "ttl");
+		Utilities.writeModelToFile(results, graphStoresLocal_URI + "/graphStoreC/traditional/" + c3.getWithoutTTL_Graph_INFS_NAME() + Op + "-" + timeNowStart[1] + ".ttl", "ttl");
 		
 		ProvenanceHandler.updateC3Entailment(entailActivityName, this, timeNowStart, timeNowEnd);
 		Utilities.writeModelToFile(c3.getGraph_PROV_MODEL(), graphStoresLocal_URI + "/graphStoreC/provStoreC/traditional/" + c3.getWithoutTTL_Graph_PROV_NAME() + Op + "-" + timeNowStart[1]+ ".ttl", "ttl");
@@ -67,7 +67,8 @@ public class TraditionalOperator extends ParentOperator
 			try {
 				SPARQLUtilities.uploadNewGraph(DATASET4COPIES, a1.getGraph_COPY_NAME(), a1.getGraph_MODEL());
 				SPARQLUtilities.uploadNewGraph(DATASET4COPIES, b2.getGraph_COPY_NAME(), b2.getGraph_MODEL());
-				SPARQLUtilities.uploadNewGraph(DATASET4TRADITIONAL, c3.getGraph_NAME(), c3.getGraph_MODEL());
+				SPARQLUtilities.uploadNewGraph(DATASET4TRADITIONAL, c3.getGraph_BASE_NAME(), c3.getGraph_BASE_MODEL());
+				SPARQLUtilities.uploadNewGraph(DATASET4TRADITIONAL, c3.getGraph_INFS_NAME(), c3.getGraph_INFS_MODEL());
 				SPARQLUtilities.uploadNewGraph(DATASET4TRADITIONAL, c3.getGraph_PROV_NAME(), c3.getGraph_PROV_MODEL());
 			}
 			catch (Exception e) {
