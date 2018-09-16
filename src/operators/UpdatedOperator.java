@@ -22,9 +22,8 @@ import org.apache.jena.rdf.model.StmtIterator;
 
 public class UpdatedOperator 
 {
-	
-	private String graphStoresLocal_URI = Config.LOCAL_URI;
-	private String DATASET_ORIGINALS = Config.DATASET_ORIGINALS;
+	private String graphStoresLocal_URI = Constants.LOCAL_URI;
+	private String DATASET_ORIGINALS = Constants.DATASET_ORIGINALS;
 
 	private String DATASET4MT;
 	private String DATASET4COPIES;
@@ -47,7 +46,8 @@ public class UpdatedOperator
 	}
 
 	
-	public void loadUpdateAndProv(String whichGraph, String graphOriginalName, String updateGraph_source_NAME, String graph_source_PROVprime_NAME) throws IOException {
+	public void loadUpdateAndProv(String whichGraph, String graphOriginalName, String updateGraph_source_NAME, String graph_source_PROVprime_NAME) throws IOException 
+	{
 		if (whichGraph.equalsIgnoreCase("A1")) {
 			// ignore for the moment
 		} else if (whichGraph.equalsIgnoreCase("B2")) {
@@ -68,22 +68,19 @@ public class UpdatedOperator
 		c3prime.setGraph_BASE_MODEL(c3base);
 		Model c3infs = SPARQLUtilities.loadGraphFromFuseki(DATASET4MT,c3prime.getGraph_INFS_NAME());
 		c3prime.setGraph_INFS_MODEL(c3infs);
-		//Model c3primeModel = c3base.union(c3infs);
-		//c3prime.setGraph_BASE_MODEL(c3primeModel);
-		
+				
 		//Get C3's provenance from Fuseki
 		Model c3PreviousProv = SPARQLUtilities.loadGraphFromFuseki(DATASET4MT, graphC3_PROV_NAME);
 		c3prime.setGraph_PROV_MODEL(c3PreviousProv);
 		
 		//check C3's provenance to see which graph operation was applied to create it
 		String retreivedOp = SPARQLUtilities.getStOpFromProvGraph(c3PreviousProv, 
-							Config.LOCAL_URI + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(), 
-							"inaja:" + c3prime.getGraph_NAME());
+				Constants.localhostString + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(), 
+							Constants.customPrefix + ":" + c3prime.getGraph_NAME());
 		setQueriedGraphStOpType(retreivedOp);
 		//check C3's provenance to see which other graph was used along with this one in the st op
 		
-		Model c3PROVAfterloading;
-		c3PROVAfterloading = ProvenanceHandler.updateC3ProvAfterLoadingUpdate(c3PreviousProv, c3prime.getGraph_NAME(), b2prime.getGraphOriginal_source_NAME());
+		Model c3PROVAfterloading = ProvenanceHandler.updateC3ProvAfterLoadingUpdate(c3PreviousProv, c3prime.getGraph_NAME(), b2prime.getGraphOriginal_source_NAME());
 		c3prime.setGraph_PROV_MODEL(c3PROVAfterloading);
 	}
 	
@@ -120,7 +117,7 @@ public class UpdatedOperator
 	public void applyInsertUpdateOnC3 () throws Exception 
 	{
 		// 1. create insert statement
-		String timeCalled [] = Utilities.getTime();
+		String timeCalled [] = MiscUtilities.getTime();
 		Model m;
 		if (b2prime.isUseAllUpdate()) 
 			m = b2prime.getUpdateGraph_MODEL();
@@ -153,7 +150,7 @@ public class UpdatedOperator
 		m.remove(notToBeInserted);
 		
 		c3prime.setGraph_BASE_MODEL(c3prime.getGraph_BASE_MODEL().union(m));
-		Utilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
+		MiscUtilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
 		
 		String sTriplesToBeInserted = SPARQLUtilities.createTriplesForUpdate(m);
 		String updateStmt = SPARQLUtilities.createUpdateStatement(DATASET4MT, c3prime.getGraph_BASE_NAME(), sTriplesToBeInserted, "insert");
@@ -174,21 +171,27 @@ public class UpdatedOperator
 		}
 			
 		// 4. re-reason the final describe graph 
-		timeCalled = Utilities.getTime();
-		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribe, graphStoresLocal_URI + "/graphStoreC/nontraditional/dredCountInsert" + queriedGraphStOpType + timeCalled [1]+ ".txt");
+		String [] timeNowStart = MiscUtilities.getTime();
+		String entailActivityName = ProvenanceHandler.createNameOfEntailOp(c3prime.getGraph_UpdatedNAME(), timeNowStart[1]);
+		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribe, graphStoresLocal_URI + "/graphStoreC/nontraditional/dredCountInsert" + queriedGraphStOpType +  timeCalled[1]+ ".txt");
+		String [] timeNowEnd = MiscUtilities.getTime();
 		//Model oldBASE_AND_NEW_TRIPLES = c3.getGraph_BASE_MODEL().union(results);
 		Model oldInfs_AND_NEW_Infs = c3prime.getGraph_INFS_MODEL().union(results);
 		// 5. insert the new triples created by the re-reasoning - or model generated
 		//c3.setGraph_BASE_AND_INFS_MODEL(oldBASE_AND_NEW_TRIPLES);
 		c3prime.setGraph_INFS_MODEL(oldInfs_AND_NEW_Infs);
-		Utilities.writeModelToFile(oldInfs_AND_NEW_Infs, graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
+		MiscUtilities.writeModelToFile(oldInfs_AND_NEW_Infs, graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
+		
+		ProvenanceHandler.updateC3ProvEntailment(entailActivityName, this, timeNowStart, timeNowEnd);
+		
 		try {
 			SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES, c3prime.getGraph_INFS_NAME());
 			SPARQLUtilities.uploadNewGraph(DATASET4MT, c3prime.getGraph_INFS_NAME(), oldInfs_AND_NEW_Infs);
+			SPARQLUtilities.uploadNewGraph(DATASET4MT, c3prime.getGraph_PROV_NAME(), c3prime.getGraph_PROV_MODEL());
 		} catch (IOException e) {
 			System.err.println("\n************************************************* \n"
 							   + "ERROR from Method applyInsertUpdateOnC3 in Class Operator,\n"
-							   + "COULD NOT UPLOAD TO FUSEKI, intended graph" +  c3prime.getGraph_INFS_NAME()+timeCalled [1]+"\n"
+							   + "COULD NOT UPLOAD TO FUSEKI, intended graph" +  c3prime.getGraph_INFS_NAME()+ timeCalled[1]+"\n"
 							   + e.getMessage()
 							   + "************************************************* \n");
 		}	
@@ -204,12 +207,15 @@ public class UpdatedOperator
 		else 
 			mTriplesToBeDeleted = b2prime.getUpdateGraphSubset_MODEL();
 		
-		//loop over the triples to be deleted, if they are inferred, remove them from the
-		// list of triples to be deleted
-		
+		/* we do not to loop over the triples to be deleted and check if they are inferred (so as to remove them from the list of triples to be deleted)
+		 * because we are splitting the graph into 1-)base/ground and 2)inferred triples
+		 * so, we just check if they are in the inf graph and remove them from the list of triples to be deleted
+		 * since they will be deleted according to the rdfs entailment rules, this way we are not overdeleting*/
 		List <Statement> notToBeDeleted = new ArrayList<Statement>();
+		
 		StmtIterator itStmt = mTriplesToBeDeleted.listStatements();
-		while (itStmt.hasNext()) {
+		while (itStmt.hasNext()) 
+		{
 			Statement currentTriple = itStmt.next();
 			String predicate;
 			if (currentTriple.getObject().isLiteral()) {
@@ -218,9 +224,7 @@ public class UpdatedOperator
 			else {
 				predicate = "<" + currentTriple.getObject().toString() + "> ";
 			}
-			String triple = //currentTriple.getSubject().getNameSpace()+ currentTriple.getSubject().getLocalName() + " "
-							//currentTriple.getSubject().getLocalName() + " "
-							"<" + currentTriple.getSubject().toString()+ "> " +
+			String triple ="<" + currentTriple.getSubject().toString()+ "> " +
 							"<" + currentTriple.getPredicate().toString() + "> " +
 							predicate;
 			System.out.println(triple);
@@ -228,7 +232,8 @@ public class UpdatedOperator
 				System.out.println("Won't be deleting: " + triple);
 				notToBeDeleted.add(currentTriple);			
 			}
-		}mTriplesToBeDeleted.remove(notToBeDeleted);	
+		}
+		mTriplesToBeDeleted.remove(notToBeDeleted);	
 		
 		// 1. loop over triples (or the subset of the triples) to be deleted and 
 		//		send a request for their describe to Fuseki, 
@@ -267,7 +272,8 @@ public class UpdatedOperator
 			//loop over the triples in the inf graph which share the subject
 			Selector selectTriplesOfInterest = new SimpleSelector(subjectOfInterest, null, (RDFNode) null);
 			StmtIterator itrTriplesWithSameSubject = mDescribedGraph.listStatements(selectTriplesOfInterest);
-			while (itrTriplesWithSameSubject.hasNext()) {
+			while (itrTriplesWithSameSubject.hasNext()) 
+			{
 				Statement stmtWithSameSubjct = itrTriplesWithSameSubject.next();
 				/*System.out.println(stmtWithSameSubjct.getSubject().toString() + " " 
 									+ stmtWithSameSubjct.getPredicate().toString() + " " 
@@ -275,38 +281,106 @@ public class UpdatedOperator
 				// now check the property
 				Property currentProperty = stmtWithSameSubjct.getPredicate();
 				String strCurrentProperty = currentProperty.toString();
-				if (strCurrentProperty.equalsIgnoreCase("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")) {
-					// get the statement where the current object is the subject in a triple
-					// and the property is subclass of
-					Property rdfsSubClassOf =  mDescribedGraph.getProperty("http://www.w3.org/2000/01/rdf-schema#subClassOf");
-					Selector selectTriplesWithObjAsSub = new SimpleSelector( (Resource) stmtWithSameSubjct.getObject(), rdfsSubClassOf, (RDFNode) null);
-					// for each of the those objects
-					StmtIterator itrTypeOfObject = mDescribedGraph.listStatements(selectTriplesWithObjAsSub);
-					//loop and create a delete
-					while (itrTypeOfObject.hasNext()) {
-						Statement stmt = itrTypeOfObject.next();
-						String strRDFType = stmt.getObject().toString();
-						strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
-										   + "<" + currentProperty.toString() + "> "
-											+ "<" + strRDFType + ">");
-					}
+				
+				//TODO: rdfs1, rdf5, rdfs7 removing "aaa rdfs:subPropertyOf bbb .", 
+				//      rdfs 9 removing "xxx rdfs:subClassOf yyy .", rdfs11 
 					
-				}
-				else {
-						//the property is not rdf:type, i.e. someProperty which is a subproperty/superproperty
-						//the loop over the property:
-						Property rdfsSubPropertyOf = mDescribedGraph.getProperty("http://www.w3.org/2000/01/rdf-schema#subPropertyOf");
-						Selector selectTriplesWithProperty = new SimpleSelector((Resource) currentProperty, rdfsSubPropertyOf, (RDFNode) null);
-						StmtIterator itrTypeOfProperty = mDescribedGraph.listStatements(selectTriplesWithProperty);
-						while(itrTypeOfProperty.hasNext()) {
-							// 1. get its super properties
-							Statement stmt = itrTypeOfProperty.next();
-							//String strRDFType = stmt.getObject().toString();
-							//2. create delete statement for subject current-sub/super-property object
+				/* the below if statement checks for rdfs6, rdfs8, rdf9, rdfs10, rdfs12, rdfs13 */
+				if (strCurrentProperty.equalsIgnoreCase("rdf:type")
+							|| strCurrentProperty.equalsIgnoreCase("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")) 
+				{
+					Resource currentObject = stmtWithSameSubjct.getPredicate();
+					String strCurrentObject = currentObject.toString();
+					
+					/* the below if statement checks for rdfs6 */
+					if (strCurrentObject.equalsIgnoreCase("rdf:Property") 
+							|| strCurrentObject.equalsIgnoreCase("http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"))
+					{
+						/* we found rdfs6 "xxx rdf:type rdf:Property" so we are removing "xxx rdfs:subPropertyOf xxx" */
+						strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
+								   + "<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> "
+									+ "<" + subjectOfInterest + ">");
+					} 
+					/* the below if statement checks for rdfs8 and rdfs 10*/
+					else if (strCurrentObject.equalsIgnoreCase("rdfs:Class") 
+							|| strCurrentObject.equalsIgnoreCase("http://www.w3.org/2000/01/rdf-schema#Class"))
+					{
+						/* we found rdfs8 "xxx rdf:type rdfs:Class" so we are removing "xxx rdfs:subClassOf rdfs:Resource" */
+						strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
+								   + "<http://www.w3.org/2000/01/rdf-schema#subClassOf> "
+									+ "<http://www.w3.org/2000/01/rdf-schema#Resource>");
+						/* we found rdfs10 "xxx rdf:type rdfs:Class" so we are removing "xxx rdfs:subClassOf xxx" */
+						strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
+								   + "<http://www.w3.org/2000/01/rdf-schema#subClassOf> "
+									+ "<" + subjectOfInterest + ">");
+					}
+					/* the below if statement checks for rdfs12*/
+					else if (strCurrentObject.equalsIgnoreCase("rdfs:ContainerMembershipProperty") 
+							|| strCurrentObject.equalsIgnoreCase("http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty"))
+					{
+						/* we found rdfs12 "xxx rdf:type rdfs:ContainerMembershipProperty" so we are removing "xxx rdfs:subPropertyOf rdfs:member" */
+						strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
+								   + "<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> "
+									+ "<http://www.w3.org/2000/01/rdf-schema#member>");
+					}
+					/* the below if statement checks for rdfs13*/
+					else if (strCurrentObject.equalsIgnoreCase("rdfs:Datatype") 
+							|| strCurrentObject.equalsIgnoreCase("http://www.w3.org/2000/01/rdf-schema#Datatype"))
+					{
+						/* we found rdfs13 "xxx rdf:type rdfs:Datatype" so we are removing "xxx rdfs:subClassOf rdfs:Literal" */
+						strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
+								   + "<http://www.w3.org/2000/01/rdf-schema#subClassOf> "
+									+ "<http://www.w3.org/2000/01/rdf-schema#Literal>");
+					}
+					/* the below else statement is for rdfs 9
+					 * it deals with having "xxx rdfs:subClassOf yyy ." and deleting "zzz rdf:type xxx ." 
+					 * and thus deletes "zzz rdf:type yyy ."*/
+					else 
+					{
+						// get the statement where the current object is the subject in a triple
+						// and the property is subclass of
+						Property rdfsSubClassOf =  mDescribedGraph.getProperty("http://www.w3.org/2000/01/rdf-schema#subClassOf");	
+						Selector selectTriplesWithObjAsSub = new SimpleSelector( (Resource) stmtWithSameSubjct.getObject(), rdfsSubClassOf, (RDFNode) null);
+						// for each of the those objects
+						StmtIterator itrTypeOfObject = mDescribedGraph.listStatements(selectTriplesWithObjAsSub);
+						//loop and create a delete
+						while (itrTypeOfObject.hasNext()) 
+						{
+							Statement stmt = itrTypeOfObject.next();
+							String strRDFType = stmt.getObject().toString();
 							strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
-									   + "<" + stmt.getObject().toString() + "> "
-										+ "<" + stmtWithSameSubjct.getObject().toString() + ">");
+											   + "<" + currentProperty.toString() + "> "
+												+ "<" + strRDFType + ">");
 						}
+					}
+				}
+				/*the below else statement is for rdfs 7 */
+				else 
+				{
+					//the property is not rdf:type, i.e. someProperty which is a subproperty/superproperty or a property with domain/range
+					//the loop over the property:
+					Property rdfsSubPropertyOf = mDescribedGraph.getProperty("http://www.w3.org/2000/01/rdf-schema#subPropertyOf");
+					Selector selectTriplesWithProperty = new SimpleSelector((Resource) currentProperty, rdfsSubPropertyOf, (RDFNode) null);
+					StmtIterator itrTypeOfProperty = mDescribedGraph.listStatements(selectTriplesWithProperty);
+					/*the below while statement is for rdfs 7
+					 * it deals with having "aaa rdfs:subPropertyOf bbb ." and deleting "xxx aaa yyy ."*
+					 * and so deletes "xxx bbb yyy ."*/
+					while(itrTypeOfProperty.hasNext()) 
+					{
+						// 1. get its super properties
+						Statement stmt = itrTypeOfProperty.next();
+						//String strRDFType = stmt.getObject().toString();
+						//2. create delete statement for subject current-sub/super-property object
+						strInfTriples.add("<" + stmtWithSameSubjct.getSubject().toString() + "> "
+								   + "<" + stmt.getObject().toString() + "> "
+									+ "<" + stmtWithSameSubjct.getObject().toString() + ">");
+					}
+					/* now deal with rdfs 2 and 3, removing "yyy aaa zzz ." so deleting 
+					 * for rdfs 2 "yyy rdf:type xxx ."
+					 * and for rdfs 3 	"zzz rdf:type xxx ."
+					 * BUT ONLY IF THEY ARE NOT PRESENT IN THE base GRAPH
+					 * preferably if they also do not become inferred thanks to rdfs 9
+					 */
 				}		
 			}
 			/* 
@@ -340,28 +414,35 @@ public class UpdatedOperator
 			mDescribeSubjectsAndProperties = mDescribeSubjectsAndProperties.union(SPARQLUtilities.describeThatOf(DATASET4MT, ds));
 		}
 		
-		String [] timeCalled = Utilities.getTime();
-		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribeSubjectsAndProperties, graphStoresLocal_URI + "/graphStoreC/nontraditional/dredCountDelete" + queriedGraphStOpType + timeCalled [1]+ ".txt");
-		//Utilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_DELETE-" + timeCalled[1] + ".ttl", "ttl");
-		//Utilities.writeModelToFile(c3prime.getGraph_INFS_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_DELETE-" + timeCalled[1] + ".ttl", "ttl");
+		String [] timeNowStart = MiscUtilities.getTime();
+		String entailActivityName = ProvenanceHandler.createNameOfEntailOp(c3prime.getGraph_UpdatedNAME(), timeNowStart[1]);
+		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribeSubjectsAndProperties, graphStoresLocal_URI + "/graphStoreC/nontraditional/dredCountDelete" + queriedGraphStOpType + timeNowStart [1]+ ".txt");
+		String [] timeNowEnd = MiscUtilities.getTime();
+		//Utilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_DELETE-" + [1] + ".ttl", "ttl");
+		//Utilities.writeModelToFile(c3prime.getGraph_INFS_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_DELETE-" + [1] + ".ttl", "ttl");
 		String triplesToBeInserted = SPARQLUtilities.createTriplesForUpdate(results);
 		String insertQuery = SPARQLUtilities.createUpdateStatement(DATASET4MT, c3prime.getGraph_INFS_NAME(), triplesToBeInserted, "insert");
+		
+		ProvenanceHandler.updateC3ProvEntailment(entailActivityName, this, timeNowStart, timeNowEnd);
+		
 		try {
+			SPARQLUtilities.copyGraphOnFuseki(DATASET4MT, DATASET4COPIES, c3prime.getGraph_INFS_NAME());
 			SPARQLUtilities.updateGraph(DATASET4MT, c3prime.getGraph_INFS_NAME(), insertQuery);
+			SPARQLUtilities.uploadNewGraph(DATASET4MT, c3prime.getGraph_PROV_NAME(), c3prime.getGraph_PROV_MODEL());
 		} catch (IOException e) {
 			System.err.println("\n************************************************* \n"
 							   + "ERROR from Method applyInsertUpdateOnC3 in Class Operator,\n"
-							   + "COULD NOT UPLOAD TO FUSEKI, intended graph" +  c3prime.getGraph_INFS_NAME()+timeCalled[1] +"\n"
+							   + "COULD NOT UPLOAD TO FUSEKI, intended graph" +  c3prime.getGraph_INFS_NAME()+timeNowStart[1] +"\n"
 							   + e.getMessage()
 							   + "************************************************* \n");
 		}
-		// 3. maybe check validity
+		
 	}
 	
 	public void generateWhatIsToBeAppliedAsUpdate(String whichGraph) throws IOException 
 	{
 		Model whatToUseInUpdate = ModelFactory.createDefaultModel();
-		String timeCalled = Utilities.getTime()[1];
+		String timeCalled = MiscUtilities.getTime()[1];
 		if (whichGraph.equalsIgnoreCase("A1")) {
 			// we only care about this in difference operations and in chain of updates
 		} 
@@ -412,11 +493,11 @@ public class UpdatedOperator
 			{
 				// check whether it is difference 1 or difference 2 by checking if B is the Subtrahend
 				String subtrahend = SPARQLUtilities.getHasSubtrahend(c3prime.getGraph_PROV_MODEL(), 
-						Config.LOCAL_URI + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(),
-						"inaja:" + c3prime.getGraph_NAME());
-				if (subtrahend.equalsIgnoreCase("Gcopy_" + Config.graphB2_source_NAME)) {
+						Constants.localhostString + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(),
+						Constants.customPrefix + ":" + c3prime.getGraph_NAME());
+				if (subtrahend.equalsIgnoreCase("Gcopy_" + Constants.graphB2_source_NAME)) {
 					setQueriedGraphStOpType("difference1");
-				} else if (subtrahend.equalsIgnoreCase("Gcopy_" + Config.graphA1_source_NAME)) {
+				} else if (subtrahend.equalsIgnoreCase("Gcopy_" + Constants.graphA1_source_NAME)) {
 					setQueriedGraphStOpType("difference2");
 				}
 				// now that is sorted, go into getting the update
@@ -425,7 +506,7 @@ public class UpdatedOperator
 					if (graphUpdateType.equalsIgnoreCase("insert")) {
 						b2prime.setUseAllUpdate(true);	
 						setGraphUpdateType("delete");
-						ProvenanceHandler.updateC3ProvSetOperation(this, timeCalled);
+						ProvenanceHandler.updateC3ProvSetOperation(this,timeCalled );
 					} 
 					else if(graphUpdateType.equalsIgnoreCase("delete")) 
 					{
@@ -560,17 +641,17 @@ public class UpdatedOperator
 	public void setDATASETS(String graphStOpType)
 	{
 		if (graphStOpType.equalsIgnoreCase("union")) {
-			DATASET4MT = Config.DATASET_UNION;
-			DATASET4COPIES = Config.DATASET4COPIES_UNION;
+			DATASET4MT = Constants.DATASET_UNION;
+			DATASET4COPIES = Constants.DATASET4COPIES_UNION;
 		} else if (graphStOpType.equalsIgnoreCase("intersection")) {
-			DATASET4MT = Config.DATASET_INTERSECTION;
-			DATASET4COPIES = Config.DATASET4COPIES_INTERSECTION;
+			DATASET4MT = Constants.DATASET_INTERSECTION;
+			DATASET4COPIES = Constants.DATASET4COPIES_INTERSECTION;
 		} else if (graphStOpType.equalsIgnoreCase("difference1")) {
-			DATASET4MT = Config.DATASET_DIFFERENCE1;
-			DATASET4COPIES = Config.DATASET4COPIES_DIFFERENCE1;
+			DATASET4MT = Constants.DATASET_DIFFERENCE1;
+			DATASET4COPIES = Constants.DATASET4COPIES_DIFFERENCE1;
 		} else if (graphStOpType.equalsIgnoreCase("difference2")) {
-			DATASET4MT = Config.DATASET_DIFFERENCE2;
-			DATASET4COPIES = Config.DATASET4COPIES_DIFFERENCE2;
+			DATASET4MT = Constants.DATASET_DIFFERENCE2;
+			DATASET4COPIES = Constants.DATASET4COPIES_DIFFERENCE2;
 		} else throw new IllegalArgumentException("Invalid graph ST operation type: " 
 				+ graphStOpType 
 				+ ", was expecting either union, intersection, difference1, or difference2");

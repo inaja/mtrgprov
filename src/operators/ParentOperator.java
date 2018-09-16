@@ -2,19 +2,18 @@ package operators;
 
 import java.io.IOException;
 
+import miniT.ProvenanceHandler;
+
 import org.apache.jena.rdf.model.Model;
 
-import miniT.ProvenanceHandler;
-import utilities.Config;
-import utilities.GraphSTUtilities;
-import utilities.Utilities;
+import utilities.*;
 import utilities.graph.GraphInSystem;
 import utilities.graph.SourceGraphInSystem;
 
 public class ParentOperator 
 {
-	protected String graphStoresLocal_URI = Config.LOCAL_URI;
-	protected String DATASET_ORIGINALS = Config.DATASET_ORIGINALS;
+	protected String graphStoresLocal_URI = Constants.LOCAL_URI;
+	protected String DATASET_ORIGINALS = Constants.DATASET_ORIGINALS;
 	
 	protected SourceGraphInSystem a1, b2;
 	
@@ -50,12 +49,12 @@ public class ParentOperator
 	{
 		setGraphSTA1B2_NAME(graphSTA1B2_NAME);
 		
-		String [] timeNowStart = Utilities.getTime();
+		String [] timeNowStart = MiscUtilities.getTime();
 		setStOpActivityName(ProvenanceHandler.createNameOfSTOp(a1.getGraph_COPY_NAME(), b2.getGraph_COPY_NAME(), graphStOpType, timeNowStart[1]));
 		setGraphSTA1B2_MODEL(GraphSTUtilities.applyGraphSt(a1.getGraph_MODEL(), b2.getGraph_MODEL(), graphStOpType));
-		String [] timeNowEnd = Utilities.getTime();
+		String [] timeNowEnd = MiscUtilities.getTime();
 
-		c3.setGraph_MODEL(graphSTA1B2_MODEL);
+		c3.setGraph_BASE_MODEL(graphSTA1B2_MODEL);
 		
 		ProvenanceHandler.updateC3SetOperation(stOpActivityName, this, timeNowStart, timeNowEnd);
 		
