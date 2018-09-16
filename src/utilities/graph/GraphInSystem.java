@@ -3,13 +3,10 @@ package utilities.graph;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
-import utilities.Config;
-
 public class GraphInSystem {
 	private String graph_NAME;
-	//private String graph_BASE_NAME, graph_INFS_NAME;
-	//private Model graph_BASE_MODEL, graph_INFS_MODEL; 
-	private Model graph_MODEL;
+	private String graph_BASE_NAME, graph_INFS_NAME;
+	private Model graph_BASE_MODEL, graph_INFS_MODEL; 
 	
 	private String graph_PROV_NAME;
 	private Model graph_PROV_MODEL;
@@ -28,8 +25,8 @@ public class GraphInSystem {
 	public GraphInSystem(String graph_NAME, String graph_PROV_NAME) 
 	{
 		this.graph_NAME = graph_NAME;
-		//this.graph_BASE_NAME = graph_NAME.substring(0, graph_NAME.length() - 4) + "Base.ttl";
-		//this.graph_INFS_NAME = graph_NAME.substring(0, graph_NAME.length() - 4) + "Infs.ttl";
+		this.graph_BASE_NAME = graph_NAME.substring(0, graph_NAME.length() - 4) + "Base.ttl";
+		this.graph_INFS_NAME = graph_NAME.substring(0, graph_NAME.length() - 4) + "Infs.ttl";
 		this.graph_PROV_NAME = graph_PROV_NAME;
 		graph_PROV_MODEL = ModelFactory.createDefaultModel();
 	}
@@ -44,8 +41,8 @@ public class GraphInSystem {
 	public GraphInSystem(String graph_NAME, String graph_PROV_NAME, String graphC3Updated_NAME) 
 	{
 		this.graph_NAME = graph_NAME;
-		//this.graph_BASE_NAME = graph_NAME.substring(0, graph_NAME.length() - 4) + "Base.ttl";
-		//this.graph_INFS_NAME = graph_NAME.substring(0, graph_NAME.length() - 4) + "Infs.ttl";
+		this.graph_BASE_NAME = graph_NAME.substring(0, graph_NAME.length() - 4) + "Base.ttl";
+		this.graph_INFS_NAME = graph_NAME.substring(0, graph_NAME.length() - 4) + "Infs.ttl";
 		this.graph_PROV_NAME = graph_PROV_NAME;
 		graph_PROV_MODEL = ModelFactory.createDefaultModel();
 		
@@ -84,7 +81,7 @@ public class GraphInSystem {
 		this.graph_PROV_MODEL = graph_PROV_MODEL;
 	}
 	
-	/*public String getGraph_BASE_NAME() {
+	public String getGraph_BASE_NAME() {
 		return graph_BASE_NAME;
 	}
 	public String getWithoutTTL_Graph_BASE_NAME() {
@@ -121,7 +118,7 @@ public class GraphInSystem {
 	public void setGraph_INFS_MODEL(Model graph_INFS_MODEL) {
 		this.graph_INFS_MODEL = graph_INFS_MODEL;
 	}
-*/
+
 	public String getGraph_UpdatedNAME() {
 		return graph_UpdatedNAME;
 	}
@@ -161,15 +158,5 @@ public class GraphInSystem {
 	public void setGraph_UPDATEDINFS_MODEL(Model graph_UPDATEDINFS_MODEL) {
 		this.graph_UPDATEDINFS_MODEL = graph_UPDATEDINFS_MODEL;
 	}
-
-	public Model getGraph_MODEL() {
-		return graph_MODEL;
-	}
-
-	public void setGraph_MODEL(Model graph_MODEL) {
-		this.graph_MODEL = graph_MODEL;
-	}
-
-	
 	
 }

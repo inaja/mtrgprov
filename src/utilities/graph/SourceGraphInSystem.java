@@ -6,13 +6,15 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
 import miniT.ProvenanceHandler;
+import utilities.Constants;
 import utilities.SPARQLUtilities;
-import utilities.Utilities;
+import utilities.MiscUtilities;
 
 public class SourceGraphInSystem 
 {
 	//private String NAMESPACE;
-	private String graphStoresLocal_URI = "d:/alleclipses/workspaces/afterformatworkplacejaxrs/Minithesis/src/miniT/GraphStores";
+	private String graphStoresLocal_URI = Constants.LOCAL_URI;  
+	//"d:/alleclipses/workspaces/afterformatworkplacejaxrs/Minithesis/src/miniT/GraphStores";
 	
 	private String graph_source_URI; // its name on the the outside server
 	private String graph_source_NAME; //its name on the outside server if different from its URI
@@ -59,10 +61,10 @@ public class SourceGraphInSystem
 		setGraph_COPY_NAME("Gcopy_" + graph_source_NAME);
 		
 		//first load both the source and prov graphs 
-		String[] timeNowStart = Utilities.getTime();
+		String[] timeNowStart = MiscUtilities.getTime();
 		Model m = SPARQLUtilities.loadOriginalGraphFromFusekiFullURI(dataset, graph_source_URI);
 		Model mprov = SPARQLUtilities.loadOriginalGraphFromFusekiFullURI(dataset,graph_source_PROV_URI);
-		String timeNowEnd[] = Utilities.getTime();
+		String timeNowEnd[] = MiscUtilities.getTime();
 		
 		setGraph_MODEL(m);
 		setGraph_PROV_MODEL(mprov);

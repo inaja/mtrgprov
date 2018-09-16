@@ -8,7 +8,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
 import utilities.SPARQLUtilities;
-import utilities.Utilities;
+import utilities.MiscUtilities;
 
 public class UpdatedSourceGraphInSystem 
 {
@@ -66,13 +66,13 @@ public class UpdatedSourceGraphInSystem
 		setGraphOriginal_source_NAME(graphOriginalName);
 		setUpdateGraph_source_NAME(updateGraph_source_NAME);
 		setGraphprime_source_PROV_NAME(graph_source_PROV_NAME);
-		setUpdateGraph_COPY_NAME("Ucopy_" + updateGraph_COPY_NAME);
+		setUpdateGraph_COPY_NAME("Ucopy_" + updateGraph_source_NAME);
 		
 		//first load both the update and prov graphs from Fuseki
-		String [] timeNowStart = Utilities.getTime();
+		String [] timeNowStart = MiscUtilities.getTime();
 		Model m = SPARQLUtilities.loadOriginalGraphFromFusekiFullURI(dataset, updateGraph_URI);
 		Model mprov = SPARQLUtilities.loadOriginalGraphFromFusekiFullURI(dataset, graphprime_source_PROV_URI);
-		String [] timeNowEnd = Utilities.getTime();
+		String [] timeNowEnd = MiscUtilities.getTime();
 		
 		setUpdateGraph_MODEL(m);
 		setGraphprime_PROV_MODEL(mprov);
