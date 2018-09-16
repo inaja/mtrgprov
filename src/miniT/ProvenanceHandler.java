@@ -10,17 +10,11 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 
+import utilities.Constants;
 import utilities.graph.*;
 
-public class ProvenanceHandler {
-	
-	private static String rgprovNamespace = "http://www.ecs.soton.ac.uk/rgprov#";
-	private static String provNamespace = "http://www.w3.org/ns/prov#";
-	private static String egNamespace = "http://example.org/";
-	private static String egPrefix = "";
-	private static String inNamespace = "http://www.ecs.soton.ac.uk/inaja#";
-	private static String inPrefix = "inaja";
-	
+public class ProvenanceHandler 
+{	
 	/**
 	 * This method creates the triples that represent the provenance of a copied source graph as per RGPROV
 	 * @param graphNametimeFetched: a String indicating the name of the graph
@@ -31,42 +25,42 @@ public class ProvenanceHandler {
 	public static void createProvOfSourceGraph (String graphNametimeFetched, SourceGraphInSystem sg, String timeStarted[], String timeEnded[]) 
 	{
 		Model mprov = sg.getGraph_PROV_star_COPY_MODEL(); 
-		mprov.setNsPrefix(inPrefix, inNamespace);	
+		mprov.setNsPrefix(Constants.customPrefix, Constants.customNameSpace);	
 		//mprov.setNsPrefix(egPrefix, egNamespace);	
-		Resource rgprovGraphClass = mprov.getResource(rgprovNamespace + "Graph");
+		Resource rgprovGraphClass = mprov.getResource(Constants.rgprovNamespace + "Graph");
 		if (rgprovGraphClass == null) {
-			rgprovGraphClass =  mprov.createResource(rgprovNamespace + "Graph");
+			rgprovGraphClass =  mprov.createResource(Constants.rgprovNamespace + "Graph");
 		}
-		Resource RESTClient = mprov.getResource(inNamespace + "RESTClient");
+		Resource RESTClient = mprov.getResource(Constants.customNameSpace + "RESTClient");
 		if (RESTClient == null) {
-			RESTClient = mprov.createResource(inNamespace + "RESTClient");
+			RESTClient = mprov.createResource(Constants.customNameSpace + "RESTClient");
 		}
-		Resource jersey225 = mprov.getResource(inNamespace + "jersey225");
+		Resource jersey225 = mprov.getResource(Constants.customNameSpace + "jersey225");
 		if (jersey225 == null) {
-			jersey225 =  mprov.createResource(inNamespace + "jersey225");
+			jersey225 =  mprov.createResource(Constants.customNameSpace + "jersey225");
 			jersey225.addProperty(RDF.type, RESTClient);
 		}
 		
 		
 		// add to the passed model the triples that describe its fetching as per rgprov
-		Resource rgprovFetchClass = mprov.getResource(rgprovNamespace + "Fetch");
+		Resource rgprovFetchClass = mprov.getResource(Constants.rgprovNamespace + "Fetch");
 		if (rgprovFetchClass == null) {
-			rgprovFetchClass = mprov.createResource(rgprovNamespace + "Fetch");
+			rgprovFetchClass = mprov.createResource(Constants.rgprovNamespace + "Fetch");
 		}
-		Resource fetch = mprov.createResource(inNamespace + "fetch" + graphNametimeFetched+timeStarted[2]);
+		Resource fetch = mprov.createResource(Constants.customNameSpace + "fetch" + graphNametimeFetched+timeStarted[2]);
 		fetch.addProperty(RDF.type, rgprovFetchClass);
 		
-		Property provWasAssociatedWithProperty = mprov.getProperty(provNamespace + "wasAssociatedWith");
+		Property provWasAssociatedWithProperty = mprov.getProperty(Constants.provNamespace + "wasAssociatedWith");
 		if (provWasAssociatedWithProperty == null) {
-			provWasAssociatedWithProperty = mprov.createProperty(provNamespace + "wasAssociatedWith");
+			provWasAssociatedWithProperty = mprov.createProperty(Constants.provNamespace + "wasAssociatedWith");
 		}
-		Property provStartedAtTimeProperty = mprov.getProperty(provNamespace + "startedAtTime");
+		Property provStartedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "startedAtTime");
 		if (provStartedAtTimeProperty == null) {
-			provStartedAtTimeProperty = mprov.createProperty(provNamespace + "startedAtTime");
+			provStartedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "startedAtTime");
 		}
-		Property provEndedAtTimeProperty = mprov.getProperty(provNamespace + "EndedAtTime");
+		Property provEndedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "EndedAtTime");
 		if (provEndedAtTimeProperty == null) {
-			provEndedAtTimeProperty = mprov.createProperty(provNamespace + "EndedAtTime");
+			provEndedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "EndedAtTime");
 		}
 		
 		fetch.addProperty(provWasAssociatedWithProperty, jersey225);
@@ -74,30 +68,30 @@ public class ProvenanceHandler {
 		fetch.addProperty(provEndedAtTimeProperty, timeEnded[0] + "^^xsd:dateTime");
 		
 		//may change this to prov:used
-		Property accessedProperty = mprov.getProperty(inNamespace + "accessed");
+		Property accessedProperty = mprov.getProperty(Constants.customNameSpace + "accessed");
 		if (accessedProperty == null) {
-			accessedProperty = mprov.createProperty(inNamespace + "accessed");
+			accessedProperty = mprov.createProperty(Constants.customNameSpace + "accessed");
 		}		
-		Property rgprovCopiedProperty = mprov.getProperty(rgprovNamespace + "copied");
+		Property rgprovCopiedProperty = mprov.getProperty(Constants.rgprovNamespace + "copied");
 		if (rgprovCopiedProperty == null) {
-			rgprovCopiedProperty = mprov.createProperty(rgprovNamespace + "copied");
+			rgprovCopiedProperty = mprov.createProperty(Constants.rgprovNamespace + "copied");
 		}		
-		Property rgprovWasCopyResultProperty = mprov.getProperty(rgprovNamespace + "wasCopyResult");
+		Property rgprovWasCopyResultProperty = mprov.getProperty(Constants.rgprovNamespace + "wasCopyResult");
 		if (rgprovWasCopyResultProperty == null) {
-			rgprovWasCopyResultProperty = mprov.createProperty(rgprovNamespace + "wasCopyResult");
+			rgprovWasCopyResultProperty = mprov.createProperty(Constants.rgprovNamespace + "wasCopyResult");
 		}
-		Property rgprovWasExactCopyProperty = mprov.getProperty(rgprovNamespace + "wasExactCopy");
+		Property rgprovWasExactCopyProperty = mprov.getProperty(Constants.rgprovNamespace + "wasExactCopy");
 		if (rgprovWasExactCopyProperty == null) {
-			rgprovWasExactCopyProperty = mprov.createProperty(rgprovNamespace + "wasExactCopy");
+			rgprovWasExactCopyProperty = mprov.createProperty(Constants.rgprovNamespace + "wasExactCopy");
 		}
 		
-		Resource graphOriginalNameResource = mprov.getResource(egNamespace + sg.getGraph_source_NAME());
+		Resource graphOriginalNameResource = mprov.getResource(Constants.egNamespace + sg.getGraph_source_NAME());
 		if (graphOriginalNameResource == null) {
-			graphOriginalNameResource = mprov.createResource(egNamespace + sg.getGraph_source_NAME());
+			graphOriginalNameResource = mprov.createResource(Constants.egNamespace + sg.getGraph_source_NAME());
 		}
-		Resource graphCopyNameResource = mprov.getResource(inNamespace + sg.getGraph_COPY_NAME());
+		Resource graphCopyNameResource = mprov.getResource(Constants.customNameSpace + sg.getGraph_COPY_NAME());
 		if (graphCopyNameResource == null) {
-			graphCopyNameResource = mprov.createResource(inNamespace + sg.getGraph_COPY_NAME());
+			graphCopyNameResource = mprov.createResource(Constants.customNameSpace + sg.getGraph_COPY_NAME());
 		}
 		graphCopyNameResource.addProperty(RDF.type, rgprovGraphClass);
 		fetch.addProperty(accessedProperty, sg.getGraph_source_URI());
@@ -105,13 +99,13 @@ public class ProvenanceHandler {
 		graphCopyNameResource.addProperty(rgprovWasExactCopyProperty, fetch);
 		graphCopyNameResource.addProperty(rgprovWasExactCopyProperty, graphOriginalNameResource); 
 		
-		Resource graphProvCopyResource = mprov.createResource(inNamespace +  sg.getGraph_PROV_COPY_NAME());
+		Resource graphProvCopyResource = mprov.createResource(Constants.customNameSpace +  sg.getGraph_PROV_COPY_NAME());
 		graphProvCopyResource.addProperty(RDF.type, rgprovGraphClass);
-		Resource graphProvStarCopyResource = mprov.createResource(inNamespace +  sg.getGraph_PROV_star_COPY_NAME());
+		Resource graphProvStarCopyResource = mprov.createResource(Constants.customNameSpace +  sg.getGraph_PROV_star_COPY_NAME());
 		graphProvStarCopyResource.addProperty(RDF.type, rgprovGraphClass);
-		Property provWasDerivedFromProperty = mprov.getProperty(provNamespace + "wasDerivedFrom");
+		Property provWasDerivedFromProperty = mprov.getProperty(Constants.provNamespace + "wasDerivedFrom");
 		if (provWasDerivedFromProperty == null) {
-			provWasDerivedFromProperty = mprov.createProperty(provNamespace + "wasDerivedFrom");
+			provWasDerivedFromProperty = mprov.createProperty(Constants.provNamespace + "wasDerivedFrom");
 		}
 		graphProvStarCopyResource.addProperty(provWasDerivedFromProperty, graphProvCopyResource);
 		sg.setGraph_PROV_star_COPY_MODEL(mprov); //this is redundant but i am being paranoid
@@ -130,25 +124,25 @@ public class ProvenanceHandler {
 	 */
 	public static Model createInitialC3Prov(Model unionOfTwoInSysSourceProvs, String c3provName, String a1provStarCopyName, String b2provStarCopyName) {
 		Model mresults = unionOfTwoInSysSourceProvs;
-		Resource rgprovGraphClass = mresults.getResource(rgprovNamespace + "Graph");
+		Resource rgprovGraphClass = mresults.getResource(Constants.rgprovNamespace + "Graph");
 		if (rgprovGraphClass == null) {
-			rgprovGraphClass =  mresults.createResource(rgprovNamespace + "Graph");
+			rgprovGraphClass =  mresults.createResource(Constants.rgprovNamespace + "Graph");
 		}
-		Property provWasDerivedFromProperty = mresults.getProperty(provNamespace + "wasDerivedFrom");
+		Property provWasDerivedFromProperty = mresults.getProperty(Constants.provNamespace + "wasDerivedFrom");
 		if (provWasDerivedFromProperty == null) {
-			provWasDerivedFromProperty = mresults.createProperty(provNamespace + "wasDerivedFrom");
+			provWasDerivedFromProperty = mresults.createProperty(Constants.provNamespace + "wasDerivedFrom");
 		}
-		Resource a1provStarCopyNameResource = mresults.getResource(inNamespace + a1provStarCopyName);
+		Resource a1provStarCopyNameResource = mresults.getResource(Constants.customNameSpace + a1provStarCopyName);
 		if (a1provStarCopyNameResource == null) {
-			a1provStarCopyNameResource = mresults.createResource(inNamespace + a1provStarCopyName);
+			a1provStarCopyNameResource = mresults.createResource(Constants.customNameSpace + a1provStarCopyName);
 		}
-		Resource b2provStarCopyNameResource = mresults.getResource(inNamespace + b2provStarCopyName);
+		Resource b2provStarCopyNameResource = mresults.getResource(Constants.customNameSpace + b2provStarCopyName);
 		if (b2provStarCopyNameResource == null) {
-			b2provStarCopyNameResource = mresults.createResource(inNamespace + b2provStarCopyName);
+			b2provStarCopyNameResource = mresults.createResource(Constants.customNameSpace + b2provStarCopyName);
 		}
-		Resource c3provNameResource = mresults.getResource(inNamespace + c3provName);
+		Resource c3provNameResource = mresults.getResource(Constants.customNameSpace + c3provName);
 		if (b2provStarCopyNameResource == null) {
-			b2provStarCopyNameResource = mresults.createResource(inNamespace + c3provName);
+			b2provStarCopyNameResource = mresults.createResource(Constants.customNameSpace + c3provName);
 		}
 		c3provNameResource.addProperty(RDF.type, rgprovGraphClass);
 		c3provNameResource.addProperty(provWasDerivedFromProperty, a1provStarCopyNameResource);
@@ -167,69 +161,69 @@ public class ProvenanceHandler {
 	public static void updateC3SetOperation (String stOpActivityName,  ParentOperator po, String timeStarted[], String timeEnded[])
 	{
 		Model mprov = po.getC3().getGraph_PROV_MODEL();
-		Resource rgprovRDFSReasonerClass = mprov.getResource(rgprovNamespace + "RDFSReasoner");
+		Resource rgprovRDFSReasonerClass = mprov.getResource(Constants.rgprovNamespace + "RDFSReasoner");
 		if (rgprovRDFSReasonerClass == null) {
-			rgprovRDFSReasonerClass =  mprov.createResource(rgprovNamespace + "RDFSReasoner");
+			rgprovRDFSReasonerClass =  mprov.createResource(Constants.rgprovNamespace + "RDFSReasoner");
 		}
-		Resource Jena = mprov.getResource(egNamespace + "Jena");
+		Resource Jena = mprov.getResource(Constants.egNamespace + "Jena");
 		if (Jena == null) {
-			Jena =  mprov.createResource(egNamespace + "Jena");
+			Jena =  mprov.createResource(Constants.egNamespace + "Jena");
 			Jena.addProperty(RDFS.subClassOf, rgprovRDFSReasonerClass);
 		}
-		Resource jena3111 = mprov.getResource(egNamespace + "jena3.1.1");
+		Resource jena3111 = mprov.getResource(Constants.egNamespace + "jena3.1.1");
 		if (jena3111 == null) {
-			jena3111 =  mprov.createResource(egNamespace + "jena3.1.1");
+			jena3111 =  mprov.createResource(Constants.egNamespace + "jena3.1.1");
 			jena3111.addProperty(RDF.type, Jena);
 		}
-		Resource rgprovGraphOpClass = mprov.getResource(rgprovNamespace + "GraphOperation");
+		Resource rgprovGraphOpClass = mprov.getResource(Constants.rgprovNamespace + "GraphOperation");
 		if (rgprovGraphOpClass == null) {
-			rgprovGraphOpClass =  mprov.createResource(rgprovNamespace + "GraphOperation");
+			rgprovGraphOpClass =  mprov.createResource(Constants.rgprovNamespace + "GraphOperation");
 		}
-		Resource rgprovGraphClass = mprov.getResource(rgprovNamespace + "Graph");
+		Resource rgprovGraphClass = mprov.getResource(Constants.rgprovNamespace + "Graph");
 		if (rgprovGraphClass == null) {
-			rgprovGraphClass =  mprov.createResource(rgprovNamespace + "Graph");
+			rgprovGraphClass =  mprov.createResource(Constants.rgprovNamespace + "Graph");
 		}
-		Property provWasAssociatedWithProperty = mprov.getProperty(provNamespace + "wasAssociatedWith");
+		Property provWasAssociatedWithProperty = mprov.getProperty(Constants.provNamespace + "wasAssociatedWith");
 		if (provWasAssociatedWithProperty == null) {
-			provWasAssociatedWithProperty = mprov.createProperty(provNamespace + "wasAssociatedWith");
+			provWasAssociatedWithProperty = mprov.createProperty(Constants.provNamespace + "wasAssociatedWith");
 		}
-		Property provUsedProperty = mprov.getProperty(provNamespace + "Used");
+		Property provUsedProperty = mprov.getProperty(Constants.provNamespace + "Used");
 		if (provUsedProperty == null) {
-			provUsedProperty = mprov.createProperty(provNamespace + "Used");
+			provUsedProperty = mprov.createProperty(Constants.provNamespace + "Used");
 		}
-		Property provWasGeneratedByProperty = mprov.getProperty(provNamespace + "wasGeneratedBy");
+		Property provWasGeneratedByProperty = mprov.getProperty(Constants.provNamespace + "wasGeneratedBy");
 		if (provWasGeneratedByProperty == null) {
-			provWasGeneratedByProperty = mprov.createProperty(provNamespace + "wasGeneratedBy");
+			provWasGeneratedByProperty = mprov.createProperty(Constants.provNamespace + "wasGeneratedBy");
 		}
-		Property provWasDerivedFromProperty = mprov.getProperty(provNamespace + "wasDerivedFrom");
+		Property provWasDerivedFromProperty = mprov.getProperty(Constants.provNamespace + "wasDerivedFrom");
 		if (provWasDerivedFromProperty == null) {
-			provWasDerivedFromProperty = mprov.createProperty(provNamespace + "wasDerivedFrom");
+			provWasDerivedFromProperty = mprov.createProperty(Constants.provNamespace + "wasDerivedFrom");
 		}
-		Property provStartedAtTimeProperty = mprov.getProperty(provNamespace + "startedAtTime");
+		Property provStartedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "startedAtTime");
 		if (provStartedAtTimeProperty == null) {
-			provStartedAtTimeProperty = mprov.createProperty(provNamespace + "startedAtTime");
+			provStartedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "startedAtTime");
 		}
-		Property provEndedAtTimeProperty = mprov.getProperty(provNamespace + "EndedAtTime");
+		Property provEndedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "EndedAtTime");
 		if (provEndedAtTimeProperty == null) {
-			provEndedAtTimeProperty = mprov.createProperty(provNamespace + "EndedAtTime");
+			provEndedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "EndedAtTime");
 		}
 
-		Resource gOpC3 = mprov.createResource(inNamespace + po.getGraphSTA1B2_NAME());
+		Resource gOpC3 = mprov.createResource(Constants.customNameSpace + po.getGraphSTA1B2_NAME());
 		gOpC3.addProperty(RDF.type, rgprovGraphClass);
-		Resource gcopyA1 = mprov.getResource(inNamespace + po.getA1().getGraph_COPY_NAME());
-		Resource gcopyB2 = mprov.getResource(inNamespace + po.getB2().getGraph_COPY_NAME());
+		Resource gcopyA1 = mprov.getResource(Constants.customNameSpace + po.getA1().getGraph_COPY_NAME());
+		Resource gcopyB2 = mprov.getResource(Constants.customNameSpace + po.getB2().getGraph_COPY_NAME());
 		gOpC3.addProperty(provWasDerivedFromProperty, gcopyA1);
 		gOpC3.addProperty(provWasDerivedFromProperty, gcopyB2);
 		
 		String stOp = po.getGraphStOpType();
 		if (stOp.equalsIgnoreCase("union")) 
 		{
-			Resource rgprovUnionResource = mprov.getResource(rgprovNamespace + "Union");
+			Resource rgprovUnionResource = mprov.getResource(Constants.rgprovNamespace + "Union");
 			if (rgprovUnionResource == null) {
-				rgprovUnionResource = mprov.createResource(rgprovNamespace + "Union");
+				rgprovUnionResource = mprov.createResource(Constants.rgprovNamespace + "Union");
 				rgprovUnionResource.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
 			}
-			Resource gu = mprov.createResource(inNamespace + stOpActivityName+timeStarted[2]);
+			Resource gu = mprov.createResource(Constants.customNameSpace + stOpActivityName+timeStarted[2]);
 			gu.addProperty(RDF.type, rgprovUnionResource);
 			gu.addProperty(provWasAssociatedWithProperty, jena3111);
 			gu.addProperty(provUsedProperty, gcopyA1);
@@ -240,12 +234,12 @@ public class ProvenanceHandler {
 		}
 		else if (stOp.equalsIgnoreCase("intersection")) 
 		{
-			Resource rgprovIntersectionResource = mprov.getResource(rgprovNamespace + "Intersection");
+			Resource rgprovIntersectionResource = mprov.getResource(Constants.rgprovNamespace + "Intersection");
 			if (rgprovIntersectionResource == null) {
-				rgprovIntersectionResource = mprov.createResource(rgprovNamespace + "Intersection");
+				rgprovIntersectionResource = mprov.createResource(Constants.rgprovNamespace + "Intersection");
 				rgprovIntersectionResource.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
 			}
-			Resource gi = mprov.createResource(inNamespace + stOpActivityName+timeStarted[2]);
+			Resource gi = mprov.createResource(Constants.customNameSpace + stOpActivityName+timeStarted[2]);
 			gi.addProperty(RDF.type, rgprovIntersectionResource);
 			gi.addProperty(provWasAssociatedWithProperty, jena3111);
 			gi.addProperty(provUsedProperty, gcopyA1);
@@ -257,17 +251,17 @@ public class ProvenanceHandler {
 		} 
 		else if (stOp.equalsIgnoreCase("difference1")) 
 		{
-			Resource rgprovDifferencenResource = mprov.getResource(rgprovNamespace + "Difference");
+			Resource rgprovDifferencenResource = mprov.getResource(Constants.rgprovNamespace + "Difference");
 			if (rgprovDifferencenResource == null) {
-				rgprovDifferencenResource = mprov.createResource(rgprovNamespace + "Difference");
+				rgprovDifferencenResource = mprov.createResource(Constants.rgprovNamespace + "Difference");
 				rgprovDifferencenResource.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
 			}
-			Resource gd = mprov.createResource(inNamespace + stOpActivityName+timeStarted[2]);
+			Resource gd = mprov.createResource(Constants.customNameSpace + stOpActivityName+timeStarted[2]);
 			
 			gd.addProperty(RDF.type, rgprovDifferencenResource);
 			gd.addProperty(provWasAssociatedWithProperty, jena3111);
-			Property hadMinuend = mprov.createProperty(rgprovNamespace + "hadMinuend");
-			Property hadSubtrahend = mprov.createProperty(rgprovNamespace + "hadSubtrahend");
+			Property hadMinuend = mprov.createProperty(Constants.rgprovNamespace + "hadMinuend");
+			Property hadSubtrahend = mprov.createProperty(Constants.rgprovNamespace + "hadSubtrahend");
 			gd.addProperty(hadMinuend, gcopyA1);
 			gd.addProperty(hadSubtrahend, gcopyB2);
 			gOpC3.addProperty(provWasGeneratedByProperty, gd);
@@ -277,17 +271,17 @@ public class ProvenanceHandler {
 		} 
 		else if (stOp.equalsIgnoreCase("difference2")) 
 		{
-			Resource rgprovDifferencenResource = mprov.getResource(rgprovNamespace + "Difference");
+			Resource rgprovDifferencenResource = mprov.getResource(Constants.rgprovNamespace + "Difference");
 			if (rgprovDifferencenResource == null) {
-				rgprovDifferencenResource = mprov.createResource(rgprovNamespace + "Difference");
+				rgprovDifferencenResource = mprov.createResource(Constants.rgprovNamespace + "Difference");
 				rgprovDifferencenResource.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
 			}
 			
-			Resource gd = mprov.createResource(inNamespace + stOpActivityName+timeStarted[2]);
+			Resource gd = mprov.createResource(Constants.customNameSpace + stOpActivityName+timeStarted[2]);
 			gd.addProperty(RDF.type, rgprovDifferencenResource);
 			gd.addProperty(provWasAssociatedWithProperty, jena3111);
-			Property hadMinuend = mprov.createProperty(rgprovNamespace + "hadMinuend");
-			Property hadSubtrahend = mprov.createProperty(rgprovNamespace + "hadSubtrahend");
+			Property hadMinuend = mprov.createProperty(Constants.rgprovNamespace + "hadMinuend");
+			Property hadSubtrahend = mprov.createProperty(Constants.rgprovNamespace + "hadSubtrahend");
 			gd.addProperty(hadMinuend, gcopyB2);
 			gd.addProperty(hadSubtrahend, gcopyA1);
 			gOpC3.addProperty(provWasGeneratedByProperty, gd);
@@ -295,221 +289,222 @@ public class ProvenanceHandler {
 			gd.addProperty(provEndedAtTimeProperty, timeEnded[0] + "^^xsd:dateTime");
 		}	
 		//setGraphC3_PROV_MODEL(mprov);
+		po.getC3().setGraph_PROV_MODEL(mprov);
 	}
 	
-	public static void updateC3Entailment (String entailActivityName, ParentOperator po, String timeStarted[], String timeEnded[]) {
+	public static void updateC3Entailment (String entailActivityName, ParentOperator po, String timeStarted[], String timeEnded[]) 
+	{
 		Model mprov = po.getC3().getGraph_PROV_MODEL();
 		
-		Resource rgprovRDFSReasonerClass = mprov.getResource(rgprovNamespace + "RDFSReasoner");
+		Resource rgprovRDFSReasonerClass = mprov.getResource(Constants.rgprovNamespace + "RDFSReasoner");
 		if (rgprovRDFSReasonerClass == null) {
-			rgprovRDFSReasonerClass =  mprov.createResource(rgprovNamespace + "RDFSReasoner");
+			rgprovRDFSReasonerClass =  mprov.createResource(Constants.rgprovNamespace + "RDFSReasoner");
 		}
-		Resource Jena = mprov.getResource(egNamespace + "Jena");
+		Resource Jena = mprov.getResource(Constants.egNamespace + "Jena");
 		if (Jena == null) {
-			Jena =  mprov.createResource(egNamespace + "Jena");
+			Jena =  mprov.createResource(Constants.egNamespace + "Jena");
 			Jena.addProperty(RDFS.subClassOf, rgprovRDFSReasonerClass);
 		}
-		Resource jena3111 = mprov.getResource(egNamespace + "jena3.1.1");
+		Resource jena3111 = mprov.getResource(Constants.egNamespace + "jena3.1.1");
 		if (jena3111 == null) {
-			jena3111 =  mprov.createResource(egNamespace + "jena3.1.1");
+			jena3111 =  mprov.createResource(Constants.egNamespace + "jena3.1.1");
 			jena3111.addProperty(RDF.type, Jena);
 		}
-		Resource rgprovGraphClass = mprov.getResource(rgprovNamespace + "Graph");
+		Resource rgprovGraphClass = mprov.getResource(Constants.rgprovNamespace + "Graph");
 		if (rgprovGraphClass == null) {
-			rgprovGraphClass =  mprov.createResource(rgprovNamespace + "Graph");
+			rgprovGraphClass =  mprov.createResource(Constants.rgprovNamespace + "Graph");
 		}
-		Resource rgprovGraphOpClass = mprov.getResource(rgprovNamespace + "GraphOperation");
+		Resource rgprovGraphOpClass = mprov.getResource(Constants.rgprovNamespace + "GraphOperation");
 		if (rgprovGraphOpClass == null) {
-			rgprovGraphOpClass =  mprov.createResource(rgprovNamespace + "GraphOperation");
+			rgprovGraphOpClass =  mprov.createResource(Constants.rgprovNamespace + "GraphOperation");
 		}
-		Resource rgprovEntailmentClass = mprov.getResource(rgprovNamespace + "Entailment");
+		Resource rgprovEntailmentClass = mprov.getResource(Constants.rgprovNamespace + "Entailment");
 		if (rgprovEntailmentClass == null) {
-			rgprovEntailmentClass =  mprov.createResource(rgprovNamespace + "Entailment");
+			rgprovEntailmentClass =  mprov.createResource(Constants.rgprovNamespace + "Entailment");
 			rgprovEntailmentClass.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
 		}
-		Resource rgprovRDFSEntailmentClass = mprov.getResource(rgprovNamespace + "RDFSEntailment");
+		Resource rgprovRDFSEntailmentClass = mprov.getResource(Constants.rgprovNamespace + "RDFSEntailment");
 		if (rgprovRDFSEntailmentClass == null) {
-			rgprovRDFSEntailmentClass =  mprov.createResource(rgprovNamespace + "RDFSEntailment");
+			rgprovRDFSEntailmentClass =  mprov.createResource(Constants.rgprovNamespace + "RDFSEntailment");
 			rgprovRDFSEntailmentClass.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
 		}
 		
-		Property provWasAssociatedWithProperty = mprov.getProperty(provNamespace + "wasAssociatedWith");
+		Property provWasAssociatedWithProperty = mprov.getProperty(Constants.provNamespace + "wasAssociatedWith");
 		if (provWasAssociatedWithProperty == null) {
-			provWasAssociatedWithProperty = mprov.createProperty(provNamespace + "wasAssociatedWith");
+			provWasAssociatedWithProperty = mprov.createProperty(Constants.provNamespace + "wasAssociatedWith");
 		}
-		Property provUsedProperty = mprov.getProperty(provNamespace + "Used");
+		Property provUsedProperty = mprov.getProperty(Constants.provNamespace + "Used");
 		if (provUsedProperty == null) {
-			provUsedProperty = mprov.createProperty(provNamespace + "Used");
+			provUsedProperty = mprov.createProperty(Constants.provNamespace + "Used");
 		}
-		Property provWasGeneratedByProperty = mprov.getProperty(provNamespace + "wasGeneratedBy");
+		Property provWasGeneratedByProperty = mprov.getProperty(Constants.provNamespace + "wasGeneratedBy");
 		if (provWasGeneratedByProperty == null) {
-			provWasGeneratedByProperty = mprov.createProperty(provNamespace + "wasGeneratedBy");
+			provWasGeneratedByProperty = mprov.createProperty(Constants.provNamespace + "wasGeneratedBy");
 		}
-		Property provWasDerivedFromProperty = mprov.getProperty(provNamespace + "wasDerivedFrom");
+		Property provWasDerivedFromProperty = mprov.getProperty(Constants.provNamespace + "wasDerivedFrom");
 		if (provWasDerivedFromProperty == null) {
-			provWasDerivedFromProperty = mprov.createProperty(provNamespace + "wasDerivedFrom");
+			provWasDerivedFromProperty = mprov.createProperty(Constants.provNamespace + "wasDerivedFrom");
 		}
-		Property provStartedAtTimeProperty = mprov.getProperty(provNamespace + "startedAtTime");
+		Property provStartedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "startedAtTime");
 		if (provStartedAtTimeProperty == null) {
-			provStartedAtTimeProperty = mprov.createProperty(provNamespace + "startedAtTime");
+			provStartedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "startedAtTime");
 		}
-		Property provEndedAtTimeProperty = mprov.getProperty(provNamespace + "EndedAtTime");
+		Property provEndedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "EndedAtTime");
 		if (provEndedAtTimeProperty == null) {
-			provEndedAtTimeProperty = mprov.createProperty(provNamespace + "EndedAtTime");
+			provEndedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "EndedAtTime");
 		}
-		Resource gcopyA1 = mprov.getResource(inNamespace + po.getA1().getGraph_COPY_NAME());
-		Resource gcopyB2 = mprov.getResource(inNamespace + po.getB2().getGraph_COPY_NAME());
-		Resource gOpC3 = mprov.getResource(inNamespace + po.getGraphSTA1B2_NAME());
+		Resource gcopyA1 = mprov.getResource(Constants.customNameSpace + po.getA1().getGraph_COPY_NAME());
+		Resource gcopyB2 = mprov.getResource(Constants.customNameSpace + po.getB2().getGraph_COPY_NAME());
+		Resource gOpC3 = mprov.getResource(Constants.customNameSpace + po.getGraphSTA1B2_NAME());
 		
 		
 		
-		Resource ge = mprov.createResource(inNamespace + entailActivityName);
+		Resource ge = mprov.createResource(Constants.customNameSpace + entailActivityName);
 		ge.addProperty(RDF.type, rgprovRDFSEntailmentClass);
 		ge.addProperty(provWasAssociatedWithProperty, jena3111);
 		ge.addProperty(provUsedProperty, gOpC3);
 		ge.addProperty(provStartedAtTimeProperty, timeStarted[0] + "^^xsd:dateTime");
 		ge.addProperty(provEndedAtTimeProperty, timeEnded[0] + "^^xsd:dateTime");
 		
-		Resource gC3 = mprov.createResource(inNamespace + po.getC3().getGraph_NAME());
+		Resource gC3 = mprov.createResource(Constants.customNameSpace + po.getC3().getGraph_NAME());
 		gC3.addProperty(RDF.type, rgprovGraphClass);
 		gC3.addProperty(provWasGeneratedByProperty, ge);
-		Property rgprovWasEntailedFromProperty = mprov.getProperty(rgprovNamespace + "wasEntailedFrom");
+		Property rgprovWasEntailedFromProperty = mprov.getProperty(Constants.rgprovNamespace + "wasEntailedFrom");
 		if (rgprovWasEntailedFromProperty == null) {
-			rgprovWasEntailedFromProperty = mprov.createProperty(rgprovNamespace + "wasEntailedFrom");
+			rgprovWasEntailedFromProperty = mprov.createProperty(Constants.rgprovNamespace + "wasEntailedFrom");
 		}
 		gC3.addProperty(rgprovWasEntailedFromProperty, gOpC3);
 		
 		gC3.addProperty(provWasDerivedFromProperty, gcopyA1);
 		gC3.addProperty(provWasDerivedFromProperty, gcopyB2);
 		
-		//p.setGraphC3_PROV_MODEL(mprov);
+		po.getC3().setGraph_PROV_MODEL(mprov);
 	}
 	
 	
 	public static void updateProvOfSourceGraphAfterLoadingUpdate(String graphNametimeFetched, UpdatedSourceGraphInSystem usg, 
 																	String timeStarted[], String timeEnded[]) 
 	{
-			Model mprov = usg.getGraphprime_PROV_star_COPY_MODEL();
-			mprov.setNsPrefix(inPrefix, inNamespace);
-			
-			Resource rgprovGraphClass = mprov.getResource(rgprovNamespace + "Graph");
-			if (rgprovGraphClass == null) {
-				rgprovGraphClass =  mprov.createResource(rgprovNamespace + "Graph");
-			}
-			Resource rgprovUpdateGraphClass = mprov.getResource(rgprovNamespace + "UpdateGraph");
-			if (rgprovUpdateGraphClass == null) {
-				rgprovUpdateGraphClass =  mprov.createResource(rgprovNamespace + "UpdateGraph");
-				rgprovUpdateGraphClass.addProperty(RDFS.subClassOf, rgprovGraphClass);
-			}
-			Resource RESTClient = mprov.getResource(inNamespace + "RESTClient");
-			if (RESTClient == null) {
-				RESTClient = mprov.createResource(inNamespace + "RESTClient");
-			}
-			Resource jersey225 = mprov.getResource(inNamespace + "jersey225");
-			if (jersey225 == null) {
-				jersey225 =  mprov.createResource(inNamespace + "jersey225");
-				jersey225.addProperty(RDF.type, RESTClient);
-			}
-			
-			// add to the passed model the triples that describe its fetching as per rgprov
-			Resource rgprovFetchResource = mprov.getResource(rgprovNamespace + "Fetch");
-			if (rgprovFetchResource == null) {
-				rgprovFetchResource = mprov.createResource(rgprovNamespace + "Fetch");
-			}
-			Resource fetch = mprov.createResource(inNamespace + "fetch" + graphNametimeFetched+timeStarted[2]);
-			fetch.addProperty(RDF.type, rgprovFetchResource);
-			
-			Property provWasAssociatedWithProperty = mprov.getProperty(provNamespace + "wasAssociatedWith");
-			if (provWasAssociatedWithProperty == null) {
-				provWasAssociatedWithProperty = mprov.createProperty(provNamespace + "wasAssociatedWith");
-			}
-			Property provStartedAtTimeProperty = mprov.getProperty(provNamespace + "startedAtTime");
-			if (provStartedAtTimeProperty == null) {
-				provStartedAtTimeProperty = mprov.createProperty(provNamespace + "startedAtTime");
-			}
-			Property provEndedAtTimeProperty = mprov.getProperty(provNamespace + "EndedAtTime");
-			if (provEndedAtTimeProperty == null) {
-				provEndedAtTimeProperty = mprov.createProperty(provNamespace + "EndedAtTime");
-			}
-			
-			fetch.addProperty(provWasAssociatedWithProperty, jersey225);
-			fetch.addProperty(provStartedAtTimeProperty, timeStarted[0] + "^^xsd:dateTime");
-			fetch.addProperty(provEndedAtTimeProperty, timeEnded[0] + "^^xsd:dateTime");
-			
-			//may change this to prov:used
-			Property accessedProperty = mprov.getProperty(inNamespace + "accessed");
-			if (accessedProperty == null) {
-				accessedProperty = mprov.createProperty(inNamespace + "accessed");
-			}
-			Property rgprovCopiedProperty = mprov.getProperty(rgprovNamespace + "copied");
-			if (rgprovCopiedProperty == null) {
-				rgprovCopiedProperty = mprov.createProperty(rgprovNamespace + "copied");
-			}
-			Property rgprovWasCopyResultProperty = mprov.getProperty(rgprovNamespace + "wasCopyResult");
-			if (rgprovWasCopyResultProperty == null) {
-				rgprovWasCopyResultProperty = mprov.createProperty(rgprovNamespace + "wasCopyResult");
-			}
-			Property rgprovWasExactCopyProperty = mprov.getProperty(rgprovNamespace + "wasExactCopy");
-			if (rgprovWasExactCopyProperty == null) {
-				rgprovWasExactCopyProperty = mprov.createProperty(rgprovNamespace + "wasExactCopy");
-			}
-			
-			Resource updateGraphOriginalNameResource = mprov.getResource(egNamespace + usg.getUpdateGraph_source_NAME());
-			if (updateGraphOriginalNameResource == null) {
-				updateGraphOriginalNameResource = mprov.createResource(egNamespace + usg.getUpdateGraph_source_NAME());
-			}
-			Resource updateGraphCopyNameResource = mprov.getResource(inNamespace + usg.getUpdateGraph_COPY_NAME());
-			if (updateGraphCopyNameResource == null) {
-				updateGraphCopyNameResource = mprov.createResource(inNamespace + usg.getUpdateGraph_COPY_NAME());
-			}
-			
-			updateGraphOriginalNameResource.addProperty(RDF.type, rgprovUpdateGraphClass);
-			updateGraphCopyNameResource.addProperty(RDF.type, rgprovUpdateGraphClass);
-			
-			fetch.addProperty(accessedProperty, usg.getUpdateGraph_URI());
-			fetch.addProperty(rgprovCopiedProperty,updateGraphOriginalNameResource);
-			updateGraphCopyNameResource.addProperty(rgprovWasCopyResultProperty, fetch);
-			updateGraphCopyNameResource.addProperty(rgprovWasExactCopyProperty, updateGraphOriginalNameResource);
-			
-			Resource graphPrimeProvCopyResource = mprov.createResource(inNamespace +  usg.getGraphprime_PROV_COPY_NAME());		
-			graphPrimeProvCopyResource.addProperty(RDF.type, rgprovGraphClass);
-			
-			Property wasRevisionOf = mprov.getProperty(provNamespace + "wasRevisionOf");
-			if (wasRevisionOf == null) {
-				wasRevisionOf = mprov.createProperty(provNamespace + "wasRevisionOf");
-			}
-			// THIS NEEDS FIXING
-			
-			//P'copy(B',2) is a new version of P'copy(B,2) , this creates the triple:
-			//P'copy(B',2 prov:wasRevisionOf P'copy(B,2) .
-	//		Resource provPrimeB2prime = mprov.createResource(p.getGraphB2prime_PROV_URI());
-	//		Resource provB2 = mprov.getResource(p.getGraphB2_PROV_URI());
-	//		provPrimeB2prime.addProperty(wasRevisionOf, provB2);
-			
-			usg.setGraphprime_PROV_star_COPY_MODEL(mprov);
-			
-		}
-	public static Model updateC3ProvAfterLoadingUpdate(Model c3PreviousProv, String c3provName, String b2provStarCopyName) {
-		Model mresults = c3PreviousProv;
-		Resource rgprovGraphClass = mresults.getResource(rgprovNamespace + "Graph");
+		Model mprov = usg.getGraphprime_PROV_star_COPY_MODEL();
+		mprov.setNsPrefix(Constants.customPrefix, Constants.customNameSpace);
+		
+		Resource rgprovGraphClass = mprov.getResource(Constants.rgprovNamespace + "Graph");
 		if (rgprovGraphClass == null) {
-			rgprovGraphClass =  mresults.createResource(rgprovNamespace + "Graph");
+			rgprovGraphClass =  mprov.createResource(Constants.rgprovNamespace + "Graph");
 		}
-		Property provWasDerivedFromProperty = mresults.getProperty(provNamespace + "wasDerivedFrom");
+		Resource rgprovUpdateGraphClass = mprov.getResource(Constants.rgprovNamespace + "UpdateGraph");
+		if (rgprovUpdateGraphClass == null) {
+			rgprovUpdateGraphClass =  mprov.createResource(Constants.rgprovNamespace + "UpdateGraph");
+			rgprovUpdateGraphClass.addProperty(RDFS.subClassOf, rgprovGraphClass);
+		}
+		Resource RESTClient = mprov.getResource(Constants.customNameSpace + "RESTClient");
+		if (RESTClient == null) {
+			RESTClient = mprov.createResource(Constants.customNameSpace + "RESTClient");
+		}
+		Resource jersey225 = mprov.getResource(Constants.customNameSpace + "jersey225");
+		if (jersey225 == null) {
+			jersey225 =  mprov.createResource(Constants.customNameSpace + "jersey225");
+			jersey225.addProperty(RDF.type, RESTClient);
+		}
+		
+		// add to the passed model the triples that describe its fetching as per rgprov
+		Resource rgprovFetchResource = mprov.getResource(Constants.rgprovNamespace + "Fetch");
+		if (rgprovFetchResource == null) {
+			rgprovFetchResource = mprov.createResource(Constants.rgprovNamespace + "Fetch");
+		}
+		Resource fetch = mprov.createResource(Constants.customNameSpace + "fetch" + graphNametimeFetched+timeStarted[2]);
+		fetch.addProperty(RDF.type, rgprovFetchResource);
+		
+		Property provWasAssociatedWithProperty = mprov.getProperty(Constants.provNamespace + "wasAssociatedWith");
+		if (provWasAssociatedWithProperty == null) {
+			provWasAssociatedWithProperty = mprov.createProperty(Constants.provNamespace + "wasAssociatedWith");
+		}
+		Property provStartedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "startedAtTime");
+		if (provStartedAtTimeProperty == null) {
+			provStartedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "startedAtTime");
+		}
+		Property provEndedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "EndedAtTime");
+		if (provEndedAtTimeProperty == null) {
+			provEndedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "EndedAtTime");
+		}
+		
+		fetch.addProperty(provWasAssociatedWithProperty, jersey225);
+		fetch.addProperty(provStartedAtTimeProperty, timeStarted[0] + "^^xsd:dateTime");
+		fetch.addProperty(provEndedAtTimeProperty, timeEnded[0] + "^^xsd:dateTime");
+		
+		//may change this to prov:used
+		Property accessedProperty = mprov.getProperty(Constants.customNameSpace + "accessed");
+		if (accessedProperty == null) {
+			accessedProperty = mprov.createProperty(Constants.customNameSpace + "accessed");
+		}
+		Property rgprovCopiedProperty = mprov.getProperty(Constants.rgprovNamespace + "copied");
+		if (rgprovCopiedProperty == null) {
+			rgprovCopiedProperty = mprov.createProperty(Constants.rgprovNamespace + "copied");
+		}
+		Property rgprovWasCopyResultProperty = mprov.getProperty(Constants.rgprovNamespace + "wasCopyResult");
+		if (rgprovWasCopyResultProperty == null) {
+			rgprovWasCopyResultProperty = mprov.createProperty(Constants.rgprovNamespace + "wasCopyResult");
+		}
+		Property rgprovWasExactCopyProperty = mprov.getProperty(Constants.rgprovNamespace + "wasExactCopy");
+		if (rgprovWasExactCopyProperty == null) {
+			rgprovWasExactCopyProperty = mprov.createProperty(Constants.rgprovNamespace + "wasExactCopy");
+		}
+		
+		Resource updateGraphOriginalNameResource = mprov.getResource(Constants.egNamespace + usg.getUpdateGraph_source_NAME());
+		if (updateGraphOriginalNameResource == null) {
+			updateGraphOriginalNameResource = mprov.createResource(Constants.egNamespace + usg.getUpdateGraph_source_NAME());
+		}
+		Resource updateGraphCopyNameResource = mprov.getResource(Constants.customNameSpace + usg.getUpdateGraph_COPY_NAME());
+		if (updateGraphCopyNameResource == null) {
+			updateGraphCopyNameResource = mprov.createResource(Constants.customNameSpace + usg.getUpdateGraph_COPY_NAME());
+		}
+		
+		updateGraphOriginalNameResource.addProperty(RDF.type, rgprovUpdateGraphClass);
+		updateGraphCopyNameResource.addProperty(RDF.type, rgprovUpdateGraphClass);
+		
+		fetch.addProperty(accessedProperty, usg.getUpdateGraph_URI());
+		fetch.addProperty(rgprovCopiedProperty,updateGraphOriginalNameResource);
+		updateGraphCopyNameResource.addProperty(rgprovWasCopyResultProperty, fetch);
+		updateGraphCopyNameResource.addProperty(rgprovWasExactCopyProperty, updateGraphOriginalNameResource);
+		
+		Resource graphPrimeProvCopyResource = mprov.createResource(Constants.customNameSpace +  usg.getGraphprime_PROV_COPY_NAME());		
+		graphPrimeProvCopyResource.addProperty(RDF.type, rgprovGraphClass);
+		
+		Property provWasRevisionOf = mprov.getProperty(Constants.provNamespace + "wasRevisionOf");
+		if (provWasRevisionOf == null) {
+			provWasRevisionOf = mprov.createProperty(Constants.provNamespace + "wasRevisionOf");
+		}
+		// THIS NEEDS FIXING
+		
+		//P'copy(B',2) is a new version of P'copy(B,2) , this creates the triple:
+		//P'copy(B',2 prov:wasRevisionOf P'copy(B,2) .
+//		Resource provPrimeB2prime = mprov.createResource(p.getGraphB2prime_PROV_URI());
+//		Resource provB2 = mprov.getResource(p.getGraphB2_PROV_URI());
+//		provPrimeB2prime.addProperty(wasRevisionOf, provB2);
+		
+		usg.setGraphprime_PROV_star_COPY_MODEL(mprov);
+			
+	}
+	
+	public static Model updateC3ProvAfterLoadingUpdate(Model c3PreviousProv, String c3provName, String b2provStarCopyName) 
+	{
+		Model mresults = c3PreviousProv;
+		Resource rgprovGraphClass = mresults.getResource(Constants.rgprovNamespace + "Graph");
+		if (rgprovGraphClass == null) {
+			rgprovGraphClass =  mresults.createResource(Constants.rgprovNamespace + "Graph");
+		}
+		Property provWasDerivedFromProperty = mresults.getProperty(Constants.provNamespace + "wasDerivedFrom");
 		if (provWasDerivedFromProperty == null) {
-			provWasDerivedFromProperty = mresults.createProperty(provNamespace + "wasDerivedFrom");
+			provWasDerivedFromProperty = mresults.createProperty(Constants.provNamespace + "wasDerivedFrom");
 		}
-		/*Resource a1provStarCopyNameResource = mresults.getResource(inNamespace + a1provStarCopyName);
-		if (a1provStarCopyNameResource == null) {
-			a1provStarCopyNameResource = mresults.createResource(inNamespace + a1provStarCopyName);
-		}*/
-		Resource b2provStarCopyNameResource = mresults.getResource(inNamespace + b2provStarCopyName);
+		
+		Resource b2provStarCopyNameResource = mresults.getResource(Constants.customNameSpace + b2provStarCopyName);
 		if (b2provStarCopyNameResource == null) {
-			b2provStarCopyNameResource = mresults.createResource(inNamespace + b2provStarCopyName);
+			b2provStarCopyNameResource = mresults.createResource(Constants.customNameSpace + b2provStarCopyName);
 		}
-		Resource c3provNameResource = mresults.getResource(inNamespace + c3provName);
+		Resource c3provNameResource = mresults.getResource(Constants.customNameSpace + c3provName);
 		if (b2provStarCopyNameResource == null) {
-			b2provStarCopyNameResource = mresults.createResource(inNamespace + c3provName);
+			b2provStarCopyNameResource = mresults.createResource(Constants.customNameSpace + c3provName);
 		}
 		c3provNameResource.addProperty(RDF.type, rgprovGraphClass);
 		//c3provNameResource.addProperty(provWasDerivedFromProperty, a1provStarCopyNameResource);
@@ -527,245 +522,270 @@ public class ProvenanceHandler {
 		
 		Model mprov = uo.getC3prime().getGraph_PROV_MODEL();
 	
-		Resource rgprovGraphClass = mprov.getResource(rgprovNamespace + "Graph");
-		if (rgprovGraphClass == null) {
-			rgprovGraphClass =  mprov.createResource(rgprovNamespace + "Graph");
+		Resource rgprovRDFSReasonerClass = mprov.getResource(Constants.rgprovNamespace + "RDFSReasoner");
+		if (rgprovRDFSReasonerClass == null) {
+			rgprovRDFSReasonerClass =  mprov.createResource(Constants.rgprovNamespace + "RDFSReasoner");
 		}
-		Resource rgprovUpdateGraphClass = mprov.getResource(rgprovNamespace + "UpdateGraph");
+		Resource Jena = mprov.getResource(Constants.egNamespace + "Jena");
+		if (Jena == null) {
+			Jena =  mprov.createResource(Constants.egNamespace + "Jena");
+			Jena.addProperty(RDFS.subClassOf, rgprovRDFSReasonerClass);
+		}
+		Resource jena3111 = mprov.getResource(Constants.egNamespace + "jena3.1.1");
+		if (jena3111 == null) {
+			jena3111 =  mprov.createResource(Constants.egNamespace + "jena3.1.1");
+			jena3111.addProperty(RDF.type, Jena);
+		}
+		Resource rgprovGraphClass = mprov.getResource(Constants.rgprovNamespace + "Graph");
+		if (rgprovGraphClass == null) {
+			rgprovGraphClass =  mprov.createResource(Constants.rgprovNamespace + "Graph");
+		}
+		Resource rgprovUpdateGraphClass = mprov.getResource(Constants.rgprovNamespace + "UpdateGraph");
 		if (rgprovUpdateGraphClass == null) {
-			rgprovUpdateGraphClass =  mprov.createResource(rgprovNamespace + "UpdateGraph");
+			rgprovUpdateGraphClass =  mprov.createResource(Constants.rgprovNamespace + "UpdateGraph");
 			rgprovUpdateGraphClass.addProperty(RDFS.subClassOf, rgprovGraphClass);
 		}
-		Resource rgprovGraphOpClass = mprov.getResource(rgprovNamespace + "GraphOperation");
+		Resource rgprovGraphOpClass = mprov.getResource(Constants.rgprovNamespace + "GraphOperation");
 		if (rgprovGraphOpClass == null) {
-			rgprovGraphOpClass =  mprov.createResource(rgprovNamespace + "GraphOperation");
+			rgprovGraphOpClass =  mprov.createResource(Constants.rgprovNamespace + "GraphOperation");
 		}
-		Property provWasAssociatedWithProperty = mprov.getProperty(provNamespace + "wasAssociatedWith");
+		Property provWasAssociatedWithProperty = mprov.getProperty(Constants.provNamespace + "wasAssociatedWith");
 		if (provWasAssociatedWithProperty == null) {
-			provWasAssociatedWithProperty = mprov.createProperty(provNamespace + "wasAssociatedWith");
+			provWasAssociatedWithProperty = mprov.createProperty(Constants.provNamespace + "wasAssociatedWith");
 		}
-		Property provUsedProperty = mprov.getProperty(provNamespace + "Used");
+		Property provUsedProperty = mprov.getProperty(Constants.provNamespace + "Used");
 		if (provUsedProperty == null) {
-			provUsedProperty = mprov.createProperty(provNamespace + "Used");
+			provUsedProperty = mprov.createProperty(Constants.provNamespace + "Used");
 		}
-		Property provWasGeneratedByProperty = mprov.getProperty(provNamespace + "wasGeneratedBy");
+		Property provWasGeneratedByProperty = mprov.getProperty(Constants.provNamespace + "wasGeneratedBy");
 		if (provWasGeneratedByProperty == null) {
-			provWasGeneratedByProperty = mprov.createProperty(provNamespace + "wasGeneratedBy");
+			provWasGeneratedByProperty = mprov.createProperty(Constants.provNamespace + "wasGeneratedBy");
 		}
-		Property provWasDerivedFromProperty = mprov.getProperty(provNamespace + "wasDerivedFrom");
+		Property provWasDerivedFromProperty = mprov.getProperty(Constants.provNamespace + "wasDerivedFrom");
 		if (provWasDerivedFromProperty == null) {
-			provWasDerivedFromProperty = mprov.createProperty(provNamespace + "wasDerivedFrom");
+			provWasDerivedFromProperty = mprov.createProperty(Constants.provNamespace + "wasDerivedFrom");
 		}
-		Property provStartedAtTimeProperty = mprov.getProperty(provNamespace + "startedAtTime");
+		Property provStartedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "startedAtTime");
 		if (provStartedAtTimeProperty == null) {
-			provStartedAtTimeProperty = mprov.createProperty(provNamespace + "startedAtTime");
+			provStartedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "startedAtTime");
 		}
-		Property provEndedAtTimeProperty = mprov.getProperty(provNamespace + "EndedAtTime");
+		Property provEndedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "EndedAtTime");
 		if (provEndedAtTimeProperty == null) {
-			provEndedAtTimeProperty = mprov.createProperty(provNamespace + "EndedAtTime");
+			provEndedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "EndedAtTime");
 		}
-		Resource gC3 = mprov.getResource(inNamespace + uo.getC3prime().getGraph_NAME());
+		Resource gC3 = mprov.getResource(Constants.customNameSpace + uo.getC3prime().getGraph_NAME());
 		if (gC3 == null) {
-			gC3 = mprov.createResource(inNamespace + uo.getC3prime().getGraph_NAME());
+			gC3 = mprov.createResource(Constants.customNameSpace + uo.getC3prime().getGraph_NAME());
 			gC3.addProperty(RDF.type, rgprovGraphClass);
 		}
-		Resource UpcopyResource = mprov.createResource(inNamespace + uo.getB2prime().getUpdateGraph_COPY_NAME());
+		Resource UpcopyResource = mprov.createResource(Constants.customNameSpace + uo.getB2prime().getUpdateGraph_COPY_NAME());
 		UpcopyResource.addProperty(RDF.type, rgprovUpdateGraphClass);
-		Resource gOpC3prime = mprov.createResource(inNamespace + uo.getGraphSTA1B2prime_NAME());
+		Resource gOpC3prime = mprov.createResource(Constants.customNameSpace + uo.getGraphSTA1B2prime_NAME());
 		gOpC3prime.addProperty(RDF.type, rgprovGraphClass);
 		gOpC3prime.addProperty(provWasDerivedFromProperty, UpcopyResource);
 		gOpC3prime.addProperty(provWasDerivedFromProperty, gC3);
 		
 		if (graphUpdateType.equalsIgnoreCase("insert")) 
 		{ 
-			Resource rgprovInsertOpClass = mprov.getResource(rgprovNamespace + "InsertOperation");
+			Resource rgprovInsertOpClass = mprov.getResource(Constants.rgprovNamespace + "InsertOperation");
 			if (rgprovInsertOpClass == null) {
-				rgprovInsertOpClass =  mprov.createResource(rgprovNamespace + "InsertOperation");
+				rgprovInsertOpClass =  mprov.createResource(Constants.rgprovNamespace + "InsertOperation");
 				rgprovInsertOpClass.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
 			}
-			Property rgprovInsertedProperty = mprov.getProperty(rgprovNamespace + "inserted");
+			Property rgprovInsertedProperty = mprov.getProperty(Constants.rgprovNamespace + "inserted");
 			if (rgprovInsertedProperty == null) {
-				rgprovInsertedProperty = mprov.createProperty(rgprovNamespace + "inserted");
+				rgprovInsertedProperty = mprov.createProperty(Constants.rgprovNamespace + "inserted");
 			}
 			
+			Resource insertIntoG3 = mprov.createResource(Constants.customNameSpace + "insert" + uo.getC3prime().getWithoutTTL_Graph_NAME() + timeCalled);
+			insertIntoG3.addProperty(RDF.type, rgprovInsertOpClass);
+			insertIntoG3.addProperty(provWasAssociatedWithProperty, jena3111);
+			insertIntoG3.addProperty(provUsedProperty, gC3);
+			insertIntoG3.addProperty(provStartedAtTimeProperty, timeCalled);
+			gOpC3prime.addProperty(provWasGeneratedByProperty, insertIntoG3);
 			if (queriedGraphStOpType.equalsIgnoreCase("union")) 
 			{
-				Resource rgprovRDFSReasonerClass = mprov.getResource(rgprovNamespace + "RDFSReasoner");
-				if (rgprovRDFSReasonerClass == null) {
-					rgprovRDFSReasonerClass =  mprov.createResource(rgprovNamespace + "RDFSReasoner");
-				}
-				Resource Jena = mprov.getResource(egNamespace + "Jena");
-				if (Jena == null) {
-					Jena =  mprov.createResource(egNamespace + "Jena");
-					Jena.addProperty(RDFS.subClassOf, rgprovRDFSReasonerClass);
-				}
-				Resource jena3111 = mprov.getResource(egNamespace + "jena3.1.1");
-				if (jena3111 == null) {
-					jena3111 =  mprov.createResource(egNamespace + "jena3.1.1");
-					jena3111.addProperty(RDF.type, Jena);
-				}
-				Resource insertIntoG3 = mprov.createResource(inNamespace + "insert" + uo.getC3prime().getWithoutTTL_Graph_NAME() + timeCalled);
-				insertIntoG3.addProperty(RDF.type, rgprovInsertOpClass);
-				insertIntoG3.addProperty(provWasAssociatedWithProperty, jena3111);
 				insertIntoG3.addProperty(rgprovInsertedProperty, UpcopyResource);
-				insertIntoG3.addProperty(provUsedProperty, gC3);
-				gOpC3prime.addProperty(provWasGeneratedByProperty, insertIntoG3);
-				insertIntoG3.addProperty(provStartedAtTimeProperty, timeCalled);
 			}
-			else
+			else if ((queriedGraphStOpType.equalsIgnoreCase("intersection")) 
+						||  (queriedGraphStOpType.equalsIgnoreCase("difference1"))
+						||  (queriedGraphStOpType.equalsIgnoreCase("difference2")))
 			{
+				Resource subsUpcopyResource = mprov.createResource(Constants.customNameSpace + "SubsetOf" + uo.getB2prime().getUpdateGraph_COPY_NAME());
+				subsUpcopyResource.addProperty(RDF.type, rgprovUpdateGraphClass);
+				subsUpcopyResource.addProperty(provWasDerivedFromProperty, UpcopyResource);
 				
+				Resource gcopyA1 = mprov.getResource(Constants.customNameSpace + uo.getA1().getGraph_COPY_NAME());
+				subsUpcopyResource.addProperty(provWasDerivedFromProperty, gcopyA1);
+				
+				insertIntoG3.addProperty(rgprovInsertedProperty, subsUpcopyResource);
+				gOpC3prime.addProperty(provWasDerivedFromProperty, subsUpcopyResource);
+				gOpC3prime.addProperty(provWasDerivedFromProperty, gcopyA1);
 			}
-			
 		}
 		else // it is delete
 		{
-			Resource rgprovDeleteOpClass = mprov.getResource(rgprovNamespace + "DeleteOperation");
+			Resource rgprovDeleteOpClass = mprov.getResource(Constants.rgprovNamespace + "DeleteOperation");
 			if (rgprovDeleteOpClass == null) {
-				rgprovDeleteOpClass =  mprov.createResource(rgprovNamespace + "DeleteOperation");
+				rgprovDeleteOpClass =  mprov.createResource(Constants.rgprovNamespace + "DeleteOperation");
 				rgprovDeleteOpClass.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
 			}
-			Property rgprovDeletedProperty = mprov.getProperty(rgprovNamespace + "deleted");
+			Resource deleteFromC3 = mprov.createResource(Constants.customNameSpace + "delete" + uo.getC3prime().getWithoutTTL_Graph_NAME() + timeCalled);
+			deleteFromC3.addProperty(RDF.type, rgprovDeleteOpClass);
+			deleteFromC3.addProperty(provWasAssociatedWithProperty, jena3111);
+			deleteFromC3.addProperty(provUsedProperty, gC3);
+			deleteFromC3.addProperty(provStartedAtTimeProperty, timeCalled);
+			Property rgprovDeletedProperty = mprov.getProperty(Constants.rgprovNamespace + "deleted");
 			if (rgprovDeletedProperty == null) {
-				rgprovDeletedProperty = mprov.createProperty(rgprovNamespace + "deleted");
+				rgprovDeletedProperty = mprov.createProperty(Constants.rgprovNamespace + "deleted");
 			}
 			if (queriedGraphStOpType.equalsIgnoreCase("union")) 
 			{
-				Resource rgprovRDFSReasonerClass = mprov.getResource(rgprovNamespace + "RDFSReasoner");
-				if (rgprovRDFSReasonerClass == null) {
-					rgprovRDFSReasonerClass =  mprov.createResource(rgprovNamespace + "RDFSReasoner");
-				}
-				Resource Jena = mprov.getResource(egNamespace + "Jena");
-				if (Jena == null) {
-					Jena =  mprov.createResource(egNamespace + "Jena");
-					Jena.addProperty(RDFS.subClassOf, rgprovRDFSReasonerClass);
-				}
-				Resource jena3111 = mprov.getResource(egNamespace + "jena3.1.1");
-				if (jena3111 == null) {
-					jena3111 =  mprov.createResource(egNamespace + "jena3.1.1");
-					jena3111.addProperty(RDF.type, Jena);
-				}
-				Resource deleteFromC3 = mprov.createResource(inNamespace + "delete" + uo.getC3prime().getWithoutTTL_Graph_NAME() + timeCalled);
-				deleteFromC3.addProperty(RDF.type, rgprovDeleteOpClass);
-				// fix this: deleteFromC3.addProperty(provWasAssociatedWithProperty, jena3111);
-				Resource subUpcopyResource = mprov.createResource(inNamespace + "SubsetOf" + uo.getB2prime().getUpdateGraph_COPY_NAME());
+				
+				Resource subUpcopyResource = mprov.createResource(Constants.customNameSpace + "SubsetOf" + uo.getB2prime().getUpdateGraph_COPY_NAME());
 				subUpcopyResource.addProperty(RDF.type, rgprovUpdateGraphClass);
 				subUpcopyResource.addProperty(provWasDerivedFromProperty, UpcopyResource);
-				Resource gcopyA1 = mprov.getResource(inNamespace + uo.getA1().getGraph_COPY_NAME());
+				
+				Resource gcopyA1 = mprov.getResource(Constants.customNameSpace + uo.getA1().getGraph_COPY_NAME());
 				subUpcopyResource.addProperty(provWasDerivedFromProperty, gcopyA1);
+				
 				deleteFromC3.addProperty(rgprovDeletedProperty, subUpcopyResource);
-				deleteFromC3.addProperty(provUsedProperty, gC3);
+				
 				gOpC3prime.addProperty(provWasGeneratedByProperty, deleteFromC3);
 				gOpC3prime.addProperty(provWasDerivedFromProperty, gcopyA1);
 				gOpC3prime.addProperty(provWasDerivedFromProperty, subUpcopyResource);
-				deleteFromC3.addProperty(provStartedAtTimeProperty, timeCalled);
-			}
-			else
-			{
 				
 			}
-			
+			else if ((queriedGraphStOpType.equalsIgnoreCase("intersection")) 
+					||  (queriedGraphStOpType.equalsIgnoreCase("difference1"))
+					||  (queriedGraphStOpType.equalsIgnoreCase("difference2")))
+			{
+				deleteFromC3.addProperty(rgprovDeletedProperty, UpcopyResource);
+			}
 		}
+		uo.getC3prime().setGraph_PROV_MODEL(mprov);
 		
-		
-		
-	/*		
-		
-		
-		
-		Resource gcopyB2 = mprov.getResource(p.getGraphB2_COPY_NAME());
-		
-		
-		if (stOp.equalsIgnoreCase("union")) {
-			Resource gu = mprov.createResource(stOpActivityName);
-			Resource rgprovUnion = mprov.createResource(rgprovNamespace + "Union");
-			gu.addProperty(RDF.type, rgprovUnion);
-			gu.addProperty(wasAssociatedWith, jena3111);
-			gu.addProperty(used, mprov.getResource(p.getGraphA1_COPY_NAME()));
-			gu.addProperty(used, mprov.getResource(p.getGraphB2_COPY_NAME()));
-			gOpC3.addProperty(wasGeneratedBy, gu);
-		}
-		else if (stOp.equalsIgnoreCase("intersection")) {
-			Resource gi = mprov.createResource(stOpActivityName);
-			Resource rgprovIntersection = mprov.createResource(rgprovNamespace + "Intersection");
-			gi.addProperty(RDF.type, rgprovIntersection);
-			gi.addProperty(wasAssociatedWith, jena3111);
-			gi.addProperty(used, mprov.getResource(p.getGraphA1_COPY_NAME()));
-			gi.addProperty(used, mprov.getResource(p.getGraphB2_COPY_NAME()));
-			gOpC3.addProperty(wasGeneratedBy, gi);
-			
-		} else if (stOp.equalsIgnoreCase("difference1")) {
-			Resource gd = mprov.createResource(stOpActivityName);
-			Resource rgprovDifference = mprov.createResource(rgprovNamespace + "Difference");
-			gd.addProperty(RDF.type, rgprovDifference);
-			gd.addProperty(wasAssociatedWith, jena3111);
-			Property hadMinuend = mprov.createProperty(rgprovNamespace + "hadMinuend");
-			Property hadSubtrahend = mprov.createProperty(rgprovNamespace + "hadSubtrahend");
-			gd.addProperty(hadMinuend, mprov.getResource(p.getGraphA1_COPY_NAME()));
-			gd.addProperty(hadSubtrahend, mprov.getResource(p.getGraphB2_COPY_NAME()));
-			gOpC3.addProperty(wasGeneratedBy, gd);
-			
-		} else if (stOp.equalsIgnoreCase("difference2")) {
-			Resource gd = mprov.createResource(stOpActivityName);
-			Resource rgprovDifference = mprov.createResource(rgprovNamespace + "Difference");
-			gd.addProperty(RDF.type, rgprovDifference);
-			gd.addProperty(wasAssociatedWith, jena3111);
-			Property hadMinuend = mprov.createProperty(rgprovNamespace + "hadMinuend");
-			Property hadSubtrahend = mprov.createProperty(rgprovNamespace + "hadSubtrahend");
-			gd.addProperty(hadMinuend, mprov.getResource(p.getGraphB2_COPY_NAME()));
-			gd.addProperty(hadSubtrahend, mprov.getResource(p.getGraphA1_COPY_NAME()));
-			gOpC3.addProperty(wasGeneratedBy, gd);
-			
-		}	
-		p.setGraphC3_PROV_MODEL(mprov);
-		*/
 	}
 	
-		/*public static void updateC3ProvEntailment (String spaceName, String entailActivityName, Producer p) {
-		  //Resource gC3prime = mprov.createResource(inNamespace + uo.getC3prime().getGraph_UpdatedNAME()); 
+	public static void updateC3ProvEntailment (String entailActivityName, UpdatedOperator uo, String timeStarted[], String timeEnded[]) 
+	{
+		//Resource gC3prime = mprov.createResource(inNamespace + uo.getC3prime().getGraph_UpdatedNAME()); 
 		//gC3prime.addProperty(RDF.type, rgprovGraphClass);
 		 
-			Model mprov = p.getGraphC3_PROV_MODEL();
-			Resource jena3111 = mprov.getResource("jena3.1.1");
-			Property wasAssociatedWith = mprov.getProperty(provNamespace + "wasAssociatedWith");
-			Property used =  mprov.getProperty(provNamespace + "Used");
-			Property wasGeneratedBy = mprov.getProperty(rgprovNamespace + "wasGeneratedBy");
-			Property wasDerivedFrom = mprov.getProperty(rgprovNamespace + "wasDerivedFrom");
-			Resource gcopyA1 = mprov.getProperty(p.getGraphA1_COPY_NAME());
-			Resource gcopyB2 = mprov.getProperty(p.getGraphB2_COPY_NAME());
-			Resource gOpC3 = mprov.getResource(p.getGraphSTA1B2_NAME());
-			
-			Resource ge = mprov.createResource(entailActivityName);
-			Resource rdfsEntailment = mprov.createResource(rgprovNamespace + "RDFSEntailment");
-			ge.addProperty(RDF.type, rdfsEntailment);
-			ge.addProperty(wasAssociatedWith, jena3111);
-			ge.addProperty(used, gOpC3);
-			
-			Resource gC3 = mprov.createResource(p.getGraphC3_NAME());
-			gC3.addProperty(wasGeneratedBy, ge);
-			Property wasEntailedFrom = mprov.createProperty(rgprovNamespace + "wasEntailedFrom");
-			gC3.addProperty(wasEntailedFrom, gOpC3);
-			
-			gC3.addProperty(wasDerivedFrom, gcopyA1);
-			gC3.addProperty(wasDerivedFrom, gcopyB2);
-			
-			p.setGraphC3_PROV_MODEL(mprov);
-		}*/
-			
+		Model mprov = uo.getC3prime().getGraph_PROV_MODEL();
 		
-		//this method should be deleted once the provenance handler has been updated
-		/*	public static String createProvOfSourceName(String graphName, String timeFetched) {
-				String mprovName = "Pstar_copy_" + graphName + "-" + timeFetched; 
-				return mprovName;
-			}*/
-			//this method should be deleted once the provenance handler has been updated
-		/*	public static String createProvOfUpdateName(String graphName, String timeFetched) {
-				String mprovName = "Pstar_copy_" + graphName + "_updated-" + timeFetched; 
-				return mprovName;
+		Resource rgprovRDFSReasonerClass = mprov.getResource(Constants.rgprovNamespace + "RDFSReasoner");
+		if (rgprovRDFSReasonerClass == null) {
+			rgprovRDFSReasonerClass =  mprov.createResource(Constants.rgprovNamespace + "RDFSReasoner");
+		}
+		Resource Jena = mprov.getResource(Constants.egNamespace + "Jena");
+		if (Jena == null) {
+			Jena =  mprov.createResource(Constants.egNamespace + "Jena");
+			Jena.addProperty(RDFS.subClassOf, rgprovRDFSReasonerClass);
+		}
+		Resource jena3111 = mprov.getResource(Constants.egNamespace + "jena3.1.1");
+		if (jena3111 == null) {
+			jena3111 =  mprov.createResource(Constants.egNamespace + "jena3.1.1");
+			jena3111.addProperty(RDF.type, Jena);
+		}
+		Resource rgprovGraphOpClass = mprov.getResource(Constants.rgprovNamespace + "GraphOperation");
+		if (rgprovGraphOpClass == null) {
+			rgprovGraphOpClass =  mprov.createResource(Constants.rgprovNamespace + "GraphOperation");
+		}
+		Resource rgprovEntailmentClass = mprov.getResource(Constants.rgprovNamespace + "Entailment");
+		if (rgprovEntailmentClass == null) {
+			rgprovEntailmentClass =  mprov.createResource(Constants.rgprovNamespace + "Entailment");
+			rgprovEntailmentClass.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
+		}
+		Resource rgprovRDFSEntailmentClass = mprov.getResource(Constants.rgprovNamespace + "RDFSEntailment");
+		if (rgprovRDFSEntailmentClass == null) {
+			rgprovRDFSEntailmentClass =  mprov.createResource(Constants.rgprovNamespace + "RDFSEntailment");
+			rgprovRDFSEntailmentClass.addProperty(RDFS.subClassOf, rgprovGraphOpClass);
+		}
+		Resource rgprovGraphClass = mprov.getResource(Constants.rgprovNamespace + "Graph");
+		if (rgprovGraphClass == null) {
+			rgprovGraphClass =  mprov.createResource(Constants.rgprovNamespace + "Graph");
+		}
+		Resource rgprovUpdateGraphClass = mprov.getResource(Constants.rgprovNamespace + "UpdateGraph");
+		if (rgprovUpdateGraphClass == null) {
+			rgprovUpdateGraphClass =  mprov.createResource(Constants.rgprovNamespace + "UpdateGraph");
+			rgprovUpdateGraphClass.addProperty(RDFS.subClassOf, rgprovGraphClass);
+		}
+		Property provWasAssociatedWithProperty = mprov.getProperty(Constants.provNamespace + "wasAssociatedWith");
+		if (provWasAssociatedWithProperty == null) {
+			provWasAssociatedWithProperty = mprov.createProperty(Constants.provNamespace + "wasAssociatedWith");
+		}
+		Property provUsedProperty = mprov.getProperty(Constants.provNamespace + "Used");
+		if (provUsedProperty == null) {
+			provUsedProperty = mprov.createProperty(Constants.provNamespace + "Used");
+		}
+		Property provWasGeneratedByProperty = mprov.getProperty(Constants.provNamespace + "wasGeneratedBy");
+		if (provWasGeneratedByProperty == null) {
+			provWasGeneratedByProperty = mprov.createProperty(Constants.provNamespace + "wasGeneratedBy");
+		}
+		Property provWasDerivedFromProperty = mprov.getProperty(Constants.provNamespace + "wasDerivedFrom");
+		if (provWasDerivedFromProperty == null) {
+			provWasDerivedFromProperty = mprov.createProperty(Constants.provNamespace + "wasDerivedFrom");
+		}
+		Property provStartedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "startedAtTime");
+		if (provStartedAtTimeProperty == null) {
+			provStartedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "startedAtTime");
+		}
+		Property provEndedAtTimeProperty = mprov.getProperty(Constants.provNamespace + "EndedAtTime");
+		if (provEndedAtTimeProperty == null) {
+			provEndedAtTimeProperty = mprov.createProperty(Constants.provNamespace + "EndedAtTime");
+		}
+		
+		Resource gOpC3prime = mprov.createResource(Constants.customNameSpace + uo.getGraphSTA1B2prime_NAME());
+		gOpC3prime.addProperty(RDF.type, rgprovGraphClass);
+		
+		Resource ge = mprov.createResource(Constants.customNameSpace + entailActivityName);
+		ge.addProperty(RDF.type, rgprovRDFSEntailmentClass);
+		ge.addProperty(provWasAssociatedWithProperty, jena3111);
+		ge.addProperty(provUsedProperty, gOpC3prime);
+		ge.addProperty(provStartedAtTimeProperty, timeStarted[0] + "^^xsd:dateTime");
+		ge.addProperty(provEndedAtTimeProperty, timeEnded[0] + "^^xsd:dateTime");
+		
+		Resource gC3prime = mprov.createResource(Constants.customNameSpace +  uo.getC3prime().getGraph_UpdatedNAME());
+		gC3prime.addProperty(RDF.type, rgprovGraphClass);
+		gC3prime.addProperty(provWasGeneratedByProperty, ge);
+		Property rgprovWasEntailedFromProperty = mprov.getProperty(Constants.rgprovNamespace + "wasEntailedFrom");
+		if (rgprovWasEntailedFromProperty == null) {
+			rgprovWasEntailedFromProperty = mprov.createProperty(Constants.rgprovNamespace + "wasEntailedFrom");
+		}
+		gC3prime.addProperty(rgprovWasEntailedFromProperty, gOpC3prime);
+		Resource gC3 = mprov.getResource(Constants.customNameSpace + uo.getC3prime().getGraph_NAME());
+		if (gC3 == null) {
+			gC3 = mprov.createResource(Constants.customNameSpace + uo.getC3prime().getGraph_NAME());
+			gC3.addProperty(RDF.type, rgprovGraphClass);
+		}
+		Property provWasRevisionOf = mprov.getProperty(Constants.provNamespace + "wasRevisionOf");
+		if (provWasRevisionOf == null) {
+			provWasRevisionOf = mprov.createProperty(Constants.provNamespace + "wasRevisionOf");
+		}
+		gC3prime.addProperty(provWasRevisionOf, gC3);
+		
+		Resource theAppliedUpdate;
+		if(uo.getB2prime().isUseAllUpdate()){
+			theAppliedUpdate = mprov.getResource(Constants.customNameSpace + uo.getB2prime().getUpdateGraph_COPY_NAME());
+			if (theAppliedUpdate == null) {
+				theAppliedUpdate = mprov.createResource(Constants.customNameSpace + uo.getB2prime().getUpdateGraph_COPY_NAME());
+				theAppliedUpdate.addProperty(RDF.type, rgprovUpdateGraphClass);
 			}
-		*/	
-	
-	//this method should be deleted once the provenance handler has been updated
+		}
+		else {
+			theAppliedUpdate = mprov.getResource(Constants.customNameSpace  + "SubsetOf" + uo.getB2prime().getUpdateGraph_COPY_NAME());
+			if (theAppliedUpdate == null) {
+				theAppliedUpdate = mprov.createResource(Constants.customNameSpace  + "SubsetOf" + uo.getB2prime().getUpdateGraph_COPY_NAME());
+				theAppliedUpdate.addProperty(RDF.type, rgprovUpdateGraphClass);
+			}
+		}
+				
+		gC3prime.addProperty(provWasDerivedFromProperty, theAppliedUpdate);
+		
+		uo.getC3prime().setGraph_PROV_MODEL(mprov);
+	}
+			
 	public static String createNameOfEntailOp (String graphC3Name, String timeCalled) {
 		return  "ge-"+ graphC3Name + "-" + timeCalled;
 	}

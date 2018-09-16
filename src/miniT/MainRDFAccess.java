@@ -11,48 +11,49 @@ import operators.TraditionalOperator;
 import operators.UpdatedOperator;
 import utilities.*;
 
-public class MainRDFAccess {
+public class MainRDFAccess 
+{
+	//private static String datasetNameOnServer = Constants.DATASET;
+	//private static String graphStoresLocal_URI = Constants.LOCAL_URI;
+	private static int napDuration = 15;
 	
-	//private static String datasetNameOnServer = Config.DATASET;
-	//private static String graphStoresLocal_URI = Config.LOCAL_URI;
-	private static int napDuration = 5;
+	private static String graphA1_source_URI = Constants.graphA1_source_URI;
+	private static String graphA1_source_NAME = Constants.graphA1_source_NAME;
+	private static String graphA1_source_PROV_URI = Constants.graphA1_source_PROV_URI;
+	private static String graphA1_source_PROV_NAME = Constants.graphA1_source_PROV_NAME;
 	
-	private static String graphA1_source_URI = Config.graphA1_source_URI;
-	private static String graphA1_source_NAME = Config.graphA1_source_NAME;
-	private static String graphA1_source_PROV_URI = Config.graphA1_source_PROV_URI;
-	private static String graphA1_source_PROV_NAME = Config.graphA1_source_PROV_NAME;
+	private static String graphB2_source_URI = Constants.graphB2_source_URI;
+	private static String graphB2_source_NAME = Constants.graphB2_source_NAME;
+	private static String graphB2_source_PROV_URI = Constants.graphB2_source_PROV_URI;
+	private static String graphB2_source_PROV_NAME = Constants.graphB2_source_PROV_NAME;
 	
-	private static String graphB2_source_URI = Config.graphB2_source_URI;
-	private static String graphB2_source_NAME = Config.graphB2_source_NAME;
-	private static String graphB2_source_PROV_URI = Config.graphB2_source_PROV_URI;
-	private static String graphB2_source_PROV_NAME = Config.graphB2_source_PROV_NAME;
-	
-	private static String graphSTA1B2_NAME = Config.graphSTA1B2_NAME;
+	private static String graphSTA1B2_NAME = Constants.graphSTA1B2_NAME;
 	private static String graphStOp;
 	
-	private static String graphC3_NAME = Config.graphC3_NAME;
-	private static String graphC3_PROV_NAME = Config.graphC3_PROV_NAME;
+	private static String graphC3_NAME = Constants.graphC3_NAME;
+	private static String graphC3_PROV_NAME = Constants.graphC3_PROV_NAME;
 	
 	// the update details
-	private static String graphC3prime_NAME = Config.graphC3Updated_NAME;
+	private static String graphC3prime_INSERTED_NAME = Constants.graphC3Updated_INSERT_NAME;
+	private static String graphC3prime_DELETED_NAME = Constants.graphC3Updated_DELETE_NAME;
 	
 	private static String updateOpInsert = "insert";
-	private static String graphSTA1B2PRIME_INSERT_NAME = Config.graphSTA1B2_INSERT_NAME;
-	private static String updateGraphB2_URI_Insert = Config.updateGraphB2_INSERT_URI; /* the file with the triples to be inserted */
-	private static String updateGraphB2_NAME_Insert = Config.updateGraphB2_INSERT_NAME; /* the file with the triples to be inserted */
-	//private static String updateGraphB2_sourceINSERTED_NAME = Config.updateGraphB2_sourceINSERTED_NAME; /* B2prime, i.e. B2 with triples inserted*/
-	private static String graphB2prime_sourceInserted_URI = Config.graphB2prime_sourceInserted_URI; /* URI of B2prime, i.e. B2 with triples inserted*/
-	private static String graphB2prime_INSERTED_PROV_URI = Config.graphB2prime_INSERTED_PROV_URI; /*ProvB2UpdatedInsert.ttl*/
-	private static String graphB2prime_INSERTED_PROV_source_NAME = Config.graphB2_source_PROV_INSERTED_NAME; //I am assuming the provenance of the source retains the same name
+	private static String graphSTA1B2PRIME_INSERT_NAME = Constants.graphSTA1B2_INSERT_NAME;
+	private static String updateGraphB2_URI_Insert = Constants.updateGraphB2_INSERT_URI; /* the file with the triples to be inserted */
+	private static String updateGraphB2_NAME_Insert = Constants.updateGraphB2_INSERT_NAME; /* the file with the triples to be inserted */
+	//private static String updateGraphB2_sourceINSERTED_NAME = Constants.updateGraphB2_sourceINSERTED_NAME; /* B2prime, i.e. B2 with triples inserted*/
+	private static String graphB2prime_sourceInserted_URI = Constants.graphB2prime_sourceInserted_URI; /* URI of B2prime, i.e. B2 with triples inserted*/
+	private static String graphB2prime_INSERTED_PROV_URI = Constants.graphB2prime_INSERTED_PROV_URI; /*ProvB2UpdatedInsert.ttl*/
+	private static String graphB2prime_INSERTED_PROV_source_NAME = Constants.graphB2_source_PROV_INSERTED_NAME; //I am assuming the provenance of the source retains the same name
 	
 	private static String updateOpDelete = "delete";
-	private static String graphSTA1B2PRIME_DELETE_NAME = Config.graphSTA1B2_INSERT_NAME;
-	private static String updateGraphB2_URI_Delete = Config.updateGraphB2_DELETE_URI; /* the file with the triples to be deleted */
-	private static String updateGraphB2_NAME_Delete = Config.updateGraphB2_DELETE_NAME; /* the file with the triples to be inserted */
+	private static String graphSTA1B2PRIME_DELETE_NAME = Constants.graphSTA1B2_DELETE_NAME;
+	private static String updateGraphB2_URI_Delete = Constants.updateGraphB2_DELETE_URI; /* the file with the triples to be deleted */
+	private static String updateGraphB2_NAME_Delete = Constants.updateGraphB2_DELETE_NAME; /* the file with the triples to be inserted */
 	//private static String updateGraphB2_sourceDELETED_NAME = Config.updateGraphB2_sourceDELETED_NAME; /* B2'', i.e. B2 with triples that were deleted*/
-	private static String graphB2prime_sourceDeleted_URI = Config.graphB2prime_sourceDeleted_URI; /* fcOthersUpdatedDelete.ttl */
-	private static String graphB2prime_DELETED_PROV_URI = Config.graphB2prime_DELETED_PROV_URI; /* ProvB2UpdatedDelete.ttl */
-	private static String graphB2prime_DELETED_PROV_source_NAME = Config.graphB2_source_PROV_DELETED_NAME;
+	private static String graphB2prime_sourceDeleted_URI = Constants.graphB2prime_sourceDeleted_URI; /* fcOthersUpdatedDelete.ttl */
+	private static String graphB2prime_DELETED_PROV_URI = Constants.graphB2prime_DELETED_PROV_URI; /* ProvB2UpdatedDelete.ttl */
+	private static String graphB2prime_DELETED_PROV_source_NAME = Constants.graphB2_source_PROV_DELETED_NAME;
 	
 	private static Operator o;
 	private static TraditionalOperator t;
@@ -61,33 +62,44 @@ public class MainRDFAccess {
 	
 	public static void main (String[] args) throws Exception 
 	{
-		System.out.println("Started at " + Utilities.getTime()[0]);
-		//graphStOp = "union";
+		//Model cinfs = SPARQLUtilities.loadGraphFromFuseki(Config.DATASET_UNION, "C3Infs.ttl");
+		//System.out.println("Marge has Father in infs: " + SPARQLUtilities.checkIfTripleIsInInfGraph(cinfs, "fcsmps:Marge fc:hasFather fcsmps:Clancy"));
+		//System.out.println("Marge has Parent in infs: " + SPARQLUtilities.checkIfTripleIsInInfGraph(cinfs, "fcsmps:Marge fc:hasParent fcsmps:Clancy"));
+		
+		System.out.println("********************************************");
+		System.out.println("Started at " + MiscUtilities.getTime()[0]);
 		graphStOp = "intersection";
-		//graphStOp = "difference1"; System.out.println("Remember: this will swap delete and insert!");
+		//graphStOp = "intersection";
+		//graphStOp = "difference1";
+		//System.out.println("Remember: this will swap delete and insert!");
 		//graphStOp = "difference2";
 		System.out.println("The ST op is:" + graphStOp);
-		System.out.println("Create initial graph:");
+		System.out.println("---------------------------------------------");
+		System.out.println("Create initial graph...");
 		o = new Operator(graphA1_source_URI, graphA1_source_PROV_URI, graphB2_source_URI, graphB2_source_PROV_URI);
 		createInitialGraph(graphStOp);
 				
-		Utilities.goToSleep(napDuration);		
-		System.out.println("\nNow for the Insert update:");
+		MiscUtilities.goToSleep(napDuration);		
+		System.out.println("Now for the Insert update...");
+		System.out.println("---------------------------------------------");
 		uoInsert = new UpdatedOperator(graphA1_source_URI, graphA1_source_PROV_URI, updateGraphB2_URI_Insert, graphB2prime_INSERTED_PROV_URI);
 		applyInsertUpdate();
 				
-		Utilities.goToSleep(napDuration);
-		System.out.println("\nNow for the Delete update:");
+		MiscUtilities.goToSleep(napDuration);
+		System.out.println("Now for the Delete update...");
+		System.out.println("---------------------------------------------");
 		uoDelete = new UpdatedOperator(graphA1_source_URI, graphA1_source_PROV_URI, updateGraphB2_URI_Delete, graphB2prime_DELETED_PROV_URI);
 		applyDeleteUpdate();
 		
-		Utilities.goToSleep(napDuration);
+		MiscUtilities.goToSleep(napDuration);
 		useTraditional(graphStOp);
 		
-		System.out.println("Finished at " + Utilities.getTime()[0]);
+		System.out.println("Finished at " + MiscUtilities.getTime()[0]);
+		
 	}
 	
-	private static void createInitialGraph(String graphStOpType) throws IOException {
+	private static void createInitialGraph(String graphStOpType) throws IOException 
+	{
 		graphStOp = graphStOpType;
 		o.setGraphStOpType(graphStOp);
 		o.loadBothGraphsAndTheirProvs(graphA1_source_NAME, graphA1_source_PROV_NAME, graphB2_source_NAME, graphB2_source_PROV_NAME);	
@@ -95,7 +107,7 @@ public class MainRDFAccess {
 		
 		o.createSTGraph(graphSTA1B2_NAME);
 		
-		o.reasonRDFS(Config.UPLOAD_TO_FUSEKI, "First_" + graphStOp);
+		o.reasonRDFS(Constants.UPLOAD_TO_FUSEKI, "First_" + graphStOp);
 	}
 	
 	private static void applyInsertUpdate() throws Exception 
@@ -103,7 +115,7 @@ public class MainRDFAccess {
 		uoInsert.loadUpdateAndProv("B2", graphB2_source_NAME, updateGraphB2_NAME_Insert, graphB2prime_INSERTED_PROV_source_NAME);
 		uoInsert.setDATASETS(graphStOp);
 		uoInsert.getA1().setGraph_source_NAME(graphA1_source_NAME);
-		uoInsert.initializeCprime(graphC3_NAME, graphC3_PROV_NAME, graphC3prime_NAME);
+		uoInsert.initializeCprime(graphC3_NAME, graphC3_PROV_NAME, graphC3prime_INSERTED_NAME);
 		uoInsert.setGraphUpdateType(updateOpInsert);
 		uoInsert.applyUpdateAndUpdateProv("B2", graphSTA1B2PRIME_INSERT_NAME);	
 	}
@@ -113,14 +125,14 @@ public class MainRDFAccess {
 		uoDelete.loadUpdateAndProv("B2", graphB2_source_NAME, updateGraphB2_NAME_Delete, graphB2prime_DELETED_PROV_source_NAME);
 		uoDelete.setDATASETS(graphStOp);
 		uoDelete.getA1().setGraph_source_NAME(graphA1_source_NAME);
-		uoDelete.initializeCprime(graphC3_NAME, graphC3_PROV_NAME, graphC3prime_NAME);
+		uoDelete.initializeCprime(graphC3_NAME, graphC3_PROV_NAME, graphC3prime_DELETED_NAME);
 		uoDelete.setGraphUpdateType(updateOpDelete);
 		uoDelete.applyUpdateAndUpdateProv("B2", graphSTA1B2PRIME_DELETE_NAME);	
 	}
 	
 	private static void useTraditional(String graphStOpType) throws IOException 
 	{
-		System.out.println("\n Now for the traditional way \n ----------------------------------------------");
+		System.out.println("Now for the traditional way \n----------------------------------------------");
 		graphStOp = graphStOpType;
 		
 		t = new TraditionalOperator(graphA1_source_URI, graphA1_source_PROV_URI, graphB2_source_URI, graphB2_source_PROV_URI);
@@ -128,27 +140,27 @@ public class MainRDFAccess {
 		t.loadBothGraphsAndTheirProvs(graphA1_source_NAME, graphA1_source_PROV_NAME, graphB2_source_NAME, graphB2_source_PROV_NAME);
 		t.initializeC(graphC3_NAME, graphC3_PROV_NAME);
 		t.createSTGraph(graphSTA1B2_NAME);
-		t.reasonRDFS(Config.UPLOAD_TO_FUSEKI, "First_" + graphStOp);
+		t.reasonRDFS(Constants.UPLOAD_TO_FUSEKI, "First_" + graphStOp);
 			
-		Utilities.goToSleep(napDuration);
+		MiscUtilities.goToSleep(napDuration);
 		t = new TraditionalOperator(graphA1_source_URI, graphA1_source_PROV_URI, graphB2prime_sourceInserted_URI, graphB2prime_INSERTED_PROV_URI);
 		t.setGraphStOpType(graphStOp);
 		t.loadBothGraphsAndTheirProvs(graphA1_source_NAME, graphA1_source_PROV_NAME, graphB2_source_NAME, graphB2_source_PROV_NAME);		
 		t.initializeC(graphC3_NAME, graphC3_PROV_NAME);
 		t.createSTGraph(graphSTA1B2_NAME);
-		t.reasonRDFS(Config.UPLOAD_TO_FUSEKI, "Insert_" + graphStOp);
+		t.reasonRDFS(Constants.UPLOAD_TO_FUSEKI, "Insert_" + graphStOp);
+
 		
-		
-		Utilities.goToSleep(napDuration);
+		MiscUtilities.goToSleep(napDuration);
 		t = new TraditionalOperator(graphA1_source_URI, graphA1_source_PROV_URI, graphB2prime_sourceDeleted_URI, graphB2prime_DELETED_PROV_URI);		
 		t.setGraphStOpType(graphStOp);
 		t.loadBothGraphsAndTheirProvs(graphA1_source_NAME, graphA1_source_PROV_NAME, graphB2_source_NAME, graphB2_source_PROV_NAME);
 		t.initializeC(graphC3_NAME, graphC3_PROV_NAME);
 		t.createSTGraph(graphSTA1B2_NAME);
-		t.reasonRDFS(Config.UPLOAD_TO_FUSEKI, "Delete_ " + graphStOp);
+		t.reasonRDFS(Constants.UPLOAD_TO_FUSEKI, "Delete_ " + graphStOp);
 		
 	}
-	/*
+/*	
 	public static void main (String[] args) throws Exception 
 	{
 		 // This method is just to test the number of triples in graph union, update, diff1 & diff2
@@ -293,7 +305,7 @@ public class MainRDFAccess {
 		Utilities.writeModelToFile(entaildiff2Mprimeprime, Config.LOCAL_URI + "/graphStoreC/basedata/diff2BaseDelete.ttl", "ttl");
 		
 	}
-	*/
+*/	
 	/*public static void main (String[] args) throws Exception 
 	{
 		// This method is just to test
@@ -349,5 +361,6 @@ public class MainRDFAccess {
 		Utilities.writeModelToFile(a1D2b2DeleteUpdate, Config.LOCAL_URI + "/testStpropagation/a1D2b2DeleteUpdate.ttl", "TURTLE");
 
 	}*/
+
 
 }
