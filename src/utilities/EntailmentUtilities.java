@@ -68,6 +68,31 @@ public class EntailmentUtilities
 		saveDerivationCount(baseAndInf, fileName, timeTaken);
 		return entails;
 	}
+	/**
+	 * This method takes a model, performs entailment on it, and calls saveDerivationCount.
+	 * Calling saveDerivationCount, results in the derivation being written to file  
+	 * @param model : the model that the reasoning will be performed on
+	 * @param dirName the name of the directory where the file is to be stored
+	 * @param fileName : the name of the file where the derivations and their counts will be recorded.
+	 * @return the difference between the base mode (passed as parameter) and the inference model.
+	 */
+	public static Model getEntailmentsOnly(Model model, String dirName, String fileName) 
+	{
+		long timeStart = System.nanoTime();
+		reasoner.setDerivationLogging(true);
+		InfModel baseAndInf = ModelFactory.createInfModel(reasoner, model);
+		InfModel empty = ModelFactory.createRDFSModel(ModelFactory.createDefaultModel());
+		empty.setNsPrefixes(model);
+		Model entails = baseAndInf.difference(empty).difference(model);
+		
+		entails.setNsPrefixes(model);
+		long timeEnd = System.nanoTime();
+		long timeNeeded = timeEnd - timeStart;
+		String timeTaken = Long.toString(timeNeeded);
+		//printDerivations(baseAndInf);
+		saveDerivationCount(baseAndInf, dirName, fileName, timeTaken);
+		return entails;
+	}
 	
 	/*public static Model getEntailmentsOnly(Model schema, Model data) 
 	{
@@ -95,7 +120,8 @@ public class EntailmentUtilities
 	}*/
 	
 
-	private static void saveDerivationCount(InfModel baseAndInfModel, String fileName, String reasoningTime) {
+	private static void saveDerivationCount(InfModel baseAndInfModel, String fileName, String reasoningTime) 
+	{
 		String modelSize = Long.toString(baseAndInfModel.size());
 		ArrayList<String> results = new ArrayList<String>();
 		results.add("Total number of processed triples: " + modelSize + "\n");
@@ -126,6 +152,40 @@ public class EntailmentUtilities
 		resultsWith0Derivs.add("Count of triples with at least one derivation: " + triplesWithMoreCounter);
 		resultsWith0Derivs.add("Count of triples with at 0 derivations: " + triplesWith0Counter);
 		MiscUtilities.writeToFile(fileName, results, resultsWith0Derivs);
+	}
+	
+	private static void saveDerivationCount(InfModel baseAndInfModel, String dirName, String fileName, String reasoningTime) 
+	{
+		String modelSize = Long.toString(baseAndInfModel.size());
+		ArrayList<String> results = new ArrayList<String>();
+		results.add("Total number of processed triples: " + modelSize + "\n");
+		results.add("\nTime taken to reason is: " + reasoningTime + " milliseconds. \n");
+		
+		ArrayList<String> resultsWith0Derivs = new ArrayList<String>();
+		StmtIterator i = baseAndInfModel.listStatements();
+		
+		int triplesWith0Counter = 0;
+		int triplesWithMoreCounter = 0;
+		while (i.hasNext()) {
+			Statement stmt = i.nextStatement();
+			int dCounter = 0;
+			String tripleAndCount = "Statement: " + stmt.toString();
+			for (Iterator<Derivation> id = baseAndInfModel.getDerivation(stmt); id.hasNext();id.next()) {
+				dCounter++;
+			}
+			tripleAndCount = tripleAndCount + " has " + dCounter + " derivations";
+			if (dCounter > 0) {
+				results.add(tripleAndCount);
+				triplesWithMoreCounter++;
+			}
+			else {
+				resultsWith0Derivs.add(tripleAndCount);
+				triplesWith0Counter++;
+			}	
+		}
+		resultsWith0Derivs.add("Count of triples with at least one derivation: " + triplesWithMoreCounter);
+		resultsWith0Derivs.add("Count of triples with at 0 derivations: " + triplesWith0Counter);
+		MiscUtilities.writeToFile(dirName, fileName, results, resultsWith0Derivs);
 	}
 	
 	public static Model getEntailedGraph(Model model) 
@@ -179,7 +239,6 @@ public class EntailmentUtilities
 			pwOut.flush();
 		}	
 	}
-	
 	
 	/*	
 	public static Model[] getBaseAndEntailments(Model model, String fileName) 

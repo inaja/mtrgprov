@@ -49,11 +49,23 @@ public class Constants
 	
 	/* 
 	 * Now, we specify information about our local system.
-	 * Like, where to store to file, the names of the graphs and their provenances 
-	 * on Fuseki and internally, 
+	 * This represents the locations on disc for local graph store, and cache
+	 * and anywhere else we want outputted files to be saved
 	 */
-	public static final String LOCAL_URI = "d:/alleclipses/workspaces/afterformatworkplacejaxrs/Minithesis/src/miniT/GraphStores";
+	public static final String LOCAL_URI = "d:/alleclipses/workspaces/afterformatworkplacejaxrs/Minithesis/GraphStores";
+	public static final String cacheNonT = "/cacheStoreC/nontraditional/";
+	public static final String cacheT = "/cacheStoreC/traditional/";
+	public static final String tempNonT = "/tempMemoryC/nontraditional/";
+	public static final String tempT = "/tempMemoryC/traditional/";
+	public static final String graphStoreCNonT = "/graphStoreC/nontraditional/";
+	public static final String graphStoreCT = "/graphStoreC/traditional/";
+	public static final String provStoreCNontT = "/graphStoreC/provStoreC/nontraditional/";
+	public static final String provStoreCT = "/graphStoreC/provStoreC/traditional/";
 	
+	/* 
+	 * Now, we specify information about the files: their names and their provenance on Fuseki 
+	 * As well as their names and the names of their provenances in the local system.
+	 */
 	public static final String graphA1_source_URI = localhostString + DATASET_ORIGINALS + "/data/fcSimpsonsFamily.ttl";
 	public static final String graphA1_source_NAME = "fcSimpsonsFamily.ttl";
 	public static final String graphA1_source_PROV_URI = localhostString + DATASET_ORIGINALS + "/data/ProvA1.ttl";

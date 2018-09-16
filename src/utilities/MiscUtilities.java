@@ -28,7 +28,8 @@ public class MiscUtilities
 	 * @param filename: String pointing to the location of the file on disk.
 	 * @return loaded Model that was read from file.
 	 */
-	public static Model readModelFromFile(String filename) {
+	public static Model readModelFromFile(String filename) 
+	{
 		Model results = ModelFactory.createDefaultModel();
 		try {
 			results = FileManager.get().loadModel(filename);
@@ -46,7 +47,8 @@ public class MiscUtilities
 	 * @param format: jena supports either of:
 	 * Turtle, N-Triples, NQuads, TriG, JSON-LD, RDF/XML, RDF/JSON, TriX, RDF Binary
 	 */
-	public static void writeModelToScreen(Model model, String format) {
+	public static void writeModelToScreen(Model model, String format) 
+	{
 		model.write(System.out, format);
 	}
 
@@ -56,7 +58,8 @@ public class MiscUtilities
 	 * @param format: jena supports either of:
 	 * Turtle, N-Triples, NQuads, TriG, JSON-LD, RDF/XML, RDF/JSON, TriX, RDF Binary
 	 */
-	public static void writeModelToFile(Model model, String fileName, String format) {
+	public static void writeModelToFile(Model model, String fileName, String format) 
+	{
 		try {
 			PrintWriter writer = new PrintWriter(fileName, "UTF-8");
 			model.write(writer, format);
@@ -77,13 +80,83 @@ public class MiscUtilities
 	
 	/**
 	 * @param model: the model to be written to file
+	 * @param dirName: the directory name where the file is to be saved.
 	 * @param fileName: the filename of the file to be created and saved.
 	 * @param format: jena supports either of:
 	 * Turtle, N-Triples, NQuads, TriG, JSON-LD, RDF/XML, RDF/JSON, TriX, RDF Binary
 	 */
-	public static void writeModelToFileWithSystemOut(Model model, String fileName, String format) {
+	public static void writeModelToFile(Model model, String dirName, String fileName, String format) 
+	{
+		// first check if the directory exists:
+		File dir = new File(dirName);
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
+				
+		// now write the file 
+		try {
+			PrintWriter writer = new PrintWriter(dirName + fileName, "UTF-8");
+			model.write(writer, format);
+			//System.out.println("Writing file " + fileName + ": Success");
+		} catch (FileNotFoundException e) {
+			System.err.println("--------------------------------------------\n"
+							 + "Failed to write " + fileName + " to file!\n"
+							 + e.getMessage() + "\n"
+							 + "--------------------------------------------\n");
+
+		} catch (UnsupportedEncodingException e) {
+			System.err.println("--------------------------------------------\n"
+							+ "Failed to write " + fileName + " to file!\n"
+							+ e.getMessage() + "\n"
+							+ "--------------------------------------------\n");
+		}
+	}
+	
+	
+	/**
+	 * @param model: the model to be written to file
+	 * @param fileName: the filename of the file to be created and saved.
+	 * @param format: jena supports either of:
+	 * Turtle, N-Triples, NQuads, TriG, JSON-LD, RDF/XML, RDF/JSON, TriX, RDF Binary
+	 */
+	public static void writeModelToFileWithSystemOut(Model model, String fileName, String format) 
+	{
 		try {
 			PrintWriter writer = new PrintWriter(fileName, "UTF-8");
+			model.write(writer, format);
+			System.out.println("Writing file " + fileName + ": Success");
+		} catch (FileNotFoundException e) {
+			System.err.println("--------------------------------------------\n"
+							 + "Failed to write " + fileName + " to file!\n"
+							 + e.getMessage() + "\n"
+							 + "--------------------------------------------\n");
+
+		} catch (UnsupportedEncodingException e) {
+			System.err.println("--------------------------------------------\n"
+							+ "Failed to write " + fileName + " to file!\n"
+							+ e.getMessage() + "\n"
+							+ "--------------------------------------------\n");
+		}
+	}
+	
+	/**
+	 * @param model: the model to be written to file
+	 * @param dirName: the directory name where the file is to be saved.
+	 * @param fileName: the filename of the file to be created and saved.
+	 * @param format: jena supports either of:
+	 * Turtle, N-Triples, NQuads, TriG, JSON-LD, RDF/XML, RDF/JSON, TriX, RDF Binary
+	 */
+	public static void writeModelToFileWithSystemOut(Model model, String dirName, String fileName, String format) 
+	{
+		// first check if the directory exists:
+		File dir = new File(dirName);
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
+				
+		// now write the file 
+		try {
+			PrintWriter writer = new PrintWriter(dirName + fileName, "UTF-8");
 			model.write(writer, format);
 			System.out.println("Writing file " + fileName + ": Success");
 		} catch (FileNotFoundException e) {
@@ -117,7 +190,33 @@ public class MiscUtilities
 		}
 	}
 	
-	public static void writeToFile (String fname, ArrayList<String> toBeWritten) {
+	public static void writeToFile (String dirName, String fname, String toBeWritten) 
+	{
+		// first check if the directory exists:
+		File dir = new File(dirName);
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
+				
+		// now write the file 
+		File fileName = new File(dirName + fname);
+		if(!fileName.exists()){
+			try {
+				fileName.createNewFile();
+			} catch (IOException e) {
+				System.err.println("Error, could not create file: " + e.getMessage());
+			}
+		}
+		try (PrintWriter out = new PrintWriter(fileName)) {
+			out.println(toBeWritten);
+		}
+		catch (FileNotFoundException e){
+			System.err.println("Error Writing to File: " + e.getMessage());
+		}
+	}
+	
+	public static void writeToFile (String fname, ArrayList<String> toBeWritten) 
+	{
 		File fileName = new File(fname);
 		if(!fileName.exists()){
 			try {
@@ -136,7 +235,35 @@ public class MiscUtilities
 		}
 	}
 	
-	public static void writeToFile (String fname, ArrayList<String> toBeWritten, ArrayList<String> toBeWritten2) {
+	public static void writeToFile (String dirName, String fname, ArrayList<String> toBeWritten) 
+	{
+		// first check if the directory exists:
+		File dir = new File(dirName);
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
+				
+		// now write the file
+		File fileName = new File(dirName + fname);
+		if(!fileName.exists()){
+			try {
+				fileName.createNewFile();
+			} catch (IOException e) {
+				System.err.println("Error, could not create file: " + e.getMessage());
+			}
+		}
+		try (PrintWriter out = new PrintWriter(fileName)) {
+			for (String text : toBeWritten) {
+				out.println(text);
+			}
+		}
+		catch (FileNotFoundException e){
+			System.err.println("Error Writing to File: " + e.getMessage());
+		}
+	}
+	
+	public static void writeToFile (String fname, ArrayList<String> toBeWritten, ArrayList<String> toBeWritten2) 
+	{
 		File fileName = new File(fname);
 		if(!fileName.exists()){
 			try {
@@ -159,8 +286,39 @@ public class MiscUtilities
 		}
 	}
 	
-	public static String[] getTime () {
-		
+	public static void writeToFile (String dirName, String fname, ArrayList<String> toBeWritten, ArrayList<String> toBeWritten2) 
+	{	
+		// first check if the directory exists:
+		File dir = new File(dirName);
+		if (!dir.exists()) {
+			dir.mkdirs();
+		}
+				
+		// now write the file
+		File fileName = new File(dirName + fname);
+		if(!fileName.exists()){
+			try {
+				fileName.createNewFile();
+			} catch (IOException e) {
+				System.err.println("Error, could not create file: " + e.getMessage());
+			}
+		}
+		try (PrintWriter out = new PrintWriter(fileName)) {
+			for (String text : toBeWritten) {
+				out.println(text);
+			}
+			System.out.println();
+			for (String text : toBeWritten2) {
+				out.println(text);
+			}
+		}
+		catch (FileNotFoundException e){
+			System.err.println("Error Writing to File: " + e.getMessage());
+		}
+	}
+	
+	public static String[] getTime () 
+	{
 		//LocalDateTime timePoint = LocalDateTime.now();
 		//String timeString = "";
 		//timeString += timePoint.getYear() + "" + timePoint.getMonthValue() + "" + timePoint.getDayOfMonth()
