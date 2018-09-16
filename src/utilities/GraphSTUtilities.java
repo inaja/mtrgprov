@@ -53,8 +53,8 @@ public class GraphSTUtilities
 	
 	public static Model modelUnionFromFile (String graphName1, String graphName2) 
 	{
-		Model graph1 = Utilities.readModelFromFile(graphName1);
-		Model graph2 = Utilities.readModelFromFile(graphName1);
+		Model graph1 = MiscUtilities.readModelFromFile(graphName1);
+		Model graph2 = MiscUtilities.readModelFromFile(graphName1);
 		
 		Model result = graph1.union(graph2);
 		
@@ -63,11 +63,11 @@ public class GraphSTUtilities
 	
 	public static void modelUnionFromFileToFile (String graphName1, String graphName2, String resultGraphName, String format) 
 	{
-		Model graph1 = Utilities.readModelFromFile(graphName1);
-		Model graph2 = Utilities.readModelFromFile(graphName1);
+		Model graph1 = MiscUtilities.readModelFromFile(graphName1);
+		Model graph2 = MiscUtilities.readModelFromFile(graphName1);
 		
 		Model result = graph1.union(graph2);
-		Utilities.writeModelToFile(result, resultGraphName, format);
+		MiscUtilities.writeModelToFile(result, resultGraphName, format);
 	}
 
 	private static Model modelIntersect (Model graph1, Model graph2) 
@@ -79,8 +79,8 @@ public class GraphSTUtilities
 	
 	public static Model modelIntersectFromFile (String graphName1, String graphName2) 
 	{
-		Model graph1 = Utilities.readModelFromFile(graphName1);
-		Model graph2 = Utilities.readModelFromFile(graphName1);
+		Model graph1 = MiscUtilities.readModelFromFile(graphName1);
+		Model graph2 = MiscUtilities.readModelFromFile(graphName1);
 		
 		Model result = graph1.intersection(graph2);
 		
@@ -89,11 +89,11 @@ public class GraphSTUtilities
 	
 	public static void modelIntersectFromFileToFile (String graphName1, String graphName2, String resultGraphName, String format) 
 	{
-		Model graph1 = Utilities.readModelFromFile(graphName1);
-		Model graph2 = Utilities.readModelFromFile(graphName1);
+		Model graph1 = MiscUtilities.readModelFromFile(graphName1);
+		Model graph2 = MiscUtilities.readModelFromFile(graphName1);
 		
 		Model result = graph1.intersection(graph2);
-		Utilities.writeModelToFile(result, resultGraphName, format);
+		MiscUtilities.writeModelToFile(result, resultGraphName, format);
 	}
 	
 	private static Model modelDifference (Model graph1, Model graph2) 
@@ -105,8 +105,8 @@ public class GraphSTUtilities
 	
 	public static Model modelDifferenceFromFile (String graphName1, String graphName2) 
 	{
-		Model graph1 = Utilities.readModelFromFile(graphName1);
-		Model graph2 = Utilities.readModelFromFile(graphName1);
+		Model graph1 = MiscUtilities.readModelFromFile(graphName1);
+		Model graph2 = MiscUtilities.readModelFromFile(graphName1);
 		
 		Model result = graph1.difference(graph2);
 		
@@ -115,10 +115,10 @@ public class GraphSTUtilities
 	
 	public static void modelDifferenceFromFileToFile (String graphName1, String graphName2, String resultGraphName, String format) 
 	{
-		Model graph1 = Utilities.readModelFromFile(graphName1);
-		Model graph2 = Utilities.readModelFromFile(graphName1);
+		Model graph1 = MiscUtilities.readModelFromFile(graphName1);
+		Model graph2 = MiscUtilities.readModelFromFile(graphName1);
 		
 		Model result = graph1.difference(graph2);
-		Utilities.writeModelToFile(result, resultGraphName, format);
+		MiscUtilities.writeModelToFile(result, resultGraphName, format);
 	}
 }

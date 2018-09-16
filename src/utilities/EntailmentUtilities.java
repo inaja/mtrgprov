@@ -125,7 +125,7 @@ public class EntailmentUtilities
 		}
 		resultsWith0Derivs.add("Count of triples with at least one derivation: " + triplesWithMoreCounter);
 		resultsWith0Derivs.add("Count of triples with at 0 derivations: " + triplesWith0Counter);
-		Utilities.writeToFile(fileName, results, resultsWith0Derivs);
+		MiscUtilities.writeToFile(fileName, results, resultsWith0Derivs);
 	}
 	
 	public static Model getEntailedGraph(Model model) 

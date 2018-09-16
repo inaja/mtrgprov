@@ -30,11 +30,11 @@ import org.apache.jena.update.UpdateProcessor;
 
 public class SPARQLUtilities 
 {
-	private static String localhostString = Config.localhostString;
+	private static String localhostString = Constants.localhostString;
 	//private static String DATASET = Config.DATASET;
 	//private static String DATASET_ORIGINALS = Config.DATASET_ORIGINALS;
 	//private static String DATASET4COPIES = Config.DATASET4COPIES;
-	private static String PREFIXES = Config.PREFIXES;
+	private static String PREFIXES = Constants.PREFIXES;
 	
 	/**
 	 * This method loads a graph from Fuseki
@@ -119,7 +119,7 @@ public class SPARQLUtilities
 		Model m = accessor.getModel(strFromServiceURI + "/" + graphName);
 		
 		String strToServiceURI =  localhostString + DATASET4COPIES + "/data";
-		String timeCalled[] = Utilities.getTime();
+		String timeCalled[] = MiscUtilities.getTime();
 		accessor = DatasetAccessorFactory.createHTTP(strToServiceURI);
 		accessor.putModel(graphName + "Old" + timeCalled[1] + ".ttl", m);
 	}
