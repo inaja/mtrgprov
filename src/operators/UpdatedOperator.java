@@ -143,14 +143,14 @@ public class UpdatedOperator
 							predicate;
 			//System.out.println(triple);
 			if (SPARQLUtilities.checkIfTripleIsInInfGraph(c3prime.getGraph_INFS_MODEL(), triple)) {
-				System.out.println("Won't be inserting: " + triple);
+				//System.out.println("Won't be inserting: " + triple);
 				notToBeInserted.add(currentTriple);			
 			}
 		}
 		m.remove(notToBeInserted);
 		
 		c3prime.setGraph_BASE_MODEL(c3prime.getGraph_BASE_MODEL().union(m));
-		MiscUtilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
+		MiscUtilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + Constants.graphStoreCNonT, c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
 		
 		String sTriplesToBeInserted = SPARQLUtilities.createTriplesForUpdate(m);
 		String updateStmt = SPARQLUtilities.createUpdateStatement(DATASET4MT, c3prime.getGraph_BASE_NAME(), sTriplesToBeInserted, "insert");
@@ -173,14 +173,14 @@ public class UpdatedOperator
 		// 4. re-reason the final describe graph 
 		String [] timeNowStart = MiscUtilities.getTime();
 		String entailActivityName = ProvenanceHandler.createNameOfEntailOp(c3prime.getGraph_UpdatedNAME(), timeNowStart[1]);
-		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribe, graphStoresLocal_URI + "/graphStoreC/nontraditional/dredCountInsert" + queriedGraphStOpType +  timeCalled[1]+ ".txt");
+		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribe, graphStoresLocal_URI + Constants.graphStoreCNonT, "dredCountInsert" + queriedGraphStOpType +  timeCalled[1]+ ".txt");
 		String [] timeNowEnd = MiscUtilities.getTime();
 		//Model oldBASE_AND_NEW_TRIPLES = c3.getGraph_BASE_MODEL().union(results);
 		Model oldInfs_AND_NEW_Infs = c3prime.getGraph_INFS_MODEL().union(results);
 		// 5. insert the new triples created by the re-reasoning - or model generated
 		//c3.setGraph_BASE_AND_INFS_MODEL(oldBASE_AND_NEW_TRIPLES);
 		c3prime.setGraph_INFS_MODEL(oldInfs_AND_NEW_Infs);
-		MiscUtilities.writeModelToFile(oldInfs_AND_NEW_Infs, graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
+		MiscUtilities.writeModelToFile(oldInfs_AND_NEW_Infs, graphStoresLocal_URI + Constants.graphStoreCNonT, c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_INSERT-" + timeCalled[1] + ".ttl", "ttl");
 		
 		ProvenanceHandler.updateC3ProvEntailment(entailActivityName, this, timeNowStart, timeNowEnd);
 		
@@ -229,7 +229,7 @@ public class UpdatedOperator
 							predicate;
 			System.out.println(triple);
 			if (SPARQLUtilities.checkIfTripleIsInInfGraph(c3prime.getGraph_INFS_MODEL(), triple)) {
-				System.out.println("Won't be deleting: " + triple);
+				//System.out.println("Won't be deleting: " + triple);
 				notToBeDeleted.add(currentTriple);			
 			}
 		}
@@ -416,7 +416,7 @@ public class UpdatedOperator
 		
 		String [] timeNowStart = MiscUtilities.getTime();
 		String entailActivityName = ProvenanceHandler.createNameOfEntailOp(c3prime.getGraph_UpdatedNAME(), timeNowStart[1]);
-		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribeSubjectsAndProperties, graphStoresLocal_URI + "/graphStoreC/nontraditional/dredCountDelete" + queriedGraphStOpType + timeNowStart [1]+ ".txt");
+		Model results = EntailmentUtilities.getEntailmentsOnly(mDescribeSubjectsAndProperties, graphStoresLocal_URI + Constants.graphStoreCNonT, "dredCountDelete" + queriedGraphStOpType + timeNowStart [1]+ ".txt");
 		String [] timeNowEnd = MiscUtilities.getTime();
 		//Utilities.writeModelToFile(c3prime.getGraph_BASE_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_BASE_NAME() + "AFTER_DELETE-" + [1] + ".ttl", "ttl");
 		//Utilities.writeModelToFile(c3prime.getGraph_INFS_MODEL(), graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3prime.getWithoutTTL_Graph_INFS_NAME() + "AFTER_DELETE-" + [1] + ".ttl", "ttl");

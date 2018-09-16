@@ -24,44 +24,44 @@ public class Operator extends ParentOperator
 	{
 		super.loadBothGraphsAndTheirProvs(graphA1_source_NAME, graphA1_source_PROV_NAME, graphB2_source_NAME, graphB2_source_PROV_NAME);
 		
-		MiscUtilities.writeModelToFile(a1.getGraph_MODEL(), graphStoresLocal_URI + "/cacheStoreC/nontraditional/" + a1.getGraph_COPY_NAME(), "TURTLE");
-		MiscUtilities.writeModelToFile(a1.getGraph_PROV_COPY_MODEL(), graphStoresLocal_URI + "/cacheStoreC/nontraditional/" + a1.getGraph_PROV_COPY_NAME(), "TURTLE");
-		MiscUtilities.writeModelToFile(a1.getGraph_PROV_star_COPY_MODEL(), graphStoresLocal_URI + "/cacheStoreC/nontraditional/" + a1.getGraph_PROV_star_COPY_NAME(), "TURTLE");
+		MiscUtilities.writeModelToFile(a1.getGraph_MODEL(), graphStoresLocal_URI + Constants.cacheNonT,  a1.getGraph_COPY_NAME(), "TURTLE");
+		MiscUtilities.writeModelToFile(a1.getGraph_PROV_COPY_MODEL(), graphStoresLocal_URI + Constants.cacheNonT, a1.getGraph_PROV_COPY_NAME(), "TURTLE");
+		MiscUtilities.writeModelToFile(a1.getGraph_PROV_star_COPY_MODEL(), graphStoresLocal_URI + Constants.cacheNonT, a1.getGraph_PROV_star_COPY_NAME(), "TURTLE");
 		
-		MiscUtilities.writeModelToFile(b2.getGraph_MODEL(), graphStoresLocal_URI + "/cacheStoreC/nontraditional/" + b2.getGraph_COPY_NAME(), "TURTLE");
-		MiscUtilities.writeModelToFile(b2.getGraph_PROV_COPY_MODEL(), graphStoresLocal_URI + "/cacheStoreC/nontraditional/" + b2.getGraph_PROV_COPY_NAME(), "TURTLE");
-		MiscUtilities.writeModelToFile(b2.getGraph_PROV_star_COPY_MODEL(), graphStoresLocal_URI + "/cacheStoreC/nontraditional/" + b2.getGraph_PROV_star_COPY_NAME(), "TURTLE");
+		MiscUtilities.writeModelToFile(b2.getGraph_MODEL(), graphStoresLocal_URI + Constants.cacheNonT, b2.getGraph_COPY_NAME(), "TURTLE");
+		MiscUtilities.writeModelToFile(b2.getGraph_PROV_COPY_MODEL(), graphStoresLocal_URI + Constants.cacheNonT, b2.getGraph_PROV_COPY_NAME(), "TURTLE");
+		MiscUtilities.writeModelToFile(b2.getGraph_PROV_star_COPY_MODEL(), graphStoresLocal_URI + Constants.cacheNonT, b2.getGraph_PROV_star_COPY_NAME(), "TURTLE");
 	}
 	
 	public void initialiazeC(String graphC3_NAME, String graphC3_PROV_NAME) 
 	{
 		super.initializeC(graphC3_NAME, graphC3_PROV_NAME);
 		
-		MiscUtilities.writeModelToFile(c3.getGraph_PROV_MODEL(), graphStoresLocal_URI + "/cacheStoreC/nontraditional/" + c3.getWithoutTTL_Graph_PROV_NAME()+"initialLoad.ttl", "ttl");
+		MiscUtilities.writeModelToFile(c3.getGraph_PROV_MODEL(), graphStoresLocal_URI + Constants.cacheNonT, c3.getWithoutTTL_Graph_PROV_NAME()+"initialLoad.ttl", "ttl");
 	}
 	
 	public void createSTGraph (String graphSTA1B2_NAME) 
 	{
 		super.createSTGraph(graphSTA1B2_NAME);
 		
-		MiscUtilities.writeModelToFile(graphSTA1B2_MODEL, graphStoresLocal_URI + "/tempMemoryC/nontraditional/" + c3.getWithoutTTL_Graph_NAME() + "_ST.ttl", "ttl");
+		MiscUtilities.writeModelToFile(graphSTA1B2_MODEL, graphStoresLocal_URI + Constants.tempNonT, c3.getWithoutTTL_Graph_NAME() + "_ST.ttl", "ttl");
 		
-		MiscUtilities.writeModelToFile(c3.getGraph_PROV_MODEL(), graphStoresLocal_URI + "/cacheStoreC/nontraditional/" + c3.getWithoutTTL_Graph_PROV_NAME() + "ST.ttl", "ttl");
+		MiscUtilities.writeModelToFile(c3.getGraph_PROV_MODEL(), graphStoresLocal_URI + Constants.tempNonT, c3.getWithoutTTL_Graph_PROV_NAME() + "ST.ttl", "ttl");
 	}
 	
 	public void reasonRDFS(boolean uploadToFuseki, String Op) 
 	{
 		String [] timeNowStart = MiscUtilities.getTime();
 		String entailActivityName = ProvenanceHandler.createNameOfEntailOp(c3.getGraph_NAME(), timeNowStart[1]);
-		Model results = EntailmentUtilities.getEntailmentsOnly(graphSTA1B2_MODEL, graphStoresLocal_URI + "/graphStoreC/nontraditional/derivationCounts" + timeNowStart[1] + Op + ".txt");
+		Model results = EntailmentUtilities.getEntailmentsOnly(graphSTA1B2_MODEL, graphStoresLocal_URI + Constants.graphStoreCNonT, "derivationCounts" + timeNowStart[1] + Op + ".txt");
 		String [] timeNowEnd = MiscUtilities.getTime();
 		c3.setGraph_INFS_MODEL(results);
 
-		MiscUtilities.writeModelToFile(graphSTA1B2_MODEL, graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3.getWithoutTTL_Graph_BASE_NAME()+ Op + "-" + timeNowStart[1] + ".ttl", "ttl");
-		MiscUtilities.writeModelToFile(results, graphStoresLocal_URI + "/graphStoreC/nontraditional/" + c3.getWithoutTTL_Graph_INFS_NAME()+ Op + "-" + timeNowStart[1] + ".ttl", "ttl");
+		MiscUtilities.writeModelToFile(graphSTA1B2_MODEL, graphStoresLocal_URI + Constants.graphStoreCNonT, c3.getWithoutTTL_Graph_BASE_NAME()+ Op + "-" + timeNowStart[1] + ".ttl", "ttl");
+		MiscUtilities.writeModelToFile(results, graphStoresLocal_URI + Constants.graphStoreCNonT, c3.getWithoutTTL_Graph_INFS_NAME()+ Op + "-" + timeNowStart[1] + ".ttl", "ttl");
 		
 		ProvenanceHandler.updateC3Entailment(entailActivityName, this, timeNowStart, timeNowEnd);
-		MiscUtilities.writeModelToFile(c3.getGraph_PROV_MODEL(), graphStoresLocal_URI + "/graphStoreC/provStoreC/nontraditional/" + c3.getWithoutTTL_Graph_PROV_NAME()+ Op + "-" + timeNowStart[1] + ".ttl", "ttl");
+		MiscUtilities.writeModelToFile(c3.getGraph_PROV_MODEL(), graphStoresLocal_URI + Constants.provStoreCNontT, c3.getWithoutTTL_Graph_PROV_NAME()+ Op + "-" + timeNowStart[1] + ".ttl", "ttl");
 		
 		// uploading to Fuseki
 		if (uploadToFuseki) {
