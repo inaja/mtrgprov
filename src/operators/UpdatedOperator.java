@@ -75,7 +75,7 @@ public class UpdatedOperator
 		
 		//check C3's provenance to see which graph operation was applied to create it
 		String retreivedOp = SPARQLUtilities.getStOpFromProvGraph(c3PreviousProv, 
-				Constants.localhostString + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(), 
+				Constants.tripleStoreURI + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(), 
 							Constants.customPrefix + ":" + c3prime.getGraph_NAME());
 		setQueriedGraphStOpType(retreivedOp);
 		//check C3's provenance to see which other graph was used along with this one in the st op
@@ -493,7 +493,7 @@ public class UpdatedOperator
 			{
 				// check whether it is difference 1 or difference 2 by checking if B is the Subtrahend
 				String subtrahend = SPARQLUtilities.getHasSubtrahend(c3prime.getGraph_PROV_MODEL(), 
-						Constants.localhostString + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(),
+						Constants.tripleStoreURI + DATASET4MT + "/data/" + c3prime.getGraph_PROV_NAME(),
 						Constants.customPrefix + ":" + c3prime.getGraph_NAME());
 				if (subtrahend.equalsIgnoreCase("Gcopy_" + Constants.graphB2_source_NAME)) {
 					setQueriedGraphStOpType("difference1");
