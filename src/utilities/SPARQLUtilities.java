@@ -30,7 +30,7 @@ import org.apache.jena.update.UpdateProcessor;
 
 public class SPARQLUtilities 
 {
-	private static String localhostString = Constants.localhostString;
+	private static String tripleStoreURI = Constants.tripleStoreURI;
 	//private static String DATASET = Config.DATASET;
 	//private static String DATASET_ORIGINALS = Config.DATASET_ORIGINALS;
 	//private static String DATASET4COPIES = Config.DATASET4COPIES;
@@ -42,7 +42,7 @@ public class SPARQLUtilities
 	 * @throws IOException, in case of errors
 	 */
 	public static Model loadGraphFromFuseki(String DATASET, String graphName) throws IOException {
-		String serviceURI =  localhostString + DATASET + "/data";
+		String serviceURI =  tripleStoreURI + DATASET + "/data";
 		DatasetAccessor accessor;
 		accessor = DatasetAccessorFactory.createHTTP(serviceURI);
 		Model m = accessor.getModel(serviceURI + "/" + graphName);
@@ -55,7 +55,7 @@ public class SPARQLUtilities
 	 * @throws IOException, in case of errors
 	 */
 	public static Model loadOriginalGraphFromFusekiFullURI(String DATASET_ORIGINALS, String fullGraphURI) throws IOException {
-		String serviceURI =  localhostString + DATASET_ORIGINALS + "/data";
+		String serviceURI =  tripleStoreURI + DATASET_ORIGINALS + "/data";
 		DatasetAccessor accessor;
 		accessor = DatasetAccessorFactory.createHTTP(serviceURI);
 		Model m = accessor.getModel(fullGraphURI);
@@ -84,7 +84,7 @@ public class SPARQLUtilities
 	 * @throws IOException, in case of errors
 	 */
 	public static void uploadNewGraph(String dataset, String graphName, Model model) throws IOException {
-		String serviceURI =  localhostString + dataset + "/data";
+		String serviceURI =  tripleStoreURI + dataset + "/data";
 		DatasetAccessor accessor;
 		accessor = DatasetAccessorFactory.createHTTP(serviceURI);
 		accessor.putModel(graphName, model);		
@@ -97,7 +97,7 @@ public class SPARQLUtilities
 	 * @throws IOException, in case of errors
 	 */
 	public static void updateGraph(String DATASET, String graphName, String updateStatement) throws IOException {
-		String url =  localhostString + DATASET + "/update";
+		String url =  tripleStoreURI + DATASET + "/update";
 		//System.out.println(url);
 		UpdateProcessor upp = UpdateExecutionFactory.createRemote(UpdateFactory.create(String.format(updateStatement, graphName)),url);
 		upp.execute();
@@ -113,12 +113,12 @@ public class SPARQLUtilities
 		//String serviceURI =  localhostString + DATASET + "/update";
 		//String copyQuery = "copy <" + localhostString + DATASET + "/data/" + graphName1 + ">"
 		//				  + " TO <" + localhostString + DATASET + "/data/" + newGraphName + ">";
-		String strFromServiceURI =  localhostString + DATASET + "/data";
+		String strFromServiceURI =  tripleStoreURI + DATASET + "/data";
 		DatasetAccessor accessor;
 		accessor = DatasetAccessorFactory.createHTTP(strFromServiceURI);
 		Model m = accessor.getModel(strFromServiceURI + "/" + graphName);
 		
-		String strToServiceURI =  localhostString + DATASET4COPIES + "/data";
+		String strToServiceURI =  tripleStoreURI + DATASET4COPIES + "/data";
 		String timeCalled[] = MiscUtilities.getTime();
 		accessor = DatasetAccessorFactory.createHTTP(strToServiceURI);
 		accessor.putModel(graphName + "Old" + timeCalled[1] + ".ttl", m);
@@ -130,7 +130,7 @@ public class SPARQLUtilities
 	 * @throws IOException, in case of errors
 	 */
 	public static Model describeThatOf (String DATASET, String describeStatement) throws Exception {
-		String url =  localhostString + DATASET + "/query";
+		String url =  tripleStoreURI + DATASET + "/query";
 		QueryExecution qExec = QueryExecutionFactory.sparqlService(url, describeStatement);
 		Model results = qExec.execDescribe();
 		qExec.close();
@@ -143,7 +143,7 @@ public class SPARQLUtilities
 	 * @throws IOException, in case of errors
 	 */
 	public static Iterator<Triple> describeTriplesOf (String DATASET, String describeStatement) throws Exception {
-		String url =  localhostString + DATASET + "/query";
+		String url =  tripleStoreURI + DATASET + "/query";
 		QueryExecution qExec = QueryExecutionFactory.sparqlService(url, describeStatement);
 		Iterator<Triple> results = qExec.execDescribeTriples();
 		qExec.close();
@@ -164,7 +164,7 @@ public class SPARQLUtilities
 		if (updateOp.equalsIgnoreCase("insert")) {
 			updateStatement = updateStatement
 							  + "INSERT DATA { \n"
-							  + "GRAPH <" + localhostString + DATASET + "/data/" 
+							  + "GRAPH <" + tripleStoreURI + DATASET + "/data/" 
 							  + graphName + ">\n"
 							  + "{" + tripleToBeUpdated + " }"
 							  + "}";
@@ -173,7 +173,7 @@ public class SPARQLUtilities
 		else {
 			updateStatement = updateStatement
 							  + "DELETE DATA { \n"
-							  + "GRAPH <" + localhostString + DATASET + "/data/" 
+							  + "GRAPH <" + tripleStoreURI + DATASET + "/data/" 
 							  + graphName + ">\n"	
 							  + "{" + tripleToBeUpdated + "}"
 							  + "}";
@@ -196,7 +196,7 @@ public class SPARQLUtilities
 		if (updateOp.equalsIgnoreCase("insert")) {
 			updateStatement = updateStatement 
 					  + "INSERT DATA { \n"
-					  + "GRAPH <" + localhostString + DATASET + "/data/" 
+					  + "GRAPH <" + tripleStoreURI + DATASET + "/data/" 
 					  + graphName + ">\n {\n";
 			for (String triple: triplesToBeUpdated) {
 				updateStatement = updateStatement +  triple + ".\n";
@@ -206,7 +206,7 @@ public class SPARQLUtilities
 		else {
 			updateStatement = updateStatement
 					  + "DELETE DATA { \n"
-					  + "GRAPH <" + localhostString + DATASET + "/data/" 
+					  + "GRAPH <" + tripleStoreURI + DATASET + "/data/" 
 					  + graphName + ">\n {\n";
 			for (String triple: triplesToBeUpdated) {
 				updateStatement = updateStatement +  triple + " .\n";
@@ -229,7 +229,7 @@ public class SPARQLUtilities
 		describeStatement = PREFIXES + "\n"  
 							+ "DESCRIBE  " + toBeDescribed
 							+ "\n where { "
-							+ "GRAPH <" + localhostString + DATASET + "/data/" 
+							+ "GRAPH <" + tripleStoreURI + DATASET + "/data/" 
 							+ graphName + ">"	
 							+ " {}" + " }";
 		return describeStatement;
@@ -292,7 +292,7 @@ public class SPARQLUtilities
 	}
 	/* untested */
 	public static void printSelectFromModelOnFuseki (String DATASET, String graphName, String selectStatement) {
-		String url =  localhostString + DATASET + "/query";
+		String url =  tripleStoreURI + DATASET + "/query";
 		QueryExecution qe = QueryExecutionFactory.sparqlService(url, selectStatement);
 		ResultSet results = qe.execSelect();
 	    ResultSetFormatter.out(System.out, results);

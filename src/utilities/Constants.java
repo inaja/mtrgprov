@@ -5,7 +5,7 @@ public class Constants
 	/*
 	 *  First, we specify the URI of the Graph Store and the names of the Datasets 
 	 */
-	public static final String localhostString = "http://localhost:3030/"; // this is my local Fuseki
+	public static final String tripleStoreURI = "http://localhost:3030/"; // this is my local Fuseki
 	public static final boolean UPLOAD_TO_FUSEKI = true;
 	
 	public static final String DATASET_ORIGINALS = "OriginalData"; // this is where graphs A1 and B2 are
@@ -66,14 +66,14 @@ public class Constants
 	 * Now, we specify information about the files: their names and their provenance on Fuseki 
 	 * As well as their names and the names of their provenances in the local system.
 	 */
-	public static final String graphA1_source_URI = localhostString + DATASET_ORIGINALS + "/data/fcSimpsonsFamily.ttl";
+	public static final String graphA1_source_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/fcSimpsonsFamily.ttl";
 	public static final String graphA1_source_NAME = "fcSimpsonsFamily.ttl";
-	public static final String graphA1_source_PROV_URI = localhostString + DATASET_ORIGINALS + "/data/ProvA1.ttl";
+	public static final String graphA1_source_PROV_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/ProvA1.ttl";
 	public static final String graphA1_source_PROV_NAME = "ProvA1.ttl";
 	
-	public static final String graphB2_source_URI = localhostString + DATASET_ORIGINALS + "/data/fcOthers.ttl";
+	public static final String graphB2_source_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/fcOthers.ttl";
 	public static final String graphB2_source_NAME = "fcOthers.ttl";
-	public static final String graphB2_source_PROV_URI = localhostString + DATASET_ORIGINALS + "/data/ProvB2.ttl";
+	public static final String graphB2_source_PROV_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/ProvB2.ttl";
 	public static final String graphB2_source_PROV_NAME = "ProvB2.ttl";
 	
 	public static final String graphSTA1B2_NAME = "GopC3.ttl";
@@ -85,20 +85,26 @@ public class Constants
 	public static final String graphC3Updated_DELETE_NAME = "C3UpdatedAfterDelete.ttl";
 	
 	public static final String graphSTA1B2_INSERT_NAME = "GopINSERTC3.ttl";
-	public static final String updateGraphB2_INSERT_URI = localhostString + DATASET_ORIGINALS + "/data/insert.ttl";
+	public static final String updateGraphB2_INSERT_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/insert.ttl";
 	public static final String updateGraphB2_INSERT_NAME = "InsertedTriples.ttl";
-	public static final String graphB2prime_sourceInserted_URI = localhostString + DATASET_ORIGINALS + "/data/fcOthersUpdatedInsert.ttl";
+	public static final String graphB2prime_sourceInserted_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/fcOthersUpdatedInsert.ttl";
 	public static final String updateGraphB2_sourceINSERTED_NAME = "fcOthersUpdatedInsert.ttl";
-	public static final String graphB2prime_INSERTED_PROV_URI = localhostString + DATASET_ORIGINALS + "/data/ProvB2UpdatedInsert.ttl";
+	public static final String graphB2prime_INSERTED_PROV_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/ProvB2UpdatedInsert.ttl";
 	public static final String graphB2_source_PROV_INSERTED_NAME = "ProvB2UpdatedInsert.ttl";
 	
 	public static final String graphSTA1B2_DELETE_NAME = "GopDELETEC3.ttl";
-	public static final String updateGraphB2_DELETE_URI = localhostString + DATASET_ORIGINALS + "/data/delete2.ttl";
+	public static final String updateGraphB2_DELETE_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/delete2.ttl";
 	public static final String updateGraphB2_DELETE_NAME = "DeletedTriples.ttl";
-	public static final String graphB2prime_sourceDeleted_URI = localhostString + DATASET_ORIGINALS + "/data/fcOthersUpdatedDelete.ttl";
+	public static final String graphB2prime_sourceDeleted_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/fcOthersUpdatedDelete.ttl";
 	public static final String updateGraphB2_sourceDELETED_NAME = "fcOthersUpdatedDelete.ttl";
-	public static final String graphB2prime_DELETED_PROV_URI = localhostString + DATASET_ORIGINALS + "/data/ProvB2UpdatedDelete.ttl";
+	public static final String graphB2prime_DELETED_PROV_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/ProvB2UpdatedDelete.ttl";
 	public static final String graphB2_source_PROV_DELETED_NAME = "ProvB2UpdatedDelete.ttl";
 	
 	//public static final String graphB2prime_PROV_source_NAME = "pb2updated.ttl"; //I am assuming the provenance of the source retains the same name
+	
+	/* 
+	 * Now we specify some things for EvoGen and LUBM
+	 */
+	public static final String ontology = "http://www.ecs.soto.ac.uk/izn1g08/univBenchEdited.rdf";
+    public static final String ontologyLocation = LOCAL_URI + "/univ-benchEdited.ttl";
 }
