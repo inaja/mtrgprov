@@ -15,7 +15,7 @@ public class MainRDFAccess
 {
 	//private static String datasetNameOnServer = Constants.DATASET;
 	//private static String graphStoresLocal_URI = Constants.LOCAL_URI;
-	private static int napDuration = 15;
+	private static int napDuration = 1;
 	
 	private static String graphA1_source_URI = Constants.graphA1_source_URI;
 	private static String graphA1_source_NAME = Constants.graphA1_source_NAME;
@@ -68,7 +68,7 @@ public class MainRDFAccess
 		
 		System.out.println("********************************************");
 		System.out.println("Started at " + MiscUtilities.getTime()[0]);
-		graphStOp = "intersection";
+		graphStOp = "union";
 		//graphStOp = "intersection";
 		//graphStOp = "difference1";
 		//System.out.println("Remember: this will swap delete and insert!");
