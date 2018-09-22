@@ -217,6 +217,52 @@ public class SPARQLUtilities
 	}
 	
 	/**
+	 * This method does not interact with Fuseki. It produces ONE update statement containing
+	 * MULTIPLE INSERT or DELETE statements to be 
+	 * applied to the graph that is already on Fuseki.
+	 * @param graphName, the name of the graph on Fuseki to be updated 
+	 * @param modelToBeUpdated, the update-graph to be added/removed from the graph
+	 * @param updateOp, insert or delete
+	 * @return the update statement that will actually be sent to Fuseki to update the graph
+	 */
+	public static String createMultiUpdateStatements (String DATASET, String graphName, Model modelToBeUpdated, String updateOp) {
+		//setTestPrefixes();
+		String updateStatement = PREFIXES + "\n";
+		if (updateOp.equalsIgnoreCase("insert")) {
+			updateStatement = updateStatement 
+					  + "INSERT DATA { \n"
+					  + "GRAPH <" + tripleStoreURI + DATASET + "/data/" 
+					  + graphName + ">\n {\n";
+		}
+		else 
+		{
+			updateStatement = updateStatement
+					  + "DELETE DATA { \n"
+					  + "GRAPH <" + tripleStoreURI + DATASET + "/data/" 
+					  + graphName + ">\n {\n";
+		}
+		
+		StmtIterator itrUpdateModel = modelToBeUpdated.listStatements();
+		while(itrUpdateModel.hasNext()) 
+		{
+			Statement stmt = itrUpdateModel.next();
+			String strCurrentTriple = "<" + stmt.getSubject() + "> " 
+									+ "<" + stmt.getPredicate() + "> ";
+			if (stmt.getObject().isLiteral()) {
+				strCurrentTriple += "\"" + stmt.getObject() + "\"";
+			} 
+			else {
+				strCurrentTriple += "<" + stmt.getObject() + ">";
+			}
+			
+			updateStatement = updateStatement + strCurrentTriple + ".\n";;
+		}
+			
+		updateStatement = updateStatement + "}\n}";
+		return updateStatement;
+	}
+	
+	/**
 	 * This method does not interact with Fuseki. It produces the describe statement to be 
 	 * applied to the graph that is already on Fuseki.
 	 * @param graphName, the name of the graph on Fuseki to get the describe of the triple from it 

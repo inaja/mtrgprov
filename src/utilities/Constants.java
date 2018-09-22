@@ -93,7 +93,7 @@ public class Constants
 	public static final String graphB2_source_PROV_INSERTED_NAME = "ProvB2UpdatedInsert.ttl";
 	
 	public static final String graphSTA1B2_DELETE_NAME = "GopDELETEC3.ttl";
-	public static final String updateGraphB2_DELETE_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/delete2.ttl";
+	public static final String updateGraphB2_DELETE_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/delete.ttl";
 	public static final String updateGraphB2_DELETE_NAME = "DeletedTriples.ttl";
 	public static final String graphB2prime_sourceDeleted_URI = tripleStoreURI + DATASET_ORIGINALS + "/data/fcOthersUpdatedDelete.ttl";
 	public static final String updateGraphB2_sourceDELETED_NAME = "fcOthersUpdatedDelete.ttl";
